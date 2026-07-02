@@ -1,0 +1,738 @@
+[
+  {
+    "id": 1,
+    "title": "Minimum Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nYou are given two integer arrays A and B of length N on which you have to perform below operation:\nIn one operation, you can swap any two elements of 'A' or any two elements of 'B'\n\nYour task is to find and return an integer value representing the minimum possible sum of A[i]*B[i] after performing the above operation any number of times.\nNote: The operation can also be performed 0 number of times.\n\nInput Specification:\n\nOutput Specification:\nReturn an integer value representing the minimum possible sum of A[i]*B[i] after performing the above operation any number of times.\n\nExample 1:\n\nExplanation:\nHere A = {1,4,3,2} and B = {1,4,3,4}. To minimize the sum, we can swap the first two elements of A i.e., 4 and 1. The array will now become (4,1,3,2). The sum obtained will be 25, which is the minimum. Hence, 25 is returned as the output.\n\nExample 2:\n\nExplanation:\nHere, A = (4,1,6) and B= (3,1,2). To minimize the sum, we can swap the first two elements of A. i.e., 4 and 1 and the last two elements of B i.e., 1 and 2. The array A and B will now become (1,4,6) and (3,2,1) respectively. The sum obtained will be 17, which is the minimum. Hence, 17 is returned as the output.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 2,
+    "title": "Magical Library",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nIn a magical library, each bookshelf is represented by a two-dimensional array A, where each row of the 2D array A[i] represents the series value of a book.\n\nA row is considered magical if the sum of the odd values of the series of a book is even. Your task is to find and return an integer value representing the number of magical rows.\n\nInput Specification:\n\nOutput Specification:Return an integer value representing the number of magical rows.\n\nExample 1:\n\nExplanation:\nHere, the given 2D array is {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}\n\nTherefore, there are only 2 magical rows so, 2 is returned as the output.\n\nExample 2:\n\nExplanation:\nHere, the given 2D given array {{2, 4}, {0, 0}, {11, 11}},\nOnly the last row {11, 11} has odd elements and their sum is 22 which is even. Therefore, there is only 1 magical row so, 1 is returned as the output.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 3,
+    "title": "Knowledge Enhancement",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nAlex is a high school student who loves reading and has a summer break coming up. He has a list of books he wants to read, with each book's estimated reading time stored in an array A. Alex has N hours available during the break for reading. Your task is to help Alex determine the maximum number of books he can read without exceeding his total available reading hours.\n\nInput Specification:\n\nOutput Specification:\nReturn an integer value representing the maximum number of books Alex can read without exceeding his total available reading hours.\n\nExample 1:\n\nExplanation:\nHere N=5 and Alex has 4 books with reading times of 4, 2, 3, and 1 respectively then\n\nHence, 2 is returned as output.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 4,
+    "title": "The Distance",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nJim has a password represented by a string S consisting of lowercase English letters (a-z) and digits (0-9). The distance between two characters is defined as the absolute difference between their indices in the string. Your task is to find and return the maximum distance between two non-similar characters within the given password S.\n\nNote: The distance between two adjacent characters is 1.\n\nInput Specification:\n\nOutput Specification:\nReturn an integer representing the maximum distance between two non-similar characters within the given password S.\n\nExample 1:\n\nExplanation:\nIn the string abc10, the maximum distances between non-similar characters are:\n\nOther combinations yield a shorter distance. Therefore, the maximum distance between two non-similar characters is 4.\n\nExample 2:\n\nExplanation:\nIn the string bbbb, all characters are the same, so there are no two non-similar characters to compare. Thus, the maximum distance between two non-similar characters is 0.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 5,
+    "title": "Charity Event",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nYou are organizing a charity event in a village, where you distribute chocolates to children sitting in a circle. While the distribution of chocolates follows a specific set of rules based on their position in the circle:\n\nThe ith child receives i chocolates. If a child's position is adjacent to a multiple of 5, they receive an additional 2 chocolates.\n\nGiven the number of children in circle, your task is to calculate and return an integer value representing the total number of chocolates distributed.\n\nNote: Return mod of total to manage overflow with 1e9+7.\n\nInput Specification:\n\nOutput Specification:\nReturn an integer value representing the total number of chocolates distributed.\n\nExample 1:\n\nExplanation:\nHere N=5, so the chocolates each child receives while sitting in the circle is:\n\nAdding chocolates of each child will give us 19 (3+2+3+6+5). Hence, 19 is returned as output.\n\nExample 2:",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 6,
+    "title": "Red Pen Green Pen",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nYou are a teacher creating an engaging math activity for your students by writing N numbers on the classroom whiteboard. You use a green pen for odd numbers and a red pen for even numbers. Your task is to find and return an integer value representing the number of times you need to switch from the green pen to the red pen while writing these numbers.\n\nInput Specification:\n\nOutput Specification:\nReturn an integer value representing the number of times you need to switch from the green pen to the red pen while writing these numbers.\n\nExample 1:\n\nExplanation:\nThe given sequence which he has to write is 1->2->1->6->10->9\nBelow is the sequence of pen, the teacher has to use:\n\nTherefore, we need to change from green pen to red twice. Hence, 2 is returned as output.\n\nExample 2:\n\nExplanation:\nThe given sequence which he has to write is 70->23->13->26->72->19",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 7,
+    "title": "Library Exploration",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nThere is a library having N shelves in it. Each shelf is labeled from 1 to N and is stocked with A[i] books on each shelf. You have to select books only from shelves that have prime-numbered labels. Additionally, there is a limit of K books that you can select from each shelf.\n\nYour task is to find and return an integer value representing the maximum number of books you can collect during a single visit to the library.\n\nNote: Assume 1-based indexing.\n\nInput Specification:\n\nOutput Specification:\nReturn an integer value representing the maximum number of books that you can collect during a single visit to the library.\n\nExample 1:\n\nExplanation:Here, the given value of K is 4, which is the maximum number of books we can select from each shelf. Since we only have to select books from prime-numbered shelves, that is the shelf with index 2, and this shelf contains 2 books. So, we collect all books from it. Therefore, 2 is returned as the output.\n\nExample 2:",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 8,
+    "title": "Generated Numbers",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nYou have a jar that initially contains N marbles. You can perform the following operations in any order and any number of times:\n\nYour task is to find and return the number of unique positive values that can represent the number of marbles left in the jar after performing these operations. The initial number of marbles N should also be included in the count of unique values.\n\nNote: The jar should never become empty during the operations.\n\nInput Specification:\n\nOutput Specification:\nReturn an integer representing the number of unique positive values for the number of marbles left in the jar.\n\nExample 1:\n\nExplanation:\nStarting with 4 marbles:\n\nUnique values: {1, 2, 3, 4}. Therefore, the output is 4.\n\nExample 2:\n\nExplanation:\nStarting with 10 marbles:\n\nUnique values: {1, 2, 3, 4, 5, 6, 8, 10}. Therefore, the output is 8.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 9,
+    "title": "Cryptographer",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nAn ancient journal was found containing an encrypted message. The encryption used in the journal shifts each character one position forward in the alphabet. For example 'a' becomes 'b', 'b' becomes 'c', and so on. However, 'z' wraps around and becomes 'a'. Alex, a cryptographer, needs to decrypt this journal by reversing the shift.\nYour task is to return the decrypted string by shifting each character one position back in the alphabet. For example:\n\nNote: The journal contains only lowercase English letters.\n\nInput Specification:\n\nOutput Specification:\nReturn the decrypted string after shifting all the characters one position back\n\nExample 1:",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 10,
+    "title": "Sort String",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nYou are a librarian in a bustling library where books are arranged in a single line, each represented by a letter from A to Z. One day in a hurry you mistakenly arranged some books out of order. Given a string S of length N representing the books, your task is to find and return an integer value representing the minimum number of books (indices in the string) that need to be moved to sort the row alphabetically.\n\nInput Specification:\n\nOutput Specification:\nReturn an integer representing the minimum number of books (indices in the string) that needs to be moved to sort the row alphabetically.\n\nExample 1:\n\nExplanation:\nThe given string is \"helco\". When the string is sorted, it becomes \"cehlo\". So, to sort the given string, characters at the indices 0, 2, and 3 are needed to be rearranged. Since there are 3 indices whose characters need to be rearranged to sort the string 3 is returned as the output.\n\nExample 2:\n\nExplanation:\nThe given string is \"asdf\". When the string is sorted, it becomes \"adfs\". So, to sort the given string, characters at indices 1, 2, and 3 needs to be rearranged. Since there are 3 indices whose characters need to be rearranged to sort the string, 3 is returned as the output.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 11,
+    "title": "Discounted Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nYou are given an array of integers and an integer n. Your task is to find the sum of the first n largest unique elements from the array. Subtract the largest element (from those n elements) from the sum (this is called a discount). Finally, return the result after applying the discount.\n\nInput:\n\nOutput:\nThe resultant value after subtracting the largest element from the sum of the first n largest elements.\n\nConstraints:\n\nExample 1:\n\nExplanation:\nThe largest unique elements are [9, 7, 6]. Sum of these is 9 + 7 + 6 = 22. After subtracting the largest element (9), the result is 22 - 9 = 13.\n\nExample 2:\n\nExplanation:\nThe largest unique element is 9. After subtracting it from itself, the result is 9 - 9 = 0.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 12,
+    "title": "Valid Palindromes",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nYou are given a string s containing blanks ('_') and an integer n. Your task is to count the total number of ways to fill the blanks such that the resultant string becomes a valid palindrome. Since the result can be large, return the answer modulo n.\n\nInput:\n\nOutput:\nReturn the number of valid palindromes that can be formed by filling the blanks, modulo n.\n\nConstraints:\n\nExample 1:\n\nExplanation:\nThe string is \"a_b_a\". To make this a palindrome, we can replace the blank with any letter (b), so there are 26 possible valid palindromes.\n\nExample 2:\n\nExplanation:\nThe string is \"a\\_a_\". The two blanks at the start and the end can each be filled with any letter (26 choices). The middle blanks must match their corresponding characters to form a palindrome. Hence, the total possible palindromes are 26 * 26 = 676.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 13,
+    "title": "Wave Theater Bill",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nVohra went to a movie with his friends in a Wave theater and during break time he bought pizzas, puffs and cool drinks. Consider the following prices:\n\nGenerate a bill for what Vohra has bought.\n\nSample Input 1:\n\nSample Output 1:",
+    "examples": "Enter the no of pizzas bought: 10\nEnter the no of puffs bought: 12\nEnter the no of cool drinks bought: 5",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 14,
+    "title": "Palindrome Checker",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nGoutam and Tanul play by telling numbers. Goutam says a number to Tanul. Tanul should first reverse the number and check if it is the same as the original. If yes, Tanul should say \"Palindrome\". If not, he should say \"Not a Palindrome\". If the number is negative, print \"Invalid Input\". Help Tanul by writing a program.\n\nSample Input 1:\n\nSample Output 1:",
+    "examples": "21212",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 15,
+    "title": "Count Words",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nCount the number of words in a string.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 16,
+    "title": "Sum of Prime Factors",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nFind the sum of prime factors of a number.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 17,
+    "title": "Mid Positive Element",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem:\nFind the middle positive element in a given array.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 18,
+    "title": "Half Sum Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a program that checks whether the sum of the first half of an array is less than the sum of the second half. If this condition is met, the program should reverse the entire array. Finally, the program should print the resulting array.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 19,
+    "title": "Generate a Bill for Vohra's Purchase",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Vohra went to a movie with his friends and bought pizzas, puffs, and cool drinks during the break. Given the prices:\n\nGenerate a bill for what Vohra has bought.\n\nSample Input 1\n\nSample Output 1",
+    "examples": "Enter the number of pizzas bought: 10\nEnter the number of puffs bought: 12\nEnter the number of cool drinks bought: 5",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 20,
+    "title": "Palindrome Check",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Goutam says a number to Tanul. Tanul should first reverse the number and check if it is the same as the original. If yes, Tanul should say \"Palindrome\". If not, he should say \"Not a Palindrome\". If the number is negative, print \"Invalid Input\". Write a program to help Tanul.\n\nSample Input 1\n\nSample Output 1",
+    "examples": "21212",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 21,
+    "title": "Maximum Subarray Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums, find the subarray with the largest sum, and return its sum.\n\nInput Example\n\nOutput Example",
+    "examples": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 22,
+    "title": "Buzz Number Check",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a function to check whether a given number is a Buzz number or not. A Buzz number is a number that ends with the digit 7 or is divisible by 7.\n\nExamples",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 23,
+    "title": "ASCII Character Display",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Ritik wants a magic board that displays a character for a corresponding number for his science project. Develop an application that converts given numbers to their corresponding characters.\n\nExample: When the digits 65, 66, 67, 68 are entered, the alphabet A, B, C, D should be displayed.\n\nSample Input 1\n\nSample Output 1",
+    "examples": "Enter the digits:\n65\n66\n67\n68",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 24,
+    "title": "Find the Second Largest Number in an Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to find the second largest number in an array.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 25,
+    "title": "Merge Two Sorted Arrays",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to merge two sorted arrays into one sorted array.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 26,
+    "title": "Reverse an Integer",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to reverse the digits of a given integer.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 27,
+    "title": "Count the Number of Vowels in a String",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to count the number of vowels in a given string.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 28,
+    "title": "Find LCM (Least Common Multiple)",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to find the LCM of two numbers using the GCD.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 29,
+    "title": "Find GCD (Greatest Common Divisor) Using Recursion",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a recursive function to find the GCD of two numbers.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 30,
+    "title": "Check if a Number is Prime",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to check if a given number is prime.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 31,
+    "title": "Fibonacci Sequence (Recursive)",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a recursive function to find the nth Fibonacci number.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 32,
+    "title": "Find the Minimum Element in an Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to find the minimum element in an array.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 33,
+    "title": "Find the Maximum Element in an Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to find the maximum element in an array.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 34,
+    "title": "Bubble Sort",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement the bubble sort algorithm to sort an array of integers.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 35,
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a binary search algorithm to find a target value in a sorted array.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 36,
+    "title": "Find the Factorial of a Number",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to calculate the factorial of a given number using recursion.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 37,
+    "title": "Check if a String is a Palindrome",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to check if a given string is a palindrome.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 38,
+    "title": "Reverse a String",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function to reverse a given string.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 39,
+    "title": "Reverse a String",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function that takes a string as input and returns the string reversed.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 40,
+    "title": "Find the Second Largest Element in an Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of integers, write a function to find the second largest element without sorting the array.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 41,
+    "title": "Check if a String is a Palindrome",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a program to check if a given string is a palindrome.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 42,
+    "title": "Find the Missing Number in an Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of numbers from 1 to n with one missing number, write a program to find the missing number.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 43,
+    "title": "Find All Duplicates in an Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of integers where each element may appear twice or more, find all the duplicate elements.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 44,
+    "title": "Merge Two Sorted Arrays",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a program to merge two sorted arrays into one sorted array without using any sorting function.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 45,
+    "title": "Reverse a Linked List",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Reverse a singly linked list.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 46,
+    "title": "Median of Two Sorted Arrays",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the median of two sorted arrays.\n\nTCS NQT Coding questions\n\nJoin Our WhatsApp Channel for more resources",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  }
+]

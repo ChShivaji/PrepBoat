@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "title": "Gift Box Packing Problem",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: You have N gifts of different types. Pack them into exactly K boxes (consecutive subarrays) such that each box's value equals the number of distinct gift types in it. Maximize the total value across all boxes.\n\n💡Solution Approach: Use DP with sliding window technique and hash map to track distinct elements efficiently. For each position, try all possible box endings and memoize results.",
+    "examples": "Example:\nInput: N=6, K=3, gifts=[1,1,2,2,3,3]\nOutput: 6 (boxes: [1,1]=1, [2,2]=1, [3,3]=1, total=3 is not optimal)\n       Better: [1,1,2]=2, [2]=1, [3,3]=1, total=4\n       Optimal: [1]=1, [1,2,2]=2, [3,3]=1, total=4\n\nInput Format:\nN K\nA[1] A[2] ... A[N]\n\nOutput Format:\nMaximum possible total value",
+    "approach": "Use DP with sliding window technique and hash map to track distinct elements efficiently. For each position, try all possible box endings and memoize results.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 2,
+    "title": "Array Minimization Problem",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given an array, you can perform two operations:\n\nFind minimum cost to make all elements zero.\n\n💡 Solution Approach: For each element, compare cost of reducing it to 0 via subarray operations vs direct assignment. Use prefix sums to optimize range operations.",
+    "examples": "Example:\nInput: N=3, X=2, Y=3, A=[4,2,1]\nOutput: 8\nExplanation: Operation 1 on [1,3] twice (cost=4), then operation 1 on [1,2] twice (cost=4)\nTotal cost = 8\n\nInput Format:\nN X Y\nA[1] A[2] ... A[N]\n\nOutput Format:\nMinimum total cost",
+    "approach": "For each element, compare cost of reducing it to 0 via subarray operations vs direct assignment. Use prefix sums to optimize range operations.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 3,
+    "title": "Terrain Transformation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Transform terrain heights to strictly decreasing sequence. Each day, you can reduce any segment's height by any power of 2 (1, 2, 4, 8, ...). Find minimum days required.\n\n💡 Solution Approach: Binary search on answer. For each day count, check if it's possible to make sequence decreasing using greedy allocation of reduction operations.",
+    "examples": "Example:\nInput: N=4, heights=[8,6,4,2]\nOutput: 0 (already decreasing)\n\nInput: N=3, heights=[5,5,5]\nOutput: 2\nDay 1: [5,4,4] (reduce middle by 1)\nDay 2: [5,4,3] (reduce last by 1)\n\nInput Format:\nN\nL[1] L[2] ... L[N]\n\nOutput Format:\nMinimum days required",
+    "approach": "Binary search on answer. For each day count, check if it's possible to make sequence decreasing using greedy allocation of reduction operations.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 4,
+    "title": "Same Digit Base Conversion",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Find the smallest base K such that decimal number M, when converted to base K, has all identical digits.\n\n💡 Solution Approach: For each possible base from 2 to M, convert M to that base and check if all digits are identical. Optimize by noting that for base b, M should be of form d×(b^n-1)/(b-1).",
+    "examples": "Example:\nInput: M=15\nOutput: 4\nExplanation: 15 in base 4 = 33 (all digits same)\n\nInput: M=7\nOutput: 6\nExplanation: 7 in base 6 = 11\n\nInput Format:\nM\n\nOutput Format:\nSmallest valid base K",
+    "approach": "For each possible base from 2 to M, convert M to that base and check if all digits are identical. Optimize by noting that for base b, M should be of form d×(b^n-1)/(b-1).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 5,
+    "title": "Maximum Vacation Days",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Andy has N days and M obligation days when he cannot take vacation. Find the maximum number of consecutive vacation days possible.\n\n💡 Solution Approach: Sort obligation days, find maximum gap between consecutive obligations, also consider gaps at beginning and end.",
+    "examples": "Example:\nInput: N=10, M=3, obligations=[2,5,8]\nOutput: 4\nExplanation: Days 1-1 (1 day), 3-4 (2 days), 6-7 (2 days), 9-10 (2 days)\nMaximum consecutive = 2... wait, actually 9-10-11-12... no, N=10\nActually: 6-7 and 9-10, so max consecutive is 2\nBetter: if obligations are [2,5,8] in days 1-10\nGaps: 1, 3-4, 6-7, 9-10. Max gap = 2\n\nInput Format:\nN M\nday[1] day[2] ... day[M]\n\nOutput Format:\nMaximum consecutive vacation days",
+    "approach": "Sort obligation days, find maximum gap between consecutive obligations, also consider gaps at beginning and end.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 6,
+    "title": "Conditional Longest Increasing Subsequence",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Find length of LIS where adjacent elements satisfy: A[i] OP A[i+1] == target, where OP is AND, OR, or XOR.\n\n💡 Solution Approach: Modify standard LIS DP to include bitwise condition checking between adjacent elements in the subsequence.",
+    "examples": "Example:\nInput: N=4, A=[1,3,2,4], OP=AND, target=0\nOutput: 3\nExplanation: Subsequence [1,3,4] where 1&3=1≠0, 3&4=0=target...\nNeed to check adjacent pairs in LIS\n\nInput Format:\nN\nA[1] A[2] ... A[N]\noperation_type target_value\n\nOutput Format:\nLength of valid LIS",
+    "approach": "Modify standard LIS DP to include bitwise condition checking between adjacent elements in the subsequence.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 7,
+    "title": "Element Frequency Analysis",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Count total repeated elements and total non-repeated elements in an array.\n\n💡 Solution Approach: Use frequency map to count occurrences, then categorize elements based on frequency > 1 or == 1.",
+    "examples": "Example:\nInput: N=6, A=[1,2,2,3,3,3]\nOutput: 2 1\nExplanation: Elements 2,3 are repeated (count=2), element 1 is non-repeated (count=1)\n\nInput Format:\nN\nA[1] A[2] ... A[N]\n\nOutput Format:\nrepeated_count non_repeated_count",
+    "approach": "Use frequency map to count occurrences, then categorize elements based on frequency > 1 or == 1.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 8,
+    "title": "First Non-Repeating Character",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Find the first character that appears exactly once in the string.\n\n💡 Solution Approach: Two-pass solution: count frequencies, then find first character with frequency 1. Or use ordered dictionary for single pass.",
+    "examples": "Example:\nInput: \"programming\"\nOutput: 'p'\nExplanation: 'p' appears once and comes first among non-repeating chars\n\nInput: \"aabbcc\"\nOutput: 'None'\n\nInput Format:\nstring S\n\nOutput Format:\nfirst_non_repeating_character or 'None'",
+    "approach": "Two-pass solution: count frequencies, then find first character with frequency 1. Or use ordered dictionary for single pass.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 9,
+    "title": "Reverse Linked List",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Reverse a singly linked list iteratively or recursively.\n\n💡 Solution Approach: Iterative: Use three pointers (prev, curr, next). Recursive: Reverse rest of list, then adjust pointers.",
+    "examples": "Example:\nInput: 1->2->3->4->5->NULL\nOutput: 5->4->3->2->1->NULL\n\nInput Format:\nN\nnode[1] node[2] ... node[N]\n\nOutput Format:\nReversed linked list",
+    "approach": "Iterative: Use three pointers (prev, curr, next). Recursive: Reverse rest of list, then adjust pointers.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 10,
+    "title": "Add Two Numbers (Linked Lists)",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Add two numbers represented as linked lists (digits in reverse order).\n\n💡 Solution Approach: Simulate elementary addition with carry. Handle different lengths and final carry carefully.",
+    "examples": "Example:\nInput: L1: 2->4->3 (represents 342)\n       L2: 5->6->4 (represents 465)\nOutput: 7->0->8 (represents 807)\n\nInput Format:\nTwo linked lists representing numbers\n\nOutput Format:\nSum as linked list",
+    "approach": "Simulate elementary addition with carry. Handle different lengths and final carry carefully.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 11,
+    "title": "Maximum Subarray Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Find the maximum sum of any contiguous subarray.\n\n💡 Solution Approach: Kadane's Algorithm - track current sum and maximum sum seen so far.",
+    "examples": "Example:\nInput: [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6\nExplanation: [4,-1,2,1] has the largest sum = 6\n\nInput Format:\nN\nA[1] A[2] ... A[N]\n\nOutput Format:\nMaximum subarray sum",
+    "approach": "Kadane's Algorithm - track current sum and maximum sum seen so far.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 12,
+    "title": "First Occurrence in Sorted Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Find the first occurrence of target element in a sorted array.\n\n💡 Solution Approach: Modified binary search - when target found, continue searching in left half to find first occurrence.",
+    "examples": "Example:\nInput: A=[1,2,2,2,3,4,5], target=2\nOutput: 1 (0-indexed)\n\nInput: A=[1,3,5,7], target=4\nOutput: -1\n\nInput Format:\nSorted array A, target T\n\nOutput Format:\nIndex of first occurrence of T or -1",
+    "approach": "Modified binary search - when target found, continue searching in left half to find first occurrence.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 13,
+    "title": "Goal Tracker",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Calculate average steps per day needed to reach goal.\n\n💡 Solution Approach: Simple arithmetic - (goal - done) / days_remaining, with proper rounding.",
+    "examples": "Example:\nInput: S=1000 (goal), D=300 (done), N=7 (days remaining)\nOutput: 100 (rounded average)\nExplanation: (1000-300)/7 = 100 steps per day\n\nInput Format:\nS D N\n\nOutput Format:\nAverage steps per day (rounded)",
+    "approach": "Simple arithmetic - (goal - done) / days_remaining, with proper rounding.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 14,
+    "title": "Octal to Binary Conversion",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Convert octal number to binary representation.\n\n💡 Solution Approach: Convert octal → decimal → binary, or directly convert each octal digit to 3-bit binary.",
+    "examples": "Example:\nInput: 17 (octal)\nOutput: 1111 (binary)\nExplanation: 17₈ = 1×8¹ + 7×8⁰ = 15₁₀ = 1111₂\n\nInput: 25 (octal)\nOutput: 10101 (binary)\n\nInput Format:\nOctal number\n\nOutput Format:\nBinary string",
+    "approach": "Convert octal → decimal → binary, or directly convert each octal digit to 3-bit binary.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 15,
+    "title": "Swap Two Arrays",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Swap all elements between two arrays A and B.\n\n💡 Solution Approach: Simple element-wise swapping using temporary variable or XOR operation.",
+    "examples": "Example:\nInput: N=3, A=[1,2,3], B=[4,5,6]\nOutput: A=[4,5,6], B=[1,2,3]\n\nInput Format:\nN\nA[1] A[2] ... A[N]\nB[1] B[2] ... B[N]\n\nOutput Format:\nSwapped arrays A and B",
+    "approach": "Simple element-wise swapping using temporary variable or XOR operation.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 16,
+    "title": "0/1 Knapsack Problem",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given items with weights and values, maximize value within weight capacity W.\n\n💡 Solution Approach: DP table dp[i][w] = maximum value using first i items with weight limit w.",
+    "examples": "Example:\nInput: N=3, W=4, weights=[4,5,1], values=[1,2,3]\nOutput: 3\nExplanation: Take item 3 (weight=1, value=3)\n\nInput Format:\nN W\nweights[1] weights[2] ... weights[N]\nvalues[1] values[2] ... values[N]\n\nOutput Format:\nMaximum achievable value",
+    "approach": "DP table dp[i][w] = maximum value using first i items with weight limit w.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 17,
+    "title": "Tower of Hanoi",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Find sequence of moves to transfer N disks from source to destination rod.\n\n💡 Solution Approach: Recursive solution - move n-1 disks to auxiliary, move largest to destination, move n-1 from auxiliary to destination.",
+    "examples": "Example:\nInput: N=2\nOutput:\nMove disk 1 from A to B\nMove disk 2 from A to C\nMove disk 1 from B to C\n\nInput Format:\nN\n\nOutput Format:\nSequence of moves",
+    "approach": "Recursive solution - move n-1 disks to auxiliary, move largest to destination, move n-1 from auxiliary to destination.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 18,
+    "title": "Factorial Calculation",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Calculate factorial of given number N.\n\n💡 Solution Approach: Iterative multiplication or recursive approach. Handle edge case N=0.",
+    "examples": "Example:\nInput: N=5\nOutput: 120\nExplanation: 5! = 5×4×3×2×1 = 120\n\nInput: N=0\nOutput: 1\n\nInput Format:\nN\n\nOutput Format:\nN!",
+    "approach": "Iterative multiplication or recursive approach. Handle edge case N=0.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 19,
+    "title": "Bitwise AND of Range",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Find bitwise AND of all numbers in range [L, R].\n\n💡 Solution Approach: Key insight - find common prefix of L and R in binary. Shift both right until they become equal.",
+    "examples": "Example:\nInput: L=5, R=7\nOutput: 4\nExplanation: 5 & 6 & 7 = 101 & 110 & 111 = 100 = 4\n\nInput: L=1, R=3\nOutput: 0\n\nInput Format:\nL R\n\nOutput Format:\nBitwise AND of all numbers from L to R",
+    "approach": "Key insight - find common prefix of L and R in binary. Shift both right until they become equal.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 20,
+    "title": "Array and Bit Manipulation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: For each element in array, find the smallest power of 2 greater than or equal to it.\n\n💡 Solution Approach: For each number, if it's already a power of 2, return it. Otherwise, find the position of MSB and return 2^(position+1).",
+    "examples": "Example:\nInput: A=[3, 7, 1, 10]\nOutput: [4, 8, 1, 16]\nExplanation:\n- For 3: smallest power of 2 ≥ 3 is 4\n- For 7: smallest power of 2 ≥ 7 is 8\n- For 1: smallest power of 2 ≥ 1 is 1\n- For 10: smallest power of 2 ≥ 10 is 16\n\nInput Format:\nArray A[1 to N]\n\nOutput Format:\nArray of smallest powers of 2",
+    "approach": "For each number, if it's already a power of 2, return it. Otherwise, find the position of MSB and return 2^(position+1).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  }
+]

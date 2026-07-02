@@ -1,0 +1,1410 @@
+[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of integers and a target value, determine if there are any two integers in the array whose sum equals the given value. Return true if the sum exists, false otherwise. You may not use the same element twice, and the answer can be returned in any order.",
+    "examples": "Input: nums = [2, 7, 11, 15], target = 9Output: [0, 1] (because nums[0] + nums[1] = 2 + 7 = 9)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 2,
+    "title": "Set Rows and Columns to Zero",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a two-dimensional array (matrix), if any element is zero, set its entire row and column to zero.",
+    "examples": "Input: matrix = [[0, 2, 3, 4], [5, 6, 0, 8], [9, 10, 11, 12], [13, 14, 15, 16]]Output: [[0, 0, 0, 0], [0, 6, 0, 8], [0, 10, 0, 12], [0, 14, 0, 16]]",
+    "approach": "Zeros at positions (0,0) and (1,2) cause their respective rows and columns to be set to zero.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 3,
+    "title": "Add Two Numbers Represented by Linked Lists",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the head pointers of two linked lists where each linked list represents an integer number (each node is a digit, with the first node as the least significant digit), add the numbers and return the resulting linked list.",
+    "examples": "Input: l1 = 8 -> 4 -> 7 (748), l2 = 9 -> 0 -> 3 -> 6 (6309)Output: 7 -> 5 -> 0 -> 7 (7057, since 748 + 6309 = 7057)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 4,
+    "title": "Copy Linked List with Arbitrary Pointer",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a linked list where each node has two pointers—next (regular pointer) and arbitrary_pointer (can point to any node in the list)—create a deep copy of the linked list. The deep copy should be independent, meaning operations on the original list (inserting, modifying, removing) should not affect the copied list.",
+    "examples": "Input: Linked list with nodes [1, 2, 3, 4, 5] and arbitrary pointers (e.g., 1->3, 2->1, 3->5, 4->3, 5->2)Output: A new linked list with the same structure and arbitrary pointer connections.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 5,
+    "title": "Level Order Traversal of Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the root of a binary tree, display the node values at each level (level-order traversal). Return the result as a list of lists, where each inner list contains the node values at a particular level.",
+    "examples": "Input: Binary tree with root = 5, left = 9, right = 12, right.left = 25, right.right = 7Output: [[5], [9, 12], [25, 7]]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 6,
+    "title": "Connect Sibling Pointers in Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a binary tree, connect the sibling pointer of each node to the next node at the same level. The last node in each level should point to the first node of the next level.",
+    "examples": "Input: Binary tree with nodes [1, 2, 3, 4, 5]Output: Nodes connected such that 1->2, 2->3, 3->4, 4->5, 5->null",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 7,
+    "title": "Find Missing Number in Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of positive numbers from 1 to n, where all numbers except one (x) are present, find the missing number x. The array is unsorted.",
+    "examples": "Input: nums = [1, 2, 4, 5, 6, 7, 8], n = 8Output: 6",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 8,
+    "title": "Merge Two Sorted Linked Lists",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write a function that takes two sorted linked lists and merges them into a single sorted linked list by splicing their nodes together.",
+    "examples": "Input: l1 = 1 -> 2 -> 4, l2 = 3 -> 5 -> 6Output: 1 -> 2 -> 3 -> 4 -> 5 -> 6",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 9,
+    "title": "Check if Binary Tree is Symmetric",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a binary tree, determine if it is a mirror image of itself (symmetric). Return true if symmetric, false otherwise.",
+    "examples": "Input: Tree with root = 1, left = 2, right = 2, left.left = 3, left.right = 4, right.left = 4, right.right = 3Output: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 10,
+    "title": "Reverse Words in a Sentence",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Reverse the order of words in a given sentence.",
+    "examples": "Input: \"sphinx of black quartz judge my vow\"Output: \"vow my judge quartz black of sphinx\"",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 11,
+    "title": "String Segmentation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a dictionary of words and a large input string, determine if the input string can be completely segmented into words from the dictionary.",
+    "examples": "Input: s = \"applepenapple\", dictionary = [\"apple\", \"pen\"]Output: true (because \"applepenapple\" can be segmented as \"apple pen apple\")",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 12,
+    "title": "Find Maximum Single Sell Profit",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a list of daily stock prices (integers), return the buy and sell prices that maximize the profit from a single buy/sell transaction. If no profit is possible, minimize the loss.",
+    "examples": "Input: prices = [7, 1, 5, 3, 6, 4]Output: Buy at 1, sell at 6 (profit = 5)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 13,
+    "title": "Length of Longest Subsequence (Increasing then Decreasing)",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a one-dimensional integer array of length n, find the length of the longest subsequence that increases before decreasing.",
+    "examples": "Input: arr = [1, 2, 3, 2, 1]Output: 5 (the entire array is a valid subsequence)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 14,
+    "title": "Longest Path in Matrix",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an n*n matrix where all numbers are distinct, find the longest path starting from any cell such that all cells along the path increase in order by 1.",
+    "examples": "Input: matrix = [[1, 2, 9], [5, 3, 8], [4, 6, 7]]Output: 6 (path: 1 -> 2 -> 3 -> 4 -> 5 -> 6)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 15,
+    "title": "Find All Sum Combinations",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a positive integer target, print all possible combinations of positive integers that sum up to the target.",
+    "examples": "Input: target = 5Output: [[1, 4], [2, 3], [1, 1, 3], [1, 2, 2], [1, 1, 1, 2], [1, 1, 1, 1, 1]]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 16,
+    "title": "Find Kth Permutation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a set of n variables, find the kth permutation of those variables.",
+    "examples": "Input: n = 3, k = 3Output: \"213\" (the 3rd permutation of [1, 2, 3])",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 17,
+    "title": "Regular Expression Matching",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a text and a pattern, determine if the pattern matches the text completely using regular expression matching. The pattern contains only two operators: . (matches any single character) and * (the preceding character may appear zero or more times).",
+    "examples": "Input: text = \"aab\", pattern = \"c*a*b\"Output: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 18,
+    "title": "Rat in a Maze",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "A rat is placed at position (0,0) in a square n*n matrix. Find all possible paths to reach the destination (n-1, n-1). The rat can move vertically or horizontally, only through cells with value 1 (traversable), and cannot visit a cell more than once. Cells with value 0 are impassable.",
+    "examples": "Input: matrix = [[1, 0, 0], [1, 1, 0], [0, 1, 1]]Output: Paths like [(0,0), (1,0), (1,1), (2,1)]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 19,
+    "title": "Solve the Sudoku",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a 9*9 square matrix representing an incomplete Sudoku puzzle, return true if the puzzle can be completed and provide the completed grid. Otherwise, return false.",
+    "examples": "Input: grid = [[5,3,.,.,7,.,.,.,.], ...] (partial Sudoku grid)Output: true (with completed grid) or false",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 20,
+    "title": "Clone a Directed Graph",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the root node of a directed graph, create a deep copy of the graph with the same vertices and edges.",
+    "examples": "Input: Graph with nodes [1, 2, 3] and edges [1->2, 2->3, 3->1]Output: A new graph with identical structure",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 21,
+    "title": "Breadth-First Traversal of a Graph",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Starting from a source node, traverse a given graph breadthwise to find the distance between the source node and node n.",
+    "examples": "Input: Graph with nodes [1, 2, 3, 4], edges [1->2, 2->3, 3->4], source = 1, target = 4Output: 3 (distance from 1 to 4)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 22,
+    "title": "Check Path from Source to Destination",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an n*n graph where each cell contains a value (0 = source, 1 = wall, 2 = blank, 3 = destination), determine if there is a path from the source to the destination. The graph can be traversed horizontally and vertically.",
+    "examples": "Input: graph = [[0, 2, 2], [1, 1, 2], [2, 2, 3]]Output: true (path exists from (0,0) to (2,2))",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 23,
+    "title": "Find Closest Meeting Point",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given n people on a square grid, find the point that requires the least total distance for all people to meet at that point.",
+    "examples": "Input: grid = 5x5 with people at positions [(0,0), (1,1), (2,2)]Output: (1,1) (minimizes total Manhattan distance)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 24,
+    "title": "Search in a Sorted 2D Matrix",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a two-dimensional array where all elements in each row and column are sorted, find the position of a given key.",
+    "examples": "Input: matrix = [[1, 3, 5], [2, 6, 9], [7, 8, 10]], key = 6Output: (1,1)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 25,
+    "title": "Check if Binary Tree is BST",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a binary tree, determine if it is a valid Binary Search Tree (BST).",
+    "examples": "Input: Tree with root = 2, left = 1, right = 3Output: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 26,
+    "title": "Remove Duplicates from String In-Place",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Remove duplicates from a string in-place.",
+    "examples": "Input: \"abbaca\"Output: \"abca\"",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 27,
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a rotated sorted array (unique elements), search for a target element.",
+    "examples": "Input: nums = [4, 5, 6, 7, 0, 1, 2], target = 0Output: 4 (index of 0)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 28,
+    "title": "Print Last 10 Lines of a Big File",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a large file or string, print the last 10 lines.",
+    "examples": "Input: A file with 100 linesOutput: Lines 91 to 100",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 29,
+    "title": "Connect Nodes at Same Level",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Connect nodes at the same level in a binary tree using a next pointer.",
+    "examples": "Input: Binary tree with nodes [1, 2, 3, 4, 5]Output: Nodes connected such that 2->3, 4->5, etc.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 30,
+    "title": "Least Common Ancestor in Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the least common ancestor of two nodes in a binary tree or BST.",
+    "examples": "Input: Tree with root = 3, nodes = 5, 1Output: 3 (LCA of 5 and 1)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 31,
+    "title": "Run Length Encoding",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement run-length encoding for a given string.",
+    "examples": "Input: \"AAABBBCC\"Output: \"A3B3C2\"",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 32,
+    "title": "Detect Cycle in Linked List",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Determine if a linked list contains a cycle.",
+    "examples": "Input: Linked list with nodes [3, 2, 0, -4], where -4 points back to 2Output: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 33,
+    "title": "Correct Swapped Nodes in BST",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Two nodes in a Binary Search Tree are swapped. Correct the BST to restore its properties.",
+    "examples": "Input: BST with nodes [3, 5, 2] (where 5 and 2 are swapped)Output: Corrected BST [3, 2, 5]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 34,
+    "title": "Word Wrap",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a sequence of words and a maximum line width, format the text such that each line has at most the given width and words are not split.",
+    "examples": "Input: words = [\"This\", \"is\", \"an\", \"example\"], width = 7Output: [\"This is\", \"an\", \"example\"]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 35,
+    "title": "Shortest Path in Unweighted Graph",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the shortest path from a source to a destination in an unweighted graph.",
+    "examples": "Input: Graph with nodes [1, 2, 3, 4], edges [1->2, 2->3, 3->4], source = 1, destination = 4Output: 3 (path length)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 36,
+    "title": "Node Level in Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a binary tree and a node, find the level of that node.",
+    "examples": "Input: Tree with root = 1, node = 3 (at level 2)Output: 2",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 37,
+    "title": "Sum at Kth Level",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the sum of node values at the kth level of a binary tree.",
+    "examples": "Input: Tree with root = 1, level 2 = [2, 3], k = 2Output: 5 (2 + 3)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 38,
+    "title": "Compress the String",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Compress a string by replacing repeated characters with their count.",
+    "examples": "Input: \"aabcccccaaa\"Output: \"a2b1c5a3\"",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 39,
+    "title": "Convert Binary Tree to Doubly Linked List",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Convert a given binary tree to a doubly linked list using in-order traversal.",
+    "examples": "Input: Binary tree with in-order [4, 2, 5, 1, 3]Output: Doubly linked list 4 <-> 2 <-> 5 <-> 1 <-> 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 40,
+    "title": "Longest Mountain Subarray",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the length of the longest subarray that forms a mountain (increases then decreases).",
+    "examples": "Input: arr = [2, 1, 4, 7, 3, 2, 5]Output: 5 (subarray [1, 4, 7, 3, 2])",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 41,
+    "title": "Kth Smallest Element",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the kth smallest element in an unsorted array.",
+    "examples": "Input: arr = [7, 10, 4, 3, 20, 15], k = 3Output: 7",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 42,
+    "title": "Swap Numbers Without Temporary Variable",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Swap two numbers without using a temporary variable.",
+    "examples": "Input: a = 5, b = 10Output: a = 10, b = 5",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 43,
+    "title": "Minimum Steps to Reach Target by a Knight",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the minimum number of steps for a knight to reach a target position on a chessboard.",
+    "examples": "Input: start = (0,0), target = (2,2)Output: 2",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 44,
+    "title": "Diagonal Traversal of Matrix",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Traverse a matrix diagonally and return the elements in diagonal order.",
+    "examples": "Input: matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]Output: [1, 2, 4, 7, 5, 3, 6, 8, 9]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 45,
+    "title": "Find All Triplets with Zero Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find all triplets in an array that sum to zero.",
+    "examples": "Input: arr = [-1, 0, 1, 2, -1, -4]Output: [[-1, 0, 1], [-1, 2, -1]]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 46,
+    "title": "Total Area of Overlapping Rectangles",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a list of rectangles (defined by bottom-left and top-right coordinates), find the total area of the overlapping regions.",
+    "examples": "Input: rectangles = [[0,0,2,2], [1,1,3,3]]Output: 7",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 47,
+    "title": "Longest Palindromic Subsequence",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the length of the longest palindromic subsequence in a string.",
+    "examples": "Input: s = \"bbbab\"Output: 4 (e.g., \"bbbb\")",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 48,
+    "title": "Nth Element of Modified Fibonacci Series",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the nth element of a modified Fibonacci series where each element is the sum of the previous three elements.",
+    "examples": "Input: n = 5, series starts as [0, 1, 1]Output: 5 (series: 0, 1, 1, 2, 4, 5)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 49,
+    "title": "Palindrome Partitioning",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Partition a string such that every substring in the partition is a palindrome. Return all possible partitions.",
+    "examples": "Input: s = \"aab\"Output: [[\"a\", \"a\", \"b\"], [\"aa\", \"b\"]]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 50,
+    "title": "Dice Throws",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given n dice and a target sum, find the number of ways to achieve the target sum by throwing the dice.",
+    "examples": "Input: n = 2, target = 7Output: 6 (e.g., (1,6), (2,5), (3,4), (4,3), (5,2), (6,1))",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 51,
+    "title": "Reverse a String",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Reverse a given string.",
+    "examples": "Input: \"hello\"Output: \"olleh\"",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 52,
+    "title": "Find Largest Element in Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the largest element in an array.",
+    "examples": "Input: arr = [10, 5, 20, 8]Output: 20",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 53,
+    "title": "Implement Binary Search",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a binary search algorithm to find a target in a sorted array.",
+    "examples": "Input: arr = [2, 3, 4, 10, 40], target = 10Output: 3 (index of 10)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 54,
+    "title": "Check if String is Palindrome",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if a given string is a palindrome.",
+    "examples": "Input: \"racecar\"Output: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 55,
+    "title": "Sort Array Using Bubble Sort",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Sort an array using the bubble sort algorithm.",
+    "examples": "Input: arr = [64, 34, 25, 12, 22]Output: [12, 22, 25, 34, 64]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 56,
+    "title": "Find Second Smallest Element in Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the second smallest element in an array.",
+    "examples": "Input: arr = [12, 13, 1, 10, 34]Output: 10",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 57,
+    "title": "Count Frequency of Elements in Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Count the frequency of each element in an array.",
+    "examples": "Input: arr = [1, 2, 2, 3, 1]Output: {1: 2, 2: 2, 3: 1}",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 58,
+    "title": "Implement Stack Using Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a stack data structure using an array.",
+    "examples": "Operations: push(1), push(2), pop(), push(3)Output: Stack = [1, 3]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 59,
+    "title": "Find Minimum Element in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the minimum element in a rotated sorted array.",
+    "examples": "Input: arr = [4, 5, 6, 7, 0, 1, 2]Output: 0",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 60,
+    "title": "Implement Queue Using Two Stacks",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a queue using two stacks.",
+    "examples": "Operations: enqueue(1), enqueue(2), dequeue(), enqueue(3)Output: Queue = [2, 3]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 61,
+    "title": "Find Longest Common Prefix",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the longest common prefix in an array of strings.",
+    "examples": "Input: strs = [\"flower\", \"flow\", \"flight\"]Output: \"fl\"",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 62,
+    "title": "Find Maximum Depth of Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the maximum depth of a binary tree.",
+    "examples": "Input: Tree with root = 1, left = 2, right = 3, left.left = 4, left.right = 5Output: 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 63,
+    "title": "Reverse an Integer",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Reverse a given integer. Handle overflow cases.",
+    "examples": "Input: x = 123Output: 321",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 64,
+    "title": "Count Character Occurrences in String",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Count the number of occurrences of a character in a string.",
+    "examples": "Input: s = \"hello\", char = 'l'Output: 2",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 65,
+    "title": "Implement Hash Table",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a hash table with basic operations (insert, search, delete).",
+    "examples": "Operations: insert(1, \"one\"), insert(2, \"two\"), search(1)Output: \"one\"",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 66,
+    "title": "Find Median of Two Sorted Arrays",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given two sorted arrays, find the median of the combined array in logarithmic time.",
+    "examples": "Input: nums1 = [1, 3], nums2 = [2]Output: 2.0",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 67,
+    "title": "Implement Priority Queue",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a priority queue with operations (insert, extract-max/min).",
+    "examples": "Operations: insert(5), insert(3), extract-max()Output: 5",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 68,
+    "title": "Check if Number is Prime",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if a given number is prime.",
+    "examples": "Input: n = 17Output: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 69,
+    "title": "Remove Duplicates from Sorted Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Remove duplicates from a sorted array in-place.",
+    "examples": "Input: arr = [1, 1, 2, 2, 3]Output: [1, 2, 3]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 70,
+    "title": "Implement Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a binary tree with basic operations (insert, search, delete).",
+    "examples": "Operations: insert(5), insert(3), insert(7), search(3)Output: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 71,
+    "title": "Find Intersection of Two Linked Lists",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the intersection point of two linked lists.",
+    "examples": "Input: list1 = 1 -> 2 -> 3 -> 4, list2 = 9 -> 3 -> 4Output: Node with value 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 72,
+    "title": "Calculate Factorial",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Calculate the factorial of a given number.",
+    "examples": "Input: n = 5Output: 120",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 73,
+    "title": "Find First Non-Repeating Character",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the first non-repeating character in a string.",
+    "examples": "Input: s = \"leetcode\"Output: 'l'",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 74,
+    "title": "Implement Heap",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a max or min heap with operations (insert, extract-max/min).",
+    "examples": "Operations: insert(5), insert(3), extract-max()Output: 5",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 75,
+    "title": "Find Maximum Subarray Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the maximum sum of a contiguous subarray.",
+    "examples": "Input: arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]Output: 6 (subarray [4, -1, 2, 1])",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 76,
+    "title": "Check Valid Parentheses Sequence",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if a string contains a valid sequence of parentheses.",
+    "examples": "Input: s = \"({[]})\"Output: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 77,
+    "title": "Implement Depth-First Search",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a depth-first search algorithm for a graph.",
+    "examples": "Input: Graph with nodes [1, 2, 3], edges [1->2, 2->3]Output: Traversal order like [1, 2, 3]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 78,
+    "title": "Find Intersection of Two Arrays",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find the intersection of two arrays (common elements).",
+    "examples": "Input: nums1 = [1, 2, 2, 1], nums2 = [2, 2]Output: [2, 2]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 79,
+    "title": "Implement Breadth-First Search",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement a breadth-first search algorithm for a graph.",
+    "examples": "Input: Graph with nodes [1, 2, 3], edges [1->2, 2->3]Output: Traversal order like [1, 2, 3]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 80,
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a string, find the length of the longest substring without repeating characters.",
+    "examples": "Input: s = \"abcabcbb\"Output: 3 (substring \"abc\")",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 81,
+    "title": "Merge Intervals",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of intervals [starti, endi], merge all overlapping intervals and return a new array of non-overlapping intervals.",
+    "examples": "Input: intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]Output: [[1, 6], [8, 10], [15, 18]]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 82,
+    "title": "Merge Sorted Arrays",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array. nums1 has enough space (size m+n) to hold all elements.",
+    "examples": "Input: nums1 = [4, 8, 9, 0, 0, 0], m = 3, nums2 = [1, 2, 7], n = 3Output: [1, 2, 4, 7, 8, 9]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 83,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a 2D grid of 1s (land) and 0s (water), count the number of disconnected islands formed by connected land cells.",
+    "examples": "Input: grid = [[1, 1, 0], [1, 1, 0], [0, 0, 1]]Output: 2",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 84,
+    "title": "Single Number",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array where every element appears twice except one, find the element that appears only once.",
+    "examples": "Input: nums = [4, 1, 2, 1, 2]Output: 4",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 85,
+    "title": "Frequency of Most Frequent Element",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array and an integer k, find the maximum frequency of any element by incrementing elements at most k times.",
+    "examples": "Input: nums = [1, 2, 4], k = 5Output: 3 (increment 1 and 2 to 4, frequency of 4 becomes 3)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 86,
+    "title": "Subarray Sum Equals K",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of integers and an integer k, find the total number of continuous subarrays that sum to k.",
+    "examples": "Input: nums = [1, 1, 1], k = 2Output: 2 (subarrays [1, 1])",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 87,
+    "title": "Move Zeroes",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array, move all zeros to the end while maintaining the relative order of non-zero elements.",
+    "examples": "Input: nums = [0, 1, 0, 3, 12]Output: [1, 3, 12, 0, 0]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 88,
+    "title": "Simple Addition Check",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given two integers n and m, return n+m if the number of digits in n+m equals the number of digits in n; otherwise, return n.",
+    "examples": "Input: n = 123, m = 4Output: 123 (since 123 + 4 = 127 has more digits than 123)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  }
+]

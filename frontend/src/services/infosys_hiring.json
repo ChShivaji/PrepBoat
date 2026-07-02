@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Stage 1: HackWithInfy / Infytq Coding Rounds",
+    "desc": "A competitive coding assessment testing advanced data structures, dynamic programming, and math.",
+    "tip": "Practice topics like graphs, DP, backtracking, and mathematical logic."
+  },
+  {
+    "title": "Stage 2: Technical Interview",
+    "desc": "Interviewers verify your coding solutions, and grill on database queries, OOP design, and web stack.",
+    "tip": "Be prepared to dry run your code and explain alternative optimal solutions."
+  },
+  {
+    "title": "Stage 3: HR Interview",
+    "desc": "Standard verification loop discussing career growth, relocation, and salary options.",
+    "tip": "Maintain good communication and express long-term interest in technology consulting."
+  }
+]

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px; 
+  }
+  body {
+    background-color: #F8FAFC;
+    color: #1E293B;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    @apply antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply font-bold tracking-tight;
+  }
+
+  /* Make focused inputs and select boxes look premium */
+  input, select, textarea {
+    @apply focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-600 transition-all duration-150;
+  }
+}
+
+/* Light Theme Clean Card Styles */
+.glass-panel {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: #FAFAFA;
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+.brand-gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600;
+}
+
+.brand-gradient-bg {
+  @apply bg-gradient-to-r from-indigo-600 to-purple-600;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 70, 229, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 70, 229, 0.4);
+}
+
+/* Code Editor Custom Input Style */
+.code-editor, textarea.font-mono, pre, code {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace !important;
+}
+
+/* Ensure smooth fade-in animations on navigation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Custom inputs for fields in forms */
+.input-premium {
+  @apply w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none transition-all duration-200;
+}
+
+.button-premium {
+  @apply px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] transition-all duration-150 shadow-md shadow-indigo-600/10 flex items-center justify-center gap-2;
+}
+
+/* --- Premium 3D Effects, Transitions, and Custom Animations --- */
+
+/* 3D Card Hover Tilt Effect */
+.card-3d-hover {
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-3d-hover:hover {
+  transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.05);
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+/* Pulsing 3D AI Orbit Logo */
+.bot-avatar-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: floatBot 4s ease-in-out infinite;
+}
+
+@keyframes floatBot {
+  0%, 100% { transform: translateY(0) rotateY(0deg); }
+  50% { transform: translateY(-6px) rotateY(8deg); }
+}
+
+.bot-avatar-3d::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(135deg, #6366F1, #C084FC);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.7;
+  filter: blur(8px);
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  100% { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* Moving Colorful Gradient Background */
+.gradient-animate-bg {
+  background: linear-gradient(-45deg, #090d16, #0e172a, #1e1b4b, #111827);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Page Mount 3D Slide Transition */
+.page-mount-transition {
+  animation: pageMount 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform-style: preserve-3d;
+}
+
+@keyframes pageMount {
+  from {
+    opacity: 0;
+    transform: perspective(1200px) translateY(30px) rotateX(10deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(1200px) translateY(0) rotateX(0deg);
+  }
+}
+
+/* Slow rotating animation for orbital rings */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spinSlow 15s linear infinite;
+  transform-origin: center;
+}
+
+/* Sound wave animations */
+@keyframes wave-bar {
+  0% { transform: scaleY(0.2); }
+  100% { transform: scaleY(1.8); }
+}
+
+/* 3D Depth Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.translate-z-10 {
+  transform: translateZ(10px);
+}
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+.translate-z-30 {
+  transform: translateZ(30px);
+}
+
+

@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Stage 1: Online Assessment",
+    "desc": "AMCAT-based test including quantitative ability, reasoning, verbal skills, and hands-on coding.",
+    "tip": "Ensure that your code is clean and handles standard inputs correctly."
+  },
+  {
+    "title": "Stage 2: Technical Interview",
+    "desc": "Discusses coding questions, logic verification, OOP design principles, DBMS queries, and web basics.",
+    "tip": "Prepare to explain differences between OOP concepts like abstract class vs interface."
+  },
+  {
+    "title": "Stage 3: HR Round",
+    "desc": "Verifies communication, adaptability, terms and conditions, and details in your resume.",
+    "tip": "Demonstrate professional communication and express willingness to relocate."
+  }
+]

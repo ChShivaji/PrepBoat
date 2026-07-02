@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Stage 1: Wipro Elite Online Test",
+    "desc": "Aptitude section, logical analysis, verbal skills, and 2 hands-on coding problems on a platform like AMCAT.",
+    "tip": "Brush up on basic arithmetic, logic, and standard coding patterns like arrays and strings."
+  },
+  {
+    "title": "Stage 2: Technical Interview",
+    "desc": "Focuses on programming logic, resume projects, basic web development, and database concepts.",
+    "tip": "Be confident about what you wrote in your resume and explain project code clearly."
+  },
+  {
+    "title": "Stage 3: HR Interview",
+    "desc": "Verifies communication skills, shifts adaptability, relocation preferences, and documents check.",
+    "tip": "Show flexibility and positive interest in working with Wipro's global projects."
+  }
+]

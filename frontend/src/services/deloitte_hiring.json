@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Stage 1: Online Technical Test",
+    "desc": "MCQs on quantitative aptitude, logical reasoning, verbal ability, and programming fundamentals.",
+    "tip": "Focus on time management; do not spend too much time on a single MCQ."
+  },
+  {
+    "title": "Stage 2: Group Discussion / Case Study",
+    "desc": "Candidates analyze a real-world business case and collaborate in a group to pitch a strategy.",
+    "tip": "Be collaborative, support your arguments with logic, and avoid speaking over others."
+  },
+  {
+    "title": "Stage 3: Technical Interview",
+    "desc": "Covers coding logic, SQL queries, database indexing, web technologies, and systems engineering concepts.",
+    "tip": "Be prepared to write SQL queries on join operations, aggregation, and indexing."
+  },
+  {
+    "title": "Stage 4: Partner/HR Round",
+    "desc": "Strategic conversations with director/partner level managers checking long-term aspirations and business fit.",
+    "tip": "Understand Deloitte's consulting model and express enthusiasm for client-facing work."
+  }
+]

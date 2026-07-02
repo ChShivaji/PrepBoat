@@ -1,0 +1,33 @@
+# Dependency directories
+node_modules/
+.venv/
+venv/
+**/__pycache__/
+__pycache__/
+
+# Environments and Secrets
+.env
+backend/.env
+frontend/.env
+*.env
+
+# Build outputs
+dist/
+build/
+out/
+
+# Database files
+*.db
+backend/prepboat.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

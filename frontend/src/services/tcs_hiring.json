@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Stage 1: National Qualifier Test (NQT)",
+    "desc": "Integrated assessment evaluating numerical ability, logical reasoning, verbal skills, and hands-on coding.",
+    "tip": "Focus on speed and accuracy. Practice standard foundation programming."
+  },
+  {
+    "title": "Stage 2: Technical Interview",
+    "desc": "Face-to-face loop covering final-year projects, programming basics (C++/Java/Python), OOP, DBMS, and simple coding.",
+    "tip": "Prepare core CS subjects like Operating Systems, DBMS concepts, and normalization."
+  },
+  {
+    "title": "Stage 3: Managerial & HR Interview",
+    "desc": "Evaluates logical thinking, communication skills, career aspirations, and adaptability to company culture.",
+    "tip": "Keep a positive attitude and demonstrate willingness to learn new technologies."
+  }
+]

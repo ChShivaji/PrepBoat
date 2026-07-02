@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Stage 1: Resume Screening",
+    "desc": "Recruiters screen profiles for strong CS fundamentals, open-source contributions, or competitive programming achievements.",
+    "tip": "Highlight impact, metrics, and technical contributions on your resume."
+  },
+  {
+    "title": "Stage 2: Technical Phone Screen",
+    "desc": "1-2 rounds of 45-60 min live coding with a Google engineer. Focuses on core algorithms, graphs, recursion, or dynamic programming.",
+    "tip": "Google values thinking process, clean code, and time/space complexity analysis."
+  },
+  {
+    "title": "Stage 3: Virtual Onsite Loop",
+    "desc": "4-5 rounds of interviews: 3-4 coding rounds testing advanced DSA and system architecture, and 1 behavioral (Googliness) round.",
+    "tip": "Always think out loud, ask clarifying questions, and write tests for edge cases."
+  },
+  {
+    "title": "Stage 4: Hiring Committee & Team Matching",
+    "desc": "An independent committee reviews the interview reports to make the final hiring decision, followed by team match calls.",
+    "tip": "Be expressive and align your preferences with team projects."
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "title": "Date Time",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Arun and his sister Usha are challenging each other with some mathematical puzzles. Usha, the cleverer one, has come up with the idea of Giving Arun 12 distinct digits from 0 to 9, and have him from the largest date time in 2018 with them. Arun is a little nervous, and asks you to help him with a computer program.\n\nUsha will give Arun 12 distinct digits. He needs to create a date time combination in the year 2018: the date in the MM/DD form (all four digits must be present), and the time in the format HH:MM (all four digits must be present). The date may be from 01/01 to 12/31 and the time may be from 00:00 to\n23:59 (in the 24 hour format).\n\nThe digits provided may be used only once in the answer that Arun gives.\nIf more than one date time combination may be formed, Arun needs to give the latest valid date time possible in the year 2018.\n\nConstraints\nSingle digits (any of 0-9)\n\nInput Format\nA line consisting of a sequence of 12 (not necessarily distinct) single digits (any of 0-9) separated by commas. The sequence will be non-decreasing.\n\nOutput\nThe maximum possible valid date time in the year 2018. The output must be in the format\nMM/DD HH:MM\nIf no date time can be constructed, the output should be 0.\n\nExample1 :\n\nExplanation:\n\nThe 12 digits to be used by Arun are given.\nThe maximum valid date time using only the digits given, and with each digit used at most once is 12/30 22:59\nThis is the output.\n\nExample 2\n\nExplanation\nAs no digit less than 3 is present in the input, a valid month cannot be formed. Hence no valid Date time can be formed with the input digits.",
+    "examples": "Input: 0,0,1,2,2,2,3,5,9,9,9,9\nOutput: 12/30 22:59",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 2,
+    "title": "Digital Time",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "The objective is to form the maximum possible time in the HH:MM:SS format using any six of nine given single digits (not\nnecessarily distinct)\nGiven a set of nine single (not necessarily distinct) digits, say 0, 0, 1, 3, 4, 6, 7, 8, 9, it is possible to form many distinct times\nin a 24 hour time format HH:MM:SS, such as 17:36:40 or 10:30:41 by using each of the digits only once. The objective is to\nfind the maximum possible valid time (00:00:01 to 24:00:00) that can be formed using some six of the nine digits exactly\nonce. In this case, it is 19:48:37.\n\nInput : A line consisting of a sequence of 9 (not necessarily distinct) single digits (any of 0-9) separated by commas. The sequence will\nbe non-decreasing\n\nOutput : The maximum possible time in a 24 hour clock (00:00:01 to 24:00:00) in a HH:MM:SS form that can be formed by using some\nsix of the nine given digits (in any order) precisely once each. If no combination of any six digits will form a valid time, the\noutput should be the word Impossible\n\nExample 1\n\nExplanation:\nThe maximum valid time in a 24 hour clock that can be formed using some six of the 9 digits precisely once is 17:57:36\n\nExample 2\n\nExplanation\nNo set of six digits from the input may be used to form a valid time.",
+    "examples": "Input: 0,0,1,1,3,5,6,7,7\nOutput: 17:57:36",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 3,
+    "title": "Greedy Hostel Owner",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You know that summers are at peak this year and every day is hot and due to this everyone is using coolers and ACs and a lot of electricity is consumed by the people.\nYou are living in a hostel and your hostel owner decided to charge extra for electricity consumption. To achieve this he put one separate electricity meter for every room and connected all those meters to central meter.\n\nBut the hostel owner is a bit greedy and wants to manipulate the meters to show a reading that is more than the actual\nconsumption of electricity. He also encrypted all the meters with alphabets. The technique he used for encrypting is as follows:\n\nEvery meter has 6 Alphabets i.e. 6 digits.\n\nEvery alphabet is in upper case.\nAllowed alphabets are A, B, C, D, E, F, G, H, I, J.\nA corresponds to 0, B = 1 and similarly C = 2, D = 3, E = 4, F = 5, G = 6, H = 7, I = 8, J = 9\n\nThe interpretation rules change as follows:\n\nIf the alphabet next to J is A, then J represents 0. Similarly, if the alphabet after I is B, then I counts as 1 (and not 8), the alphabet after H is C, then H represents 2. The same is true if D follows G and if E follows F. Note that A, B, C, D and E will\nalways retain their respective values. When J is not followed by A, J will represent 9 and similar rules for I, H, G and F\nYou are given central meter reading and encrypted readings of all the meters in the hostel. Your task is to find out whether the\nthe owner is Greedy or Innocent. If he is greedy then print the unit difference otherwise print innocent.\n\nOwner is greedy if and only if\n(units of all meters in the hostel except central meter < central meter units)\n\nInput Format:\n\nFirst line contains an integer N, giving the number of rooms in the hostel.\nThe next line contains N strings each of length 6 characters giving the readings of the meters in the rooms\nThe next line contains an integer that gives the reading in the central meter\n\nOutput Format:\nFirst line containing either GREEDY or INNOCENT\nIf the first line is GREEDY, the next line should contain the difference (as a decimal number) between the central meter reading\nand the consumption shown in the rooms.\n\nConstraints:\nNumber of rooms <= 100\n\nExample 1\n\nExample 2\n\nExplanation\nThe readings are,\n000200, 000127, 000173, 000205, 0000099, 000149, 000299, 000238\nThe sum of these readings is 1490 < 1500, the central meter reading. Hence the owner is INNOCENT.",
+    "examples": "Input\n3\nJAABHF JAACJA JAACDA\n500\nOutput\nGREEDY\n105\nA B C D E F G H",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 4,
+    "title": "Civil War",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "In this superhero epic, the denizens of the Marvel Universe are forced to pick sides when Captain America and Iron Man come to blows over ideological differences.\nThe government decides to push for the Hero Registration Act, a law that limits a hero's actions. This results in a division in The Avengers. Iron Man stands with this Act, claiming that their actions must be kept in check otherwise cities will continue to be destroyed, but Captain America feels that saving the world is daring enough and that they cannot rely on the government to protect the world. And here the civil war begins.\nThey are trying make their team stronger by adding more avengers to their team. There are N avengers lined up.\nRules to add avenger to their team-\nAny team can start first. But they will alternatively only.\nThey can select avenger from any side. But if they start from one side they can't move to other side in current chance.\nThey can select consecutive avengers as many they want.\nThey will stop only when all the avengers are part of either side.\nEvery Avenger has a power associated with him\nThere are some spurious avengers who will decrease the overall power of the team.\nBoth teams will select players optimally. Find the difference of powers of the two teams\n\nConstraints\n1<= N <= 10^6\n-10^9 <= p[i] <= 10^9\n\nInput\nFirst line contains an integer denoting the number of Avengers(N).\nNext lines contain N space separated values denoting power of every avenger(P[i]).\n\nOutput\nPrint the difference of the powers of teams\n– Time Limit (secs)\n1\n\nExamples :",
+    "examples": "Input\n5\n2-78-1 20\nOutput\n2",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 5,
+    "title": "Possible Legal Subsets",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given N comma-separated Strings. You need to form all possible legal subsets of these N strings. These subsets will be a combination of zero or more of these N Strings After forming the subsets, they will be ranked in a particular onder. The legal subset formation and ranking logic is as described below\nRank 1 will always be an empty set\nNext N ranks will be the N Strings that appear in the order they are provided in the input\nAfter N + 1 ranks, you need to combine N strings such that all legal combinations are formed\nLegal combination simply means that while combinations are formed, the string that appears to the left of a particular string in the input, can never appear to the right of that particular string, when subsets are formed\nA subset with less elements will be ranked higher than a subset with more elements (NOTE-Rank 1 is higher than rank 2)\nRefer Example 2 to get a better understanding of how subsets are formed and ranked\nIt is guaranteed that\nN>=1\nAll N strings are unique\nExample: you are having an input string \"aa,cc,bb\" in this string we can see we have three strings which are comma separated. Now from this group of string we have to create all possible subset of strings. 8 subsets can be formed from these strings. And they are as follows:\n{}\n{aa}\n{cc}\n{bb}\n{aa,}\nNote: here we can see the ranks given to the subsets are first by size i.e., the subset with lesser number of strings is ranked higher than the subset with higher size. If the subsets have equal number of strings then, the combination which is formed earlier (by virtue of combining strings in order they appear in input), gets a higher rank.\nFor example, rank of su bset (aa,cc) > rank of (aa,bb) because string cc is appearing prior to string bb in the input. Similarly, rank of (cc) > rank of (bb).\nYou are provided one rank R and for that you have to print the Rth subset from all legal subsets.\n\nConstraints:\n0<N<=10^2\n0<R<=10^18\n\nInput\nFirst line contains an integer N which is number of strings in group.\nSecond line contains an integer R, for which you have to find Rth subset from all legal subsets.\nThird line contains N comma-separated strings basis which the subsets should be formed\n\nOutput:\nFrom all possible legal subsets find the subset whose rank is R\nTime Limit (secs)\n1\n\nExplanation:\nGiven that N = 2, given\nSecond line: Rank to be find: 4th\nThird line: Given group of strings: a,b\nPossible subsets & Rank\n{}-1\n{a} -2\n{b}-3\n{a, b}-4\nOutput – a,b (4th rank corresponds to a,b)",
+    "examples": "Input\n2\n4\na,b\nOutput\na,b",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 6,
+    "title": "Seating Arrangement",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are a caretaker of a waiting room and you have to take care of empty seats such that all the people should sit together. Imagine the seats are in a straight line like in a movie theatre. People are seated on random seats initially. Your task is to make them sit together so that minimum number of people change their position. Also, they can be made to sit together in many ways. Find the number of ways you can make them sit together by requiring only minimal people movement.\n\"E\" depicts an empty seat and \"O\" depicts an occupied seat. Input will be given in the form of a string.\nExample: OEOEO\nAs we can see, only seat number 1, 3, 5 are occupied and 2 and 4 are empty.\nCase 1: If we move 5th person to 2nd position, they can all be together with only one person moving his/her place.\nCase 2: If we movement 1st person to 4th position, they can all be together with only one person moving his/her place.\nThey can all be together with only one movement and this can be done in 2 ways. Print the minimum number of movements required and the number of ways this minimum movement can help achieve the objective.\nNote: If they are already sitting together, Print \"00\" as output.\n\nConstraints\n0 <N <= 100000\n\nInput\nFirst line contains an integer N which depicts the number of seats\nSecond line contains N characters each of which are either \"O\" or \"E\". \"O\" denotes an occupied seat and \"E\" denotes an empty seat.\n\nOutput\nPrint minimum number of movements required and the number of ways in which all people can be made to sit together without exceeding minimum number of movements by space\nTime Limit (secs)\n1\n\nExamples\n\nExplanation:\nGiven data of 5 seats in the queue,\nSeat number 2 and 4 are unoccupied and all the other seats are occupied.\nWe can make them sit together by moving only one person near to the other. It can be done in 2 ways:\nOOOEE (Moving 4 person to 2º position)\nEE000 (Moving 1 person to 4 position)",
+    "examples": "Input\n5\nOEOEO\nOutput\n1 2",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 7,
+    "title": "Polygon with Maximum Area",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given N number of coordinates and you have to create a polygon from these points such that they will make a polygon with maximum area.\nNote: coordinates provided in the input may or may not be in sequential form.\n\nConstraints\n1 <= N <= 10\n\nInput:\nFirst line contains an integer N which depicts number of co-ordinates\nNext N lines consist of two space separated integer depicting coordinates of in form of xy\n\nOutput:\nPrint the maximum possible area possible by creating a polygon by joining the coordinates.\nIf the area is in decimal form, print the absolute value as output.\nTime Limit (secs): 1\n\nExamples:\n\nExplanation:\nAs we can imagine that these points will make a square shape and the maximum possible area made by the polygon will be 4.",
+    "examples": "Input:\n4\n0  0\n2  0\n0  2\n2  2\nOutput: 4",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 8,
+    "title": "Consecutive Prime Sum",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Question – : Some prime numbers can be expressed as a sum of other consecutive prime numbers.\nFor example\n5 = 2 + 3,\n17 = 2 + 3 + 5 + 7,\n41 = 2 + 3 + 5 + 7 + 11 + 13.\nYour task is to find out how many prime numbers which satisfy this property are present in the range 3 to N subject to a constraint that summation should always start with number 2.\nWrite code to find out the number of prime numbers that satisfy the above-mentioned property in a given range.\n\nInput Format: First line contains a number N\nOutput Format: Print the total number of all such prime numbers which are less than or equal to N.\nConstraints: 2<N<=12,000,000,000",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 9,
+    "title": "Counting Rock Sample",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Question – : Juan Marquinho is a geologist and he needs to count rock samples in order to send it to a chemical laboratory. He has a problem: The laboratory only accepts rock samples by a range of its size in ppm (parts per million).\nJuan Marquinho receives the rock samples one by one and he classifies the rock samples according to the range of the laboratory. This process is very hard because the number of rock samples may be in millions.\nJuan Marquinho needs your help, your task is to develop a program to get the number of rocks in each of the ranges accepted by the laboratory.\n\nInput Format: An positive integer S (the number of rock samples) separated by a blank space, and a positive integer R (the number of ranges of the laboratory); A list of the sizes of S samples (in ppm), as positive integers separated by space R lines where the ith line containing two positive integers, space separated, indicating the minimum size and maximum size respectively of the ith range.\n\nOutput Format: R lines where the ith line contains a single non-negative integer indicating the number of the samples which lie in the ith range.\n\nConstraints:\n10 <= S <= 10000\n1 <= R <= 1000000\n1<=size of Sample <= 1000\n\nExample 1\n\nExplanation:\nThere are 10 samples (S) and 2 ranges ( R ). The samples are 345, 604,811. The ranges are 300-350 and 400-700. There are 2 samples in the first range (345 and 321) and 4 samples in the second range (604, 433, 470, 517). Hence the two lines of the output are 2 and 4",
+    "examples": "Input: 10 2\n345 604 321 433 704 470 808 718 517 811\n300 350\n400 700\nOutput: 2 4",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 10,
+    "title": "kth Largest factor of N",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Question -: A positive integer d is said to be a factor of another positive integer N if when N is divided by d, the remainder obtained is zero. For example, for number 12, there are 6 factors 1, 2, 3, 4, 6, 12. Every positive integer k has at least two factors, 1 and the number k itself.Given two positive integers N and k, write a program to print the kth largest factor of N.\n\nInput Format: The input is a comma-separated list of positive integer pairs (N, k).\nOutput Format: The kth highest factor of N. If N does not have k factors, the output should be 1.\n\nConstraints:\n1<N<10000000000\n1<k<600.\nYou can assume that N will have no prime factors which are larger than 13.\n\nExample 1\n\nExplanation: N is 12, k is 3. The factors of 12 are (1,2,3,4,6,12). The highest factor is 12 and the third largest factor is 4. The output must be 4.\n\nExample 2\n\nExplanation: N is 30, k is 9. The factors of 30 are (1,2,3,5,6,10,15,30). There are only 8 factors. As k is more than the number of factors, the output is 1.",
+    "examples": "Input: 12,3\nOutput: 4",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 11,
+    "title": "String Pair",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem Description\nOne person hands over the list of digits to Mr. String, But Mr. String understands only strings. Within strings also he understands only vowels. Mr. String needs your help to find the total number of pairs which add up to a certain digit D.The rules to calculate digit D are as follow :-\nTake all digits and convert them into their textual representation.\nNext, sum up the number of vowels i.e. {a, e, i, o, u} from all textual representation.\nThis sum is digit D\nNow, once digit D is known find out all unordered pairs of numbers in input whose sum is equal to D. Refer example section for better understanding.\n\nConstraints\n1 <= N <= 100\n1 <= value of each element in second line of input <= 100\nNumber 100, if and when it appears in input should be converted to textual representation as hundred and not as one hundred. Hence number of vowels in number 100 should be 2 and not 4\n\nInput\nFirst line contains an integer N which represents number of elements to be processed as input\nSecond line contains N numbers separated by space\n\nOutput\nLower case representation of textual representation of number of pairs in input that sum up to digit D\nNote: – (If the count exceeds 100 print \"greater 100\")\n\nExamples",
+    "examples": "Input : 5\n1 2 3 4 5\nOutput : one\n\nInput : 3\n7 4 2\nOutput : zero",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 12,
+    "title": "Elections",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Elections are going on, and there are two candidates A and B, contesting with each other. There is a queue of voters and in this queue some of them are supporters of A and some of them are supporters of B. Many of them are neutral. The fate of the election will be decided on which side the neutral voters vote. Supporters of A and supporters of B make attempt to win the votes of neutral voters.\nThe way this can be done is explained below:\n\nInput\nFirst line contains an integer which is length of queue of voters.\nSecond line contains characters {-, A, B}, in which denotes\n· A = voter who is supporter of candidate A\n· B = voter who is supporter of candidate B\n· – = neutral voter\n\nOutput\nPrint candidate with maximum number of votes. If they have equal number of votes, print \"Coalition government\".\n\nExamples",
+    "examples": "Input :14\n–AB–AB—A–\nOutput : A\n\nInput : 4\nA—\nOutput : A",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 13,
+    "title": "Constellation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Three characters { #, , . } represents a constellation of stars and galaxies in space. Each galaxy is demarcated by # characters. There can be one or many stars in a given galaxy. Stars can only be in the shape of vowels { A, E, I, O, U }. A collection of  in the shape of the vowels is a star. A star is contained in a 3x3 block. Stars cannot be overlapping. The dot(.) character denotes empty space.\nGiven 3xN matrix comprising of { #, *, . } character, find the galaxy and stars within them.\nNote: Please pay attention to how vowel A is denoted in a 3x3 block in the examples section below.\n\nConstraints\n3 <= N <= 10^5\n\nInput\nInput consists of a single integer N denoting the number of columns.\n\nOutput\nThe output contains vowels (stars) in order of their occurrence within the given galaxy. The galaxy itself is represented by the # character.\n\nExample 1\n\nExplanation\nAs can be seen, the stars make the image of the alphabets U, O, I, E, and A respectively.",
+    "examples": "Input\n18\n* . * # * * * # * * * # * * * . * .\n* . * # * . * # . * . # * * * * * *\n* * * # * * * # * * * # * * * * . *\nOutput\nU#O#I#EA",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 14,
+    "title": "Prime Time Again",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Here on earth, our 24-hour day is composed of two parts, each of 12 hours. Each hour in each part has a corresponding hour in the other part separated by 12 hours: the hour essentially measures the duration since the start of the daypart. For example, 1 hour in the first part of the day is equivalent to 13, which is 1 hour into the second part of the day.\n\nNow, consider the equivalent hours that are both prime numbers. We have 3 such instances for a 24-hour 2-part day:\n\n5~17\n\n7~19\n\n11~23\n\nAccept two natural numbers D, P >1 corresponding respectively to several hours per day and the number of parts in a day separated by a space. D should be divisible by P, meaning that the number of hours per part (D/P) should be a natural number. Calculate the number of instances of equivalent prime hours. Output zero if there is no such instance. Note that we require each equivalent hour in each part of a day to be a prime number.\n\nExample:\n\nInput: 24 2\n\nOutput: 3 (We have 3 instances of equivalent prime hours: 5~17, 7~19, and 11~23.)\n\nConstraints\n\n10 <= D < 500\n\n2 <= P < 50\n\nInput\n\nThe single line consists of two space-separated integers, D and P corresponding to the number of. hours per day and number of parts in a day respectively\n\nOutput\n\nOutput must be a single number, corresponding to the number of instances of equivalent prime number, as described above\n\nExample 1\n\nExplanation\n\nIn the given test case D = 36 and P = 3\n\nDuration of each daypart = 12\n\n2~14~X\n\n3~15~X\n\n5~17~29 - an instance of equivalent prime hours\n\n7~19~31 - an instance of equivalent prime hours\n\n11~23~X\n\nHence the answer is 2.",
+    "examples": "Input\n\n36 3\n\nOutput\n\n2",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 15,
+    "title": "Minimum Gifts",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "A Company has decided to give some gifts to all of its employees. For that, the company has given some rank to each employee. Based on that rank, the company has made certain rules for distributing the gifts.\nThe rules for distributing the gifts are:\nEach employee must receive at least one gift.\nEmployees having higher ranking get a greater number of gifts than their neighbours.\nWhat is the minimum number of gifts required by the company?\n\nConstraints\n1 < T < 10\n1 < N < 100000\n1 < Rank < 10^9\n\nInput\nThe first line contains integer T, denoting the number of test cases.\nFor each test case:\nThe first line contains integer N, denoting the number of employees.\nThe second line contains N space-separated integers, denoting the rank of each employee.\n\nOutput\nFor each test case print the number of minimum gifts required on a new line.\n\nExplanation\nFor test case 1, adhering to the rules mentioned above,\nEmployee # 1 whose rank is 1 gets one gift\nEmployee # 2 whose rank is 2 gets two gifts\nEmployee # 3 whose rank is 1 gets one gift\nEmployee # 4 whose rank is 5 gets two gifts\nEmployee # 5 whose rank is 2 gets one gift\nTherefore, total gifts required is 1 + 2 + 1 + 2 + 1 = 7\nSimilarly, for test case 2, adhering to the rules mentioned above,\nEmployee # 1 whose rank is 1 gets one gift\nEmployee # 2 whose rank is 2 gets two gifts\nTherefore, the total gifts required is 1 + 2 =",
+    "examples": "Input\n2\n5\n1 2 1 5 2\n2\n1 2\nOutput\n7\n3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 16,
+    "title": "Minimize the sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of integers, perform at most K operations so that the sum of elements of a final array is minimum. An operation is defined as follows -\nConsider any 1 element from the array, arr[i].\nReplace arr[i] by floor(arr[i]/2).\nPerform the next operations on the updated array.\nThe task is to minimize the sum after utmost K operations.\n\nConstraints\n1 <= N, K <= 10^5.\n\nInput\nThe first line contains two integers N and K representing the size of the array and the maximum number of operations that can be performed on the array respectively.\nThe second line contains N space-separated integers denoting the elements of the array, arr.\n\nOutput\nPrint a single integer denoting the minimum sum of the final array.\n\nExplanation\nOperation 1 -> Select 20. Replace it with 10. New array = [10, 7, 5, 4]\nOperation 2 -> Select 10. Replace it with 5. New array = [5, 7, 5, 4].\nOperation 3 -> Select 7. Replace it with 3. New array = [5,3,5,4].\nSum = 17.",
+    "examples": "Input\n4 3\n20 7 5 4\nOutput\n17",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 17,
+    "title": "Railway Station",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the schedule of trains and their stoppage time at a Railway Station, find a minimum number of platforms needed.\nNote -\nIf Train A's departure time is x and Train B's arrival time is x, then we can't accommodate Train B on the same platform as Train A.\n\nConstraints\n1 <= N <= 10^5\n0 <= a <= 86400\n0 < b <= 86400\nNumber of platforms > 0\n\nInput\nThe first line contains N denoting the number of trains.\nNext N line contains 2 integers, a and b, denoting the arrival time and stoppage time of the train.\n\nOutput\nA single integer denotes the minimum number of platforms needed to accommodate every train.\n\nExample 1",
+    "examples": "Input\n3\n10 2\n5 10\n13 5\nOutput\n2",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 18,
+    "title": "18 Count Pairs",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of integers A, and an integer K find a number of happy elements.\nElement X is happy if there exists at least 1 element whose difference is less than K i.e. an element X is happy if there is another element in the range [X-K, X+K] other than X itself.\n\nConstraints\n1 <= N <= 10^5\n0 <= K <= 10^5\n0 <= A[i] <= 10^9\n\nInput\nThe first line contains two integers N and K where N is the size of the array and K is a number as described above. The second line contains N integers separated by space.\n\nOutput\nPrint a single integer denoting the total number of happy elements.\n\nExample 1",
+    "examples": "Input\n6 3\n5 5 7 9 15 2\nOutput\n5",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 19,
+    "title": "Critical Planets",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "The war between the Republic and the Separatists is escalating. The Separatists are on a new offensive. They have started blocking the path between the republic planets (represented by integers) so that these planets surrender due to the shortage of food and supplies. The Jedi council has taken note of the situation and they have assigned Jedi Knight Skywalker and his Padawan Ahsoka to save the critical planets from blockade (Those planets or systems of planets which can be accessed by only one path and may be lost if that path is blocked by separatist).\nSkywalker is preparing with the clone army to defend the critical paths. He has assigned Ahsoka to find the critical planets. Help Ahsoka to find the critical planets(C) in ascending order. You only need to specify those planets which have only one path between them and they cannot be accessed by any other alternative path if the only path is compromised.\n\nConstraints\nM <= 10000\nN <= 7000\n\nInput\nThe first line contains two space-separated integers M and N, where M denotes the number of paths between planets and N denotes the number of planets.\nNext M lines, each contains two space-separated integers, representing the planet numbers that have a path between them.\n\nOutput\nClines containing one integer representing the critical planet that they need to save in ascending order of the planet number if no planet is critical then print -1\n\nTime Limit\n1\n\nExample 1",
+    "examples": "Input\n3 4\n0 1\n1 2\n2 3\nOutput\n0\n1\n2\n3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 20,
+    "title": "Bank Compare",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "There are two banks – Bank A and Bank B. Their interest rates vary over the loan tenure. You have received offers from both banks specifying the annual rate of interest, tenure, and variations of the interest rate over the entire tenure. Your task is to choose the offer that results in the least total interest paid and reject the other.\n\nLoan repayment occurs monthly, and the Equated Monthly Installment (EMI) is calculated using the formula:\n\nEMI = loanAmount  monthlyInterestRate / (1 – 1 / (1 + monthlyInterestRate)^(numberOfYears  12))",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  }
+]

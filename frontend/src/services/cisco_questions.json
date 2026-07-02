@@ -1,0 +1,626 @@
+[
+  {
+    "id": 1,
+    "title": "Core CS Concepts",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Prepare and solve the coding question: Core CS Concepts asked in CISCO recruitment.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 2,
+    "title": "Behavioral Prep",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "STAR Method (Situation, Task, Action, Result) Learn how to structure answers for HR and behavioral questions:\n\nCisco’s Core Values Frame your answers around Cisco’s culture of innovation, inclusion, integrity, and teamwork:",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 3,
+    "title": "Additional Resources",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Prepare and solve the coding question: Additional Resources asked in CISCO recruitment.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 4,
+    "title": "Maximum Drop Points in a Terrain",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: A pilot must drop food packets over a terrain in a single horizontal or vertical path. Given n points with coordinates (xCoordinates, yCoordinates), find the maximum number of points that lie on a single horizontal or vertical line.\n\nInput: Integer n, arrays xCoordinates and yCoordinates.\n\nOutput: Integer representing the maximum number of points.\n\nExample:",
+    "examples": "Input: n = 4, xCoordinates = [1, 2, 1, 1], yCoordinates = [1, 1, 2, 3]\nOutput: 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 5,
+    "title": "Lexicographical String at Index M",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given integers M and N, return the Mth string (1-based index) in the lexicographically sorted set of all possible strings of length N made from lowercase letters. If M exceeds the number of possible strings, return \"Not possible\".\n\nInput: Integers M (index), N (string length).\n\nOutput: String or \"Not possible\".\n\nExample:",
+    "examples": "Input: M = 2, N = 1\nOutput: b\n\nInput: M = 27, N = 1\nOutput: Not possible",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 6,
+    "title": "Reverse Words in a String",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a string, reverse the order of words while keeping the words themselves intact. Words are separated by spaces, and multiple spaces should be handled.\n\nInput: String s.\n\nOutput: String with reversed word order.\n\nExample:",
+    "examples": "Input: s = \"Cisco Systems is hiring\"\nOutput: hiring is Systems Cisco",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 7,
+    "title": "Find Missing Number in Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given an array of n-1 integers in the range [1, n], find the missing number.\n\nInput: Array of n-1 integers.\n\nOutput: The missing integer.\n\nExample:",
+    "examples": "Input: arr = [1, 2, 4, 5]\nOutput: 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 8,
+    "title": "Longest Palindromic Substring",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a string, find the longest substring that is a palindrome.\n\nInput: String s.\n\nOutput: The longest palindromic substring.\n\nExample:",
+    "examples": "Input: s = \"babad\"\nOutput: bab",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 9,
+    "title": "Top 2 Cheapest Round Trips",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given C cities, F flights, and an array A of [start_city, dest_city, price], return the prices of the two cheapest round trips as an array. If fewer than two round trips are possible, return appropriate values (e.g., [infinity]).\n\nInput: C (cities), F (flights), A (array of [start, dest, price]).\n\nOutput: Array of two integers.\n\nExample:",
+    "examples": "Input: C = 3, F = 3, A = [[1,2,100], [2,3,200], [3,1,300]]\nOutput: [infinity]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 10,
+    "title": "Snake and Ladder Problem",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given an N x N board with snakes and ladders as source-destination pairs, find the minimum number of moves to reach cell N*N from cell 1 using a 6-sided die.\n\nInput: N (board size), snakes_ladders (list of [source, dest] pairs).\n\nOutput: Minimum moves or -1 if impossible.\n\nExample:",
+    "examples": "Input: N = 6, snakes_ladders = [[16,6], [13,24], [25,10]]\nOutput: 4",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 11,
+    "title": "Shortest Path in a Grid",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given an m x n grid where 0 represents an obstacle and 1 represents a valid cell, find the shortest path from (0,0) to (m-1,n-1) using only right and down moves.\n\nInput: Grid as a 2D array.\n\nOutput: Length of the shortest path or -1 if impossible.\n\nExample:",
+    "examples": "Input: grid = [[1,1,1], [1,0,1], [1,1,1]]\nOutput: 4",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 12,
+    "title": "Minimum Cost Path",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a grid where each cell has a cost, find the minimum cost to reach the bottom-right cell from the top-left cell, moving only right, down, or diagonally.\n\nInput: m x n grid of costs.\n\nOutput: Minimum cost.\n\nExample:",
+    "examples": "Input: grid = [[1,3,1], [1,5,1], [4,2,1]]\nOutput: 7",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 13,
+    "title": "Cycle Detection in Directed Graph",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a directed graph as an adjacency list, determine if it contains a cycle.\n\nInput: Number of vertices V, edges as a list of [u, v] pairs.\n\nOutput: true if a cycle exists, false otherwise.\n\nExample:",
+    "examples": "Input: V = 4, edges = [[1,2], [2,3], [3,1]]\nOutput: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 14,
+    "title": "Level Order Traversal of Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a binary tree, return its level order traversal as a list of lists, where each inner list contains the node values at that level.\n\nInput: Root of a binary tree.\n\nOutput: List of lists of integers.\n\nExample:",
+    "examples": "Input: root = [1,2,3,4,5]\nOutput: [[1], [2,3], [4,5]]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 15,
+    "title": "Path Sum in Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a binary tree and a target sum, determine if there exists a root-to-leaf path whose nodes sum to the target.\n\nInput: Root of a binary tree, integer target.\n\nOutput: true if such a path exists, false otherwise.\n\nExample:",
+    "examples": "Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], target = 22\nOutput: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 16,
+    "title": "Lowest Common Ancestor",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a binary tree and two nodes, find their lowest common ancestor.\n\nInput: Root of a binary tree, nodes p and q.\n\nOutput: The LCA node value.\n\nExample:",
+    "examples": "Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1\nOutput: 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 17,
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a binary tree, find its maximum depth (number of nodes along the longest path from root to leaf).\n\nInput: Root of a binary tree.\n\nOutput: Integer representing the maximum depth.\n\nExample:",
+    "examples": "Input: root = [1,2,3,4,5]\nOutput: 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 18,
+    "title": "Check if Binary Tree is Balanced",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Determine if a binary tree is height-balanced (the height of left and right subtrees of every node differs by at most 1).\n\nInput: Root of a binary tree.\n\nOutput: true if balanced, false otherwise.\n\nExample:",
+    "examples": "Input: root = [1,2,3,4,5,null,6]\nOutput: false",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 19,
+    "title": "Longest Common Subsequence",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given two strings, find the length of their longest common subsequence.\n\nInput: Two strings text1 and text2.\n\nOutput: Integer length of the LCS.\n\nExample:",
+    "examples": "Input: text1 = \"ABCDGH\", text2 = \"AEDFHR\"\nOutput: 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 20,
+    "title": "Knapsack Problem",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given n items with weights and values, and a knapsack capacity W, find the maximum value achievable without exceeding the capacity.\n\nInput: n, arrays weights and values, integer W.\n\nOutput: Maximum value.\n\nExample:",
+    "examples": "Input: n = 3, weights = [10,20,30], values = [60,100,120], W = 50\nOutput: 160",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 21,
+    "title": "Minimum Path Sum in Triangle",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a triangle of numbers, find the minimum path sum from top to bottom, where each step can move to adjacent numbers in the next row.\n\nInput: Triangle as a list of lists.\n\nOutput: Minimum path sum.\n\nExample:",
+    "examples": "Input: triangle = [[2], [3,4], [6,5,7], [4,1,8,3]]\nOutput: 11",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 22,
+    "title": "Edit Distance",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given two strings, find the minimum number of operations (insert, delete, replace) to convert one string into another.\n\nInput: Two strings word1 and word2.\n\nOutput: Minimum operations.\n\nExample:",
+    "examples": "Input: word1 = \"horse\", word2 = \"ros\"\nOutput: 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 23,
+    "title": "Maximum Subarray Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given an array of integers, find the contiguous subarray with the largest sum.\n\nInput: Array of integers.\n\nOutput: Maximum sum.\n\nExample:",
+    "examples": "Input: nums = [-2,1,-3,4,-1,2,1,-5,4]\nOutput: 6",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 24,
+    "title": "Rotate Matrix",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given an n x n matrix, rotate it 90 degrees clockwise in-place.\n\nInput: n x n matrix.\n\nOutput: Rotated matrix (modified in-place).\n\nExample:",
+    "examples": "Input: matrix = [[1,2,3], [4,5,6], [7,8,9]]\nOutput: [[7,4,1], [8,5,2], [9,6,3]]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 25,
+    "title": "Spiral Matrix",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given an m x n matrix, return all elements in spiral order (clockwise starting from top-left).\n\nInput: m x n matrix.\n\nOutput: List of elements in spiral order.\n\nExample:",
+    "examples": "Input: matrix = [[1,2,3], [4,5,6], [7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 26,
+    "title": "N-Queens Problem",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Place n queens on an n x n chessboard such that no two queens threaten each other. Return the number of possible configurations.\n\nInput: Integer n.\n\nOutput: Number of valid configurations.\n\nExample:",
+    "examples": "Input: n = 4\nOutput: 2",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 27,
+    "title": "Sudoku Solver",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a partially filled 9x9 Sudoku board, fill it such that it is valid (each row, column, and 3x3 sub-box contains digits 1-9 without repetition).\n\nInput: 9x9 board with digits 1-9 and . for empty cells.\n\nOutput: Solved board (modified in-place).\n\nExample:",
+    "examples": "Input: board = [[\"5\",\"3\",\".\"],[\"6\",\".\",\".\"],[\".\",\"9\",\"8\"],...]\nOutput: Solved Sudoku board",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 28,
+    "title": "Valid Parentheses",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a string containing parentheses (), {}, [], determine if it is valid (properly nested and closed).\n\nInput: String s.\n\nOutput: true if valid, false otherwise.\n\nExample:",
+    "examples": "Input: s = \"{[]}\"\nOutput: true",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 29,
+    "title": "Merge Intervals",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a list of intervals [start, end], merge overlapping intervals and return the merged list.\n\nInput: List of intervals.\n\nOutput: List of merged intervals.\n\nExample:",
+    "examples": "Input: intervals = [[1,3], [2,6], [8,10], [15,18]]\nOutput: [[1,6], [8,10], [15,18]]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 30,
+    "title": "LRU Cache Implementation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Implement an LRU (Least Recently Used) cache with get and put operations. The cache has a fixed capacity, and the least recently used item is evicted when full.\n\nInput: Capacity, sequence of get and put operations.\n\nOutput: Results of get operations.\n\nExample:",
+    "examples": "Input: capacity = 2, operations = [[\"put\",1,1], [\"put\",2,2], [\"get\",1], [\"put\",3,3], [\"get\",2]]\nOutput: [1, -1]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 31,
+    "title": "Word Ladder",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given two words and a dictionary, find the shortest transformation sequence from the start word to the end word, changing one letter at a time, with each intermediate word in the dictionary.\n\nInput: beginWord, endWord, list of words.\n\nOutput: Length of the shortest transformation sequence.\n\nExample:",
+    "examples": "Input: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\nOutput: 5",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 32,
+    "title": "Next Permutation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given an array of integers representing a permutation, find the next lexicographically greater permutation. If none exists, return the lowest permutation.\n\nInput: Array of integers.\n\nOutput: Next permutation (modified in-place).\n\nExample:",
+    "examples": "Input: nums = [1,2,3]\nOutput: [1,3,2]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 33,
+    "title": "Trapping Rain Water",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given an array representing elevation heights, compute how much water can be trapped after raining.\n\nInput: Array of non-negative integers.\n\nOutput: Amount of water trapped.\n\nExample:",
+    "examples": "Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]\nOutput: 6",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 34,
+    "title": "Cake Cutting Puzzle",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: How can you cut a circular cake into exactly 8 equal pieces using only 3 straight cuts?\n\nOutput: Describe the method.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 35,
+    "title": "Transmission Latency",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a network with n nodes and transmission times between them, calculate the minimum time to send a message from a source node to all other nodes.\n\nInput: n, edges with transmission times, source node.\n\nOutput: Total time.\n\nExample:",
+    "examples": "Input: n = 3, edges = [[1,2,5], [2,3,10]], source = 1\nOutput: 15",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 36,
+    "title": "IP Address Validation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a string, determine if it is a valid IPv4 address (four numbers in range 0-255 separated by dots, no leading zeros).\n\nInput: String s.\n\nOutput: true if valid, false otherwise.\n\nExample:",
+    "examples": "Input: s = \"192.168.1.1\"\nOutput: true\n\nInput: s = \"256.1.2.3\"\nOutput: false",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 37,
+    "title": "Packet Routing",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a network of routers and their connections, find the shortest path for a packet from source to destination.\n\nInput: Number of routers, connections with weights, source, destination.\n\nOutput: Shortest path length.\n\nExample:",
+    "examples": "Input: n = 4, edges = [[1,2,1], [2,3,2], [3,4,1], [1,4,5]], source = 1, dest = 4\nOutput: 4",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 38,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Description: Given a 2D grid of 1s (land) and 0s (water), count the number of islands (connected land cells surrounded by water).\n\nInput: 2D grid of 1s and 0s.\n\nOutput: Number of islands.\n\nExample:",
+    "examples": "Input: grid = [[\"1\",\"1\",\"0\",\"0\"], [\"1\",\"1\",\"0\",\"0\"], [\"0\",\"0\",\"1\",\"0\"], [\"0\",\"0\",\"0\",\"1\"]]\nOutput: 3",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 39,
+    "title": "At Last",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Getting into Cisco isn’t about being a genius, it’s about preparing the right way. If you keep your coding sharp, revise the basics, and practice interview problems regularly, you’ll slowly build the confidence you need. Stay consistent, don’t stress the process too much, and trust your effort. With the right prep, you can absolutely crack Cisco and start your journey with one of the coolest tech companies out there.\n\nJoin Telegram group for more resources & discussions!",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  }
+]

@@ -1,0 +1,129 @@
+    @classmethod
+    def _post_process_analysis(cls, analysis: Dict[str, Any], raw_text: str, filename: str = None) -> Dict[str, Any]:
+        """
+        Ensures consistency between raw resume text and extraction metrics.
+        Corrects AI hallucinations and ensures contact links or sections are not flagged as missing.
+        """
+        text_lower = raw_text.lower()
+
+        # Advanced local parsing/heuristics to ensure high quality metrics
+        if "filler_words_found" not in analysis:
+            analysis["filler_words_found"] = []
+        if "repetitive_words" not in analysis:
+            analysis["repetitive_words"] = []
+        if "metrics_density_score" not in analysis:
+            analysis["metrics_density_score"] = 0
+        if "filename_audit" not in analysis:
+            analysis["filename_audit"] = {}
+
+        # Heuristic 1: Flagged buzzwords/filler words
+        buzzwords = {"passionate", "detail-oriented", "hardworking", "motivated", "results-driven", 
+                     "synergy", "team-player", "self-starter", "go-getter", "ambitious", "innovative", "dynamic"}
+        found_buzzwords = []
+        for bw in buzzwords:
+            if re.search(r'\b' + re.escape(bw) + r'\b', text_lower):
+                found_buzzwords.append(bw)
+        analysis["filler_words_found"] = list(set(analysis.get("filler_words_found", []) + found_buzzwords))
+
+        # Heuristic 2: Repetitive Action Verbs check
+        verbs_to_check = {
+            "managed": ["spearheaded", "orchestrated", "coordinated", "directed"],
+            "developed": ["engineered", "architected", "implemented", "authored"],
+            "worked": ["collaborated", "participated", "contributed", "supported"],
+            "assisted": ["facilitated", "backed", "reinforced", "promoted"],
+            "helped": ["empowered", "assisted", "guided", "aided"],
+            "utilized": ["leveraged", "applied", "deployed", "harnessed"],
+            "created": ["formulated", "designed", "originated", "devised"],
+            "responsible": ["accountable", "charged with", "trusted to"]
+        }
+        rep_list = []
+        for verb, alts in verbs_to_check.items():
+            count = len(re.findall(r'\b' + re.escape(verb) + r'\b', text_lower))
+            if count >= 3:
+                rep_list.append({
+                    "word": verb,
+                    "count": count,
+                    "alternatives": alts
+                })
+        
+        existing_rep = {item["word"]: item for item in analysis.get("repetitive_words", []) if isinstance(item, dict) and "word" in item}
+        for item in rep_list:
+            if item["word"] not in existing_rep:
+                existing_rep[item["word"]] = item
+        analysis["repetitive_words"] = list(existing_rep.values())
+
+        # Heuristic 3: Metrics Density check
+        bullets = []
+        for line in raw_text.split('\n'):
+            line = line.strip()
+            if line.startswith(('-', '*', '•', 'o')) and len(line) > 10:
+                bullets.append(line)
+        
+        if bullets:
+            bullets_with_metrics = 0
+            for b in bullets:
+                if re.search(r'\d', b) or '%' in b or any(c in b for c in ['$', '₹', '£', '€']):
+                    bullets_with_metrics += 1
+            density = int((bullets_with_metrics / len(bullets)) * 100)
+            analysis["metrics_density_score"] = density
+        else:
+            sentences = [s.strip() for s in re.split(r'[.!?]', raw_text) if len(s.strip()) > 15]
+            if sentences:
+                sentences_with_metrics = sum(1 for s in sentences if re.search(r'\d', s) or '%' in s)
+                analysis["metrics_density_score"] = int((sentences_with_metrics / len(sentences)) * 100)
+            else:
+                analysis["metrics_density_score"] = 0
+
+        # Heuristic 4: Filename Audit
+        if filename:
+            fn_lower = filename.lower()
+            is_prof = True
+            critique = "The filename complies with professional applicant tracking system formats."
+            suggestions = []
+            
+            bad_patterns = ["draft", "final", "version", "v1", "v2", "v3", "copy", "new"]
+            flagged_bad = [p for p in bad_patterns if p in fn_lower]
+            
+            if flagged_bad:
+                is_prof = False
+                critique = f"The filename contains internal developer suffixes: {', '.join(flagged_bad)}. Recruiters recommend removing version numbers and draft labels."
+                suggestions.append("Remove version tags (e.g. use 'Name_Resume.pdf' instead of 'Resume_v2_final.pdf')")
+            
+            if not any(x in fn_lower for x in ["resume", "cv", "portfolio"]):
+                is_prof = False
+                critique = "The filename is generic and does not contain identifying keywords like 'Resume' or 'CV'."
+                suggestions.append("Include identifying keywords (e.g. 'Jane_Doe_Resume.pdf')")
+                
+            if is_prof:
+                suggestions = ["Keep the format standard: 'Firstname_Lastname_Resume.pdf'"]
+            else:
+                if not suggestions:
+                    suggestions.append("Format as 'Firstname_Lastname_Resume.pdf'")
+                    
+            analysis["filename_audit"] = {
+                "filename": filename,
+                "is_professional": is_prof,
+                "critique": critique,
+                "suggestions": suggestions
+            }
+        else:
+            analysis["filename_audit"] = {
+                "filename": "Not uploaded (Pasted Plain Text)",
+                "is_professional": False,
+                "critique": "You pasted plain text instead of uploading a PDF file. Filenames cannot be audited.",
+                "suggestions": ["Upload a PDF file named 'Firstname_Lastname_Resume.pdf' to verify the ATS filename structure."]
+            }
+
+        # Backwards compatibility and styling helper for bullet point explanations
+        if "improved_bullet_points" in analysis and isinstance(analysis["improved_bullet_points"], list):
+            for bp in analysis["improved_bullet_points"]:
+                if isinstance(bp, dict) and "explanation" not in bp:
+                    bp["explanation"] = "Focus on action-verbs and state quantifiable results to show the recruiter your scale of impact."
+
+        def clean_placeholder(val: str) -> str:
+            if not val:
+                return ""
+            v = str(val).strip()
+            if any(p in v.lower() for p in ["candidate's", "extracted", "empty", "placeholder", "click here", "enter your", "your_"]):
+                return ""
+            return v

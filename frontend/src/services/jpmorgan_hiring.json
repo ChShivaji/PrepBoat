@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Stage 1: Online Assessment (HackerRank)",
+    "desc": "2 coding problems to be solved in 60 minutes, focusing on arrays, strings, or heap metrics.",
+    "tip": "Practice speed coding. Problems are typically of LeetCode Medium difficulty."
+  },
+  {
+    "title": "Stage 2: HireVue Video Interview",
+    "desc": "Recorded video responses to standard behavioral, situational, and soft-skills questions.",
+    "tip": "Look at the camera, speak clearly, and structure responses with the STAR framework."
+  },
+  {
+    "title": "Stage 3: Code for Good Hackathon",
+    "desc": "A 24-hour virtual/onsite hackathon where candidates build real applications for non-profit organizations.",
+    "tip": "Teamwork, collaboration, and agile project delivery are heavily evaluated by JP Morgan mentors."
+  },
+  {
+    "title": "Stage 4: Final Technical & Behavioral Loops",
+    "desc": "Conversations on project engineering, database architecture, testing, and team culture.",
+    "tip": "Highlight clean coding practices, microservice designs, and testing methodologies."
+  }
+]

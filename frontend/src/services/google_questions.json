@@ -1,0 +1,762 @@
+[
+  {
+    "id": 1,
+    "title": "Build the Longest Palindrome Easy",
+    "difficulty": "Easy",
+    "round": "OA",
+    "topics": [
+      "Strings",
+      "Hashing"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/longest-palindrome/",
+    "leetcode_num": "409",
+    "description": "Given a string s of lowercase and uppercase letters, find the length of the longest palindrome you can build using those characters. Note: 'A' and 'a' are treated as different characters.",
+    "examples": "Input:  s = \"abccccdd\"\nOutput: 7\nWhy:    \"dccaccd\" uses 4 c's, 2 d's, 1 a placed in the center",
+    "approach": "Count the frequency of each character. Sum all even-count characters fully. For each odd-count character, take count − 1. If any character had an odd count, add 1 (center slot).",
+    "complexity": "Time O(n) · Space O(1)",
+    "follow_up": "What if the string contains Unicode characters beyond ASCII?"
+  },
+  {
+    "id": 2,
+    "title": "Largest Subarray of Length K Easy",
+    "difficulty": "Easy",
+    "round": "OA",
+    "topics": [
+      "Arrays"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums and integer k, the largest subarray of length k is the one starting from the maximum element (the array has exactly one maximum). Return it.",
+    "examples": "Input:  nums = [1,4,5,2,3],  k = 3\nOutput: [5,2,3]\nWhy:    Maximum element is 5 at index 2. Take k=3 elements from there.",
+    "approach": "Find the index of the maximum element using a single scan. Slice nums[maxIdx : maxIdx + k].",
+    "complexity": "Time O(n) · Space O(k)",
+    "follow_up": ""
+  },
+  {
+    "id": 3,
+    "title": "Minimum Operations to Make Array Alternating Medium",
+    "difficulty": "Medium",
+    "round": "OA",
+    "topics": [
+      "Arrays",
+      "Greedy",
+      "Hashing"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/",
+    "leetcode_num": "2170",
+    "description": "Given a 0-indexed even-length array nums, make it alternating: all even-indexed elements equal, all odd-indexed elements equal, and the two values differ. Return minimum operations (each operation changes one element to any value).",
+    "examples": "Input:  nums = [3,1,3,2,4,3]\nOutput: 3",
+    "approach": "Find the top-2 most frequent elements at even positions and odd positions. Answer = n − (best_even + best_odd), handling the edge case where the most frequent element is the same at both positions (use the second-best for one side).",
+    "complexity": "Time O(n) · Space O(n)",
+    "follow_up": ""
+  },
+  {
+    "id": 4,
+    "title": "Student Lines Minimum New Lines Created Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "Greedy",
+      "Patience Sorting"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Students arrive one at a time. Each student joins an existing line if all students in it are taller than them, or starts a new line. Given an array of heights in arrival order, return the minimum number of lines formed.",
+    "examples": "Input:  heights = [5, 3, 6, 2, 4]\nOutput: 3\nWhy:    Line1:[5,3,2], Line2:[6,4], Line3:[] greedy assigns each\n        student to a valid line with the smallest tail > student height",
+    "approach": "Maintain a list of current line \"tail\" heights (smallest student so far in each line). For each new student, binary search for the smallest tail that is",
+    "complexity": "Time O(n log n) · Space O(n)",
+    "follow_up": ""
+  },
+  {
+    "id": 5,
+    "title": "Router Broadcast BFS with Distance Limit Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Graphs",
+      "BFS"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "A source router broadcasts to all routers within d hops. Given the network as an undirected graph, return true if the destination router dest receives the broadcast.",
+    "examples": "Input:  edges = [[0,1],[1,2],[2,3]],  source = 0,  dest = 2,  d = 2\nOutput: true   (0→1→2 is 2 hops, within limit)\n\nInput:  edges = [[0,1],[1,2],[2,3]],  source = 0,  dest = 3,  d = 2\nOutput: false  (0→1→2→3 needs 3 hops)",
+    "approach": "BFS from source tracking hop count. If dest is reached within d levels, return true.",
+    "complexity": "Time O(V+E) · Space O(V)",
+    "follow_up": "What if edges have weights and distance = sum of weights? → Use Dijkstra with dist[dest] ≤ d check."
+  },
+  {
+    "id": 6,
+    "title": "Remove All \"AB\" and \"CD\" Pairs from a String Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Strings",
+      "Stack"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/minimum-string-length-after-removing-substrings/",
+    "leetcode_num": "2696",
+    "description": "Given a string of 'A', 'B', 'C', 'D', repeatedly remove the first occurrence of \"AB\" or \"CD\" until none remain. Return the final string.",
+    "examples": "Input:  s = \"ACDCBD\"\nSteps:  \"ACDCBD\" → remove CD → \"ACBD\" → remove AB → \"CD\" → remove CD → \"\"\nOutput: \"\"",
+    "approach": "Use a stack. Push each character. After every push, check if the top two chars form \"AB\" or \"CD\" if so, pop both. This is O(n) and avoids repeated rescanning.",
+    "complexity": "Time O(n) · Space O(n)",
+    "follow_up": ""
+  },
+  {
+    "id": 7,
+    "title": "Minimum Jumps to Reach End Medium",
+    "difficulty": "Medium",
+    "round": "Phone Screen",
+    "topics": [
+      "Arrays",
+      "Greedy"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/jump-game-ii/",
+    "leetcode_num": "45",
+    "description": "nums[i] is the max jump length from index i. Return the minimum number of jumps to reach the last index. You can always reach the end.",
+    "examples": "Input:  nums = [2,3,1,1,4]\nOutput: 2\nWhy:    Jump index 0→1 (jump len 2, land on 3), then 1→4 (jump len 3)",
+    "approach": "Greedy with curEnd (boundary of current jump) and farthest (max reachable so far). When index == curEnd, increment jumps and extend to farthest.",
+    "complexity": "Time O(n) · Space O(1)",
+    "follow_up": ""
+  },
+  {
+    "id": 8,
+    "title": "Subarray Sum Closest to Target Medium",
+    "difficulty": "Medium",
+    "round": "Phone Screen",
+    "topics": [
+      "Arrays",
+      "Prefix Sum",
+      "Binary Search"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array (may contain negatives) and integer k, find the contiguous subarray whose sum is closest to k. Return that sum.",
+    "examples": "Input:  nums = [1,3,-2,5,4],  k = 6\nOutput: 6   (subarray [3,-2,5] sums to 6)",
+    "approach": "Build prefix sums, store sorted. For each P[j], binary search for P[j] − k in the sorted prefix array. Track minimum absolute difference found.",
+    "complexity": "Time O(n log n) · Space O(n)",
+    "follow_up": ""
+  },
+  {
+    "id": 9,
+    "title": "Binary Search with Hidden Array + Trie Follow-up Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Binary Search",
+      "Trie"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You have a hidden sorted-descending binary array of length n (all 1s before all 0s). You can only access it via query(i) which returns the value at index i. Find the count of 1s using minimum queries.",
+    "examples": "n = 10,  hidden = [1,1,1,1,0,0,0,0,0,0]\nOutput: 4   (4 ones found via binary search in O(log n) queries)",
+    "approach": "Binary search. If query(mid) == 1, search right half. If 0, search left half. The boundary gives the count.",
+    "complexity": "Time O(log n) queries · Space O(1)",
+    "follow_up": ""
+  },
+  {
+    "id": 10,
+    "title": "Minimum Cost to Connect All Ropes Medium",
+    "difficulty": "Medium",
+    "round": "Phone Screen",
+    "topics": [
+      "Heaps",
+      "Greedy"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/minimum-cost-to-connect-sticks/",
+    "leetcode_num": "1167",
+    "description": "Connect n ropes into one. Cost of connecting two ropes = sum of their lengths. Find minimum total cost.",
+    "examples": "Input:  ropes = [4,3,2,6]\nOutput: 29\nWhy:    (2+3)=5 cost 5, (4+5)=9 cost 9, (9+6)=15 cost 15 → total 29",
+    "approach": "Min-heap. Always merge the two smallest ropes first (greedy, same as Huffman coding). Push the merged rope back.",
+    "complexity": "Time O(n log n) · Space O(n)",
+    "follow_up": ""
+  },
+  {
+    "id": 11,
+    "title": "3Sum All Unique Triplets Summing to Zero Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "Two Pointers",
+      "Sorting"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/3sum/",
+    "leetcode_num": "15",
+    "description": "Return all unique triplets [a,b,c] from nums such that a + b + c == 0.",
+    "examples": "Input:  nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]",
+    "approach": "Sort the array. Fix the first element, use two pointers for the rest. Skip duplicates at each pointer after a match.",
+    "complexity": "Time O(n²) · Space O(1) excluding output",
+    "follow_up": ""
+  },
+  {
+    "id": 12,
+    "title": "Trapping Rain Water Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "Two Pointers"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/trapping-rain-water/",
+    "leetcode_num": "42",
+    "description": "Given an elevation map height[], compute how much water can be trapped between bars.",
+    "examples": "Input:  height = [0,1,0,2,1,0,1,3,2,1,2,1]\nOutput: 6",
+    "approach": "Two pointers. Track leftMax and rightMax. Water at each position = min(leftMax, rightMax) − height[i]. Move the smaller-max pointer inward.",
+    "complexity": "Time O(n) · Space O(1)",
+    "follow_up": ""
+  },
+  {
+    "id": 13,
+    "title": "Container With Most Water Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "Two Pointers"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/container-with-most-water/",
+    "leetcode_num": "11",
+    "description": "Find two lines forming a container that holds the most water.",
+    "examples": "Input:  height = [1,8,6,2,5,4,8,3,7]\nOutput: 49",
+    "approach": "Two pointers at ends. Area = min(h[l], h[r]) × (r − l). Always move the pointer with smaller height.",
+    "complexity": "Time O(n) · Space O(1)",
+    "follow_up": ""
+  },
+  {
+    "id": 14,
+    "title": "Minimum Window Substring Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Strings",
+      "Sliding Window"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/minimum-window-substring/",
+    "leetcode_num": "76",
+    "description": "Return the minimum window in s that contains all characters of t.",
+    "examples": "Input:  s = \"ADOBECODEBANC\",  t = \"ABC\"\nOutput: \"BANC\"",
+    "approach": "Sliding window. Expand right until all chars of t are covered, then shrink from the left. Track the shortest valid window seen.",
+    "complexity": "Time O(n) · Space O(t)",
+    "follow_up": ""
+  },
+  {
+    "id": 15,
+    "title": "Minimum Cuts for Palindrome Partitioning Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Strings",
+      "DP"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/palindrome-partitioning-ii/",
+    "leetcode_num": "132",
+    "description": "Find the minimum cuts to partition string s so every part is a palindrome.",
+    "examples": "Input:  s = \"aab\"\nOutput: 1   (cut between \"aa\" and \"b\")",
+    "approach": "Precompute isPalin[i][j] (expand around center, O(n²)). Then DP: dp[i] = min cuts for s[0..i]. For each i, try all j ≤ i where s[j..i] is a palindrome.",
+    "complexity": "Time O(n²) · Space O(n²)",
+    "follow_up": ""
+  },
+  {
+    "id": 16,
+    "title": "Lowest Common Ancestor of a Binary Tree Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Trees",
+      "DFS"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+    "leetcode_num": "236",
+    "description": "Find the deepest node that is an ancestor of both p and q.",
+    "examples": "Input:  root=[3,5,1,6,2,0,8,null,null,7,4], p=5, q=4\nOutput: 5   (5 is an ancestor of 4)",
+    "approach": "Post-order DFS. Return the node if it equals p or q. If both left and right return non-null, current node is the LCA.",
+    "complexity": "Time O(n) · Space O(h)",
+    "follow_up": "What if the tree is a BST? What if nodes don't necessarily exist in the tree?"
+  },
+  {
+    "id": 17,
+    "title": "Binary Tree Maximum Path Sum Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Trees",
+      "DFS",
+      "DP"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+    "leetcode_num": "124",
+    "description": "Find the path (start/end at any nodes) in a binary tree with the maximum sum.",
+    "examples": "Input:  root = [-10,9,20,null,null,15,7]\nOutput: 42   (path 15→20→7)",
+    "approach": "At each node, compute max gain from left and right (clamp to 0 if negative). Update global max with left + node.val + right. Return node.val + max(left, right) to parent.",
+    "complexity": "Time O(n) · Space O(h)",
+    "follow_up": ""
+  },
+  {
+    "id": 18,
+    "title": "Serialize and Deserialize Binary Tree Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Trees",
+      "DFS",
+      "Design"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+    "leetcode_num": "297",
+    "description": "Design an algorithm to encode a tree as a string and decode it back losslessly.",
+    "examples": "Input:  [1,2,3,null,null,4,5]\nEncode: \"1,2,null,null,3,4,null,null,5,null,null\"\nDecode: same tree restored",
+    "approach": "Preorder DFS for serialization using # for nulls and , as delimiter. Deserialize by consuming tokens from a queue, recursively building.",
+    "complexity": "Time O(n) · Space O(n)",
+    "follow_up": ""
+  },
+  {
+    "id": 19,
+    "title": "Minimum Weight to Disconnect All Leaf Nodes Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Trees",
+      "DFS",
+      "Greedy"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a weighted binary tree, find the minimum total edge weight to remove so every leaf becomes unreachable from the root.",
+    "examples": "Input:  tree with edges: root→A (weight 5), A→leaf1 (weight 2), root→leaf2 (weight 7)\nOutput: 9   (remove A→leaf1 costs 2, remove root→leaf2 costs 7)",
+    "approach": "DFS on each root-to-leaf path, tracking the minimum-weight edge on the path. Removing that minimum edge disconnects the leaf at lowest cost. Greedily collect these minimum edges.",
+    "complexity": "Time O(n) · Space O(h)",
+    "follow_up": ""
+  },
+  {
+    "id": 20,
+    "title": "Word Ladder Minimum Transformation Steps Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Graphs",
+      "BFS"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/word-ladder/",
+    "leetcode_num": "127",
+    "description": "Find the shortest transformation from beginWord to endWord, changing one letter at a time, using only dictionary words.",
+    "examples": "Input:  beginWord=\"hit\", endWord=\"cog\"\n        wordList=[\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\nOutput: 5   (hit→hot→dot→dog→cog)",
+    "approach": "BFS. For each word, try every single-character mutation and check the dictionary. Add valid unvisited words to the queue. Return the level at which endWord is reached.",
+    "complexity": "Time O(M²×N) where M = word length, N = dict size · Space O(M×N)",
+    "follow_up": ""
+  },
+  {
+    "id": 21,
+    "title": "Boolean Constraint Satisfaction (Union-Find) Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Graphs",
+      "Union-Find"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/satisfiability-of-equality-equations/",
+    "leetcode_num": "990",
+    "description": "Given equations like a==b, b==c, a!=c, determine if all constraints can be satisfied simultaneously.",
+    "examples": "Input:  [\"a==b\",\"b==c\",\"a!=c\"]\nOutput: false   (a==b==c contradicts a!=c)",
+    "approach": "Two-pass Union-Find. First, union all == pairs. Then verify no != pair shares the same component.",
+    "complexity": "Time O(n × α(n)) · Space O(1) (26 chars)",
+    "follow_up": ""
+  },
+  {
+    "id": 22,
+    "title": "Course Schedule II Topological Sort Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Graphs",
+      "BFS",
+      "Topological Sort"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/course-schedule-ii/",
+    "leetcode_num": "210",
+    "description": "Return a valid order to finish all courses given prerequisites, or [] if impossible.",
+    "examples": "Input:  n=4, prerequisites=[[1,0],[2,0],[3,1],[3,2]]\nOutput: [0,2,1,3]  (or any valid topological order)",
+    "approach": "Kahn's algorithm maintain in-degree counts, process zero in-degree nodes via BFS. If all n nodes are processed, a valid order exists.",
+    "complexity": "Time O(V+E) · Space O(V+E)",
+    "follow_up": ""
+  },
+  {
+    "id": 23,
+    "title": "Edit Distance Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "DP",
+      "Strings"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/edit-distance/",
+    "leetcode_num": "72",
+    "description": "Minimum insert / delete / replace operations to convert word1 into word2.",
+    "examples": "Input:  word1 = \"horse\",  word2 = \"ros\"\nOutput: 3   (horse→rorse→rose→ros)",
+    "approach": "2D DP. dp[i][j] = min operations for first i chars of word1 to first j chars of word2. If chars match: dp[i-1][j-1], else 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]).",
+    "complexity": "Time O(m×n) · Space O(m×n) (optimizable to O(n))",
+    "follow_up": ""
+  },
+  {
+    "id": 24,
+    "title": "Decode Ways Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "DP",
+      "Strings"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/decode-ways/",
+    "leetcode_num": "91",
+    "description": "'A'→1 through 'Z'→26. Count total ways to decode a digit string.",
+    "examples": "Input:  s = \"226\"\nOutput: 3   (\"BZ\",\"VF\",\"BBF\")",
+    "approach": "DP where dp[i] = ways to decode s[0..i-1]. Add dp[i-1] if s[i-1] != '0'; add dp[i-2] if s[i-2..i-1] is 10–26.",
+    "complexity": "Time O(n) · Space O(n)",
+    "follow_up": ""
+  },
+  {
+    "id": 25,
+    "title": "Maximal Square Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "DP",
+      "Matrix"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/maximal-square/",
+    "leetcode_num": "221",
+    "description": "Find the largest square of all '1's in a binary matrix. Return its area.",
+    "examples": "Input:  [[\"1\",\"0\",\"1\"],[\"1\",\"1\",\"1\"],[\"1\",\"1\",\"1\"]]\nOutput: 4   (2×2 square in bottom-right)",
+    "approach": "dp[i][j] = side of largest square with bottom-right at (i,j). If matrix[i][j]=='1': dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1.",
+    "complexity": "Time O(m×n) · Space O(m×n)",
+    "follow_up": ""
+  },
+  {
+    "id": 26,
+    "title": "String Grouping with Distinct Char Constraint Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "DP",
+      "Greedy",
+      "Strings"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given string s and integer k, divide into groups of size ≤ k. All occurrences of each distinct character must land in the same group. Return minimum number of groups, or -1 if any single character's total count exceeds k.",
+    "examples": "Input:  s = \"aabbcc\",  k = 4\nOutput: 2   (groups: all a's+b's = 4, all c's = 2)",
+    "approach": "Count occurrences of each character. If any count > k, return -1. Sort character blocks by count. Greedily fill bins of size k.",
+    "complexity": "Time O(n + C log C) where C = distinct chars · Space O(C)",
+    "follow_up": ""
+  },
+  {
+    "id": 27,
+    "title": "LRU Cache Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Design",
+      "Hash Map",
+      "Linked List"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/lru-cache/",
+    "leetcode_num": "146",
+    "description": "Design get(key) and put(key, value) both in O(1) time, with LRU eviction at capacity.",
+    "examples": "LRUCache(2) → put(1,1) → put(2,2) → get(1)=1\n→ put(3,3) [evicts key 2] → get(2)=-1",
+    "approach": "Doubly linked list + hash map. Hash map gives O(1) lookup; linked list maintains usage order. Move accessed node to head; evict from tail.",
+    "complexity": "Time O(1) per operation · Space O(capacity)",
+    "follow_up": ""
+  },
+  {
+    "id": 28,
+    "title": "Find Median from Data Stream Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Design",
+      "Heaps"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/find-median-from-data-stream/",
+    "leetcode_num": "295",
+    "description": "Support addNum(n) and findMedian() dynamically.",
+    "examples": "addNum(1) → addNum(2) → findMedian()=1.5 → addNum(3) → findMedian()=2.0",
+    "approach": "Max-heap for lower half, min-heap for upper half. Keep sizes balanced (diff ≤ 1). Median = top of larger heap or average of both tops.",
+    "complexity": "Time O(log n) add · O(1) median · Space O(n)",
+    "follow_up": ""
+  },
+  {
+    "id": 29,
+    "title": "Design Hit Counter Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Design",
+      "Circular Array"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/design-hit-counter/",
+    "leetcode_num": "362",
+    "description": "Count hits in the past 300 seconds. Support hit(timestamp) and getHits(timestamp).",
+    "examples": "hit(1) → hit(2) → hit(300) → getHits(300)=3 → hit(301) → getHits(301)=2",
+    "approach": "Circular array of 300 slots. Each slot stores (timestamp, count). On hit, overwrite slot if timestamp differs. On getHits, sum only slots whose timestamp is within the window.",
+    "complexity": "Time O(1) per operation · Space O(300)",
+    "follow_up": "Handle distributed hits across multiple machines."
+  },
+  {
+    "id": 30,
+    "title": "Robot Room Cleaner Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Backtracking",
+      "DFS"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/robot-room-cleaner/",
+    "leetcode_num": "489",
+    "description": "A robot with move(), turnLeft(), turnRight(), clean() APIs must clean the entire reachable room. Grid layout and obstacles are unknown.",
+    "examples": "",
+    "approach": "DFS with backtracking. Track visited cells by relative (row, col, direction). After exploring each direction, backtrack by rotating 180°, stepping forward, rotating back. Clean the current cell before exploring.",
+    "complexity": "Time O(N−M) cells visited · Space O(N−M) for visited set",
+    "follow_up": ""
+  },
+  {
+    "id": 31,
+    "title": "Longest Consecutive Sequence Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/longest-consecutive-sequence/",
+    "leetcode_num": "128",
+    "description": "Find the length of the longest consecutive sequence in an unsorted array. Must run in O(n).",
+    "examples": "Input: [100,4,200,1,3,2] → Output: 4  (1,2,3,4)",
+    "approach": "Hash set. For each number that has no n−1 in set (sequence start), expand forward. Time O(n) · Space O(n).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 32,
+    "title": "Word Break Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/word-break/",
+    "leetcode_num": "139",
+    "description": "Can s be segmented into dictionary words?",
+    "examples": "Input: s=\"applepenapple\", dict=[\"apple\",\"pen\"] → Output: true",
+    "approach": "DP. dp[i] = true if s[0..i-1] segments cleanly. Time O(n²) · Space O(n).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 33,
+    "title": "Generate Parentheses Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/generate-parentheses/",
+    "leetcode_num": "22",
+    "description": "Generate all valid combinations of n pairs of parentheses.",
+    "examples": "n=3 → [\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+    "approach": "Backtracking. Add ( if open < n, add ) if close < open. Time O(4^n/√n).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 34,
+    "title": "Clone Graph Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/clone-graph/",
+    "leetcode_num": "133",
+    "description": "Deep copy a connected undirected graph given a node reference.",
+    "examples": "",
+    "approach": "DFS/BFS + hash map (original → clone). Time O(V+E) · Space O(V).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 35,
+    "title": "Pacific Atlantic Water Flow Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+    "leetcode_num": "417",
+    "description": "Find cells from which water can flow to both oceans.",
+    "examples": "",
+    "approach": "Reverse BFS from both borders. Answer = intersection of both reachable sets. Time O(m×n).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 36,
+    "title": "Longest Increasing Subsequence Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "leetcode_num": "300",
+    "description": "Prepare and solve the coding question: Longest Increasing Subsequence Medium asked in GOOGLE recruitment.",
+    "examples": "Input: [10,9,2,5,3,7,101,18] → Output: 4  ([2,3,7,101])",
+    "approach": "Binary search on tails[] array (patience sorting). Time O(n log n) · Space O(n).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 37,
+    "title": "Alien Dictionary Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/alien-dictionary/",
+    "leetcode_num": "269",
+    "description": "Derive character ordering from a sorted word list in an alien language.",
+    "examples": "[\"wrt\",\"wrf\",\"er\",\"ett\",\"rftt\"] → \"wertf\"",
+    "approach": "Build directed graph from adjacent word comparisons. Topological sort + cycle detection. Time O(C).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 38,
+    "title": "Implement Trie (Prefix Tree) Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Onsite",
+      "Phone Screen Follow-up"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+    "leetcode_num": "208",
+    "description": "Implement insert, search, startsWith.",
+    "examples": "",
+    "approach": "Each node = children map + isEnd flag. Time O(m) per operation.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 39,
+    "title": "Number of Islands Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/number-of-islands/",
+    "leetcode_num": "200",
+    "description": "Count connected groups of '1's in a grid.",
+    "examples": "",
+    "approach": "DFS from each unvisited '1', mark connected cells. Increment count per DFS call. Time O(m×n).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 40,
+    "title": "Minimum Spanning Tree Connect Cities Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/connecting-cities-with-minimum-cost/",
+    "leetcode_num": "1135",
+    "description": "Minimum cost to connect all n cities.",
+    "examples": "",
+    "approach": "Kruskal's sort edges by weight, Union-Find to avoid cycles. Time O(E log E).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 41,
+    "title": "Copy List with Random Pointer Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+    "leetcode_num": "138",
+    "description": "Deep copy a linked list where each node has next and random pointers.",
+    "examples": "",
+    "approach": "Two-pass with hash map (original → clone). Time O(n) · Space O(n).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 42,
+    "title": "Random Pick with Weight Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/random-pick-with-weight/",
+    "leetcode_num": "528",
+    "description": "Pick index i with probability proportional to w[i].",
+    "examples": "",
+    "approach": "Prefix sum + binary search on a random number in [1, totalSum]. Time O(log n) per pick.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 43,
+    "title": "Merge K Sorted Lists Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/merge-k-sorted-lists/",
+    "leetcode_num": "23",
+    "description": "Merge k sorted linked lists into one.",
+    "examples": "[1→4→5, 1→3→4, 2→6] → 1→1→2→3→4→4→5→6",
+    "approach": "Min-heap of size k. Extract min, push next node from that list. Time O(n log k).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 44,
+    "title": "Next Permutation Medium",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/next-permutation/",
+    "leetcode_num": "31",
+    "description": "Rearrange to the lexicographically next greater permutation in-place.",
+    "examples": "[1,2,3] → [1,3,2]\n[3,2,1] → [1,2,3]  (wrap-around)",
+    "approach": "Find rightmost element smaller than its successor. Swap with smallest larger element to its right. Reverse the suffix. Time O(n) · Space O(1).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 45,
+    "title": "Burst Balloons Hard",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/burst-balloons/",
+    "leetcode_num": "312",
+    "description": "Burst balloons to maximize coins. Bursting balloon i earns nums[i-1] × nums[i] × nums[i+1].",
+    "examples": "Input: [3,1,5,8] → Output: 167",
+    "approach": "Interval DP. Think in reverse choose the",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "title": "Divisible Within Range",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given number x and y. U need to find all numbers in range x and y both inclusive which are divisible by x\n\nSample Input 1: 3 18\n\nSample output 1: 6\n\nExplanation: 3 6 9 12 15 18",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 2,
+    "title": "Nth Term of Arithmetic progression",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given a, d and n which represents A = first term of AP D = common difference in AP N = term that we need to find\n\nFormula for calculating nth term: Nth term = a + (n-1)*d\n\nSample Input 1: 2 3 8\n\nSample output 1: 23",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 3,
+    "title": "Third Last Consonant",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given a string, str. Print the third last consonant of str.\n\nNote:\n\nInput Format:\n\nEach test case consists of two lines of input,\n\nInput will be read from the STDIN by the candidate\n\nOutput Format:\n\nThe output will be matched to the candidates output printed on the STDOUT\n\nConstraints: 0 < length of the string str < 10^9\n\nExample:\n\nInput:\n\nOutput: g\n\nExplanation: g is the third last consonant in asdfguihj\n\nSample input:\n\nSample Output: h",
+    "examples": "9\nasdfguihj",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 4,
+    "title": "Product of Numbers",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given an integer n. Find and print the product of all the numbers from 1 to n.\n\nNote: Computed value lies within the integer range.\n\nInput Format: The test case consists of a single line of input:\n\nInput will be read from the STDIN by the candidate\n\nOutput Format: Print the product of all the numbers from 1 to n.\n\nThe output will be matched to the candidate's output printed on the STDOUT\n\nConstraints: 0 < n < 13\n\nExample:\n\nInput: 5\n\nOutput: 120\n\nExplanation: For input 5, the output is 1 × 2 × 3 × 4 × 5 = 120.\n\nSample input: 4\n\nSample Output: 24",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 5,
+    "title": "Sum of Divisors",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given an integer n find and print the sum of all of its divisors starting from 1.\n\nNote:\n• Sum lies within the integer range.\n\nInput Format: The input consists of a single line of input:\n\nInput will be read from the STDIN by the candidate\n\nOutput Format: The output will be a single integer, i.e. the sum of all its divisors starting from 1.\n\nThe output will be matched to the candidate's output printed on the STDOUT\n\nConstraints: 0 < n < 10^9\n\nExample:\nInput: 6\n\nOutput: 12\n\nExplanation: Divisors of 6 are {1, 2, 3, 6} Sum = 1 + 2 + 3 + 6 = 12, hence the output is 12.\n\nSample input: 12\n\nSample Output: 28",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 6,
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given an array arr of size N. Your task is to re-order the array and find the length of the longest increasing sub-sequence from that re-ordered array and print the same as the output.\n\nA sub-sequence of a given sequence is a sequence that can be derived from the given sequence by deleting some or no elements without changing the order of the remaining elements.\n\nInput Format:\nThe input is in the following format:\n\nThe input will be read from the STDIN by the candidate\n\nOutput Format: Print the length of the longest increasing sub-sequence after re-ordering the given array.\n\nThe output will be matched to the candidate's output printed on the STDOUT\n\nConstraints:\n• 1 ≤ N ≤ 10^5\n• 1 ≤ arr[i] ≤ 10^5\n\nExample:\nInput:\n\nOutput: 3\n\nExplanation: Let's re-order the elements, as (1,3,5,3,3). Now, we can find the longest increasing sub-sequence of this, which will be (1,3,5), and its length is 3. There can be several other re-orderings of the array, but the longest increasing sub-sequence size that we can obtain for this particular array is 3, which is thus, the answer to the problem.\n\nSample input:\n\nSample Output: 1",
+    "examples": "5\n5\n3\n3\n3\n1",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 7,
+    "title": "Power Calculation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "In physics, power is the amount of energy transferred or converted per unit time, which is power=energy/time. You are given energy output and time taken for two power generators. Calculate and print the total power generated from both the generators. In case of decimal values of power, use floor value.\n\nInput Format:\nThe input consists of four lines:\n\nThe input will be read from the STDIN by the candidate\n\nOutput Format:\nPrint the total power generated.\n\nThe output will be matched to the candidate's output printed on the STDOUT\n\nConstraints:\n• 1 ≤ T1 ≤ E1 ≤ 100000\n• 1 ≤ T2 ≤ E2 ≤ 100000\n\nExample:\nInput:\n\nOutput: 273\n\nExplanation:\nPower from first generator 1 is 520/3 = 173.33 after flooring the value we get 173.\nPower from first generator 2 is 100/1 = 100.\nTotal power generated is 173+100 = 273.\n\nSample input:\n\nSample Output: 240",
+    "examples": "520\n3\n100\n1",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 8,
+    "title": "CamelCase to UpperCase",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "John wrote a sequence of words in CamelCase as a string of letters s, having the following properties:\n\nInput Format: The input consists of a single line:\n\nThe input will be read from the STDIN by the candidate\n\nOutput Format: Print each word in s separated by a line after converting the case of the letters.\n\nThe output will be matched to the candidate's output printed on the STDOUT\n\nConstraints:\n• 1 ≤ length of s ≤ 10^5\n\nExample:\nInput: saveChangesInTheEditor\n\nOutput:\n\nExplanation: String s contains five words. So, print each word in a new line with the count of the word in the string.\n\nSample input: hiHello\n\nSample Output:",
+    "examples": "SAVE\nCHANGES\nIN\nTHE\nEDITOR",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 9,
+    "title": "Case Toggle",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given a single character c. The character c lies between [a - z] or [A - Z]. If the character is in the upper case then you are required to change the case of character to lower case and print the same. If it is in the lower case, change it to upper case and print the same.\n\nInput Format: Input consists of a single line:\n\nInput will be read from the STDIN by the candidate\n\nOutput Format: The output consists of a single character i.e. the changed character.\n\nThe output will be matched to the candidate's output printed on the STDOUT\n\nConstraints:\n• The character c lies between [a - z] or [A - Z].\n\nExample:\nInput: a\n\nOutput: A\n\nExplanation: Since character 'a' is a lower case alphabet, it is changed to an upper case alphabet 'A', hence 'A' is printed.\n\nSample input: C\n\nSample Output: c",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 10,
+    "title": "Maximum Product",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given two ranges (L1, R1) and (L2, R2). You need to find two numbers a and b, such that L1 ≤ a ≤ R1 and L2 ≤ b ≤ R2, and the product of a and b is maximum.\n\nInput Format: The input consists of a single line:\n\nInput will be read from the STDIN by the candidate\n\nOutput Format: Print the maximum product of a and b.\n\nThe output will be matched to the candidate's output printed on the STDOUT\n\nConstraints:\n• -10³ ≤ L1 ≤ R1 ≤ 10³.\n• -10³ ≤ L2 ≤ R2 ≤ 10³.\n\nExample:\nInput: 1 3 -2 6\n\nOutput: 18\n\nExplanation: The ranges are (1, 3) and (-2, 6). So the maximum product of a, b such that 1 <= a <= 3 and -2 <= b <= 6 is (3*6)=18.\n\nSample input: 1 2 3 4\n\nSample Output: 8",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 11,
+    "title": "Pythagorean Theorem",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given two integers A and B. A represents a coordinate on the X-axis(A,0) and B represents a coordinate on the Y-axis (0,B). These are two co-ordinate points of a right-angled triangle, the third point being the origin(0,0). You will be given N such triangles in the input. Find the hypotenuse of all the triangles.\n\nNote:\n\nInput Format: The input consist is given in the following format:\n\nThe input will be read from the STDIN by the candidate\n\nOutput Format: The output consists of N lines:\n\nThe output will be matched to the candidate's output printed on the STDOUT\n\nConstraints:\n• 1 ≤ A, B ≤ 10⁹\n\nExample:\nInput:\n\nOutput: 29",
+    "examples": "2\n20 21\n8 15",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 12,
+    "title": "Even Odd",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given a number N. If N is odd then print the value of the product of digits of the number N otherwise print the value of the sum of digits of the number N.\n\nInput Format: The input consist of a single line:\n\nInput will be read from the STDIN by the candidate\n\nOutput Format: If N is odd then print the value of the product of digits of the number N otherwise print the value of the sum of digits of the number N.\n\nThe output will be matched to the candidate's output printed on the STDOUT\n\nConstraints:\n• 1 ≤ N ≤ 10^8.\n\nExample:\nInput: 11\n\nOutput: 1\n\nExplanation: 11 is odd hence the value of the product of the digits of 11 is 1*1=1.\n\nSample input: 464\n\nSample Output: 14",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  }
+]

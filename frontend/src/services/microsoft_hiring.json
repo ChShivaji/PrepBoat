@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Stage 1: Online Assessment (Codility)",
+    "desc": "A timed 90-minute assessment with 2 to 3 coding problems covering arrays, strings, stacks, or trees.",
+    "tip": "Aim for complete code correctness and test against hidden edge cases."
+  },
+  {
+    "title": "Stage 2: Technical Phone Screen",
+    "desc": "A 45-60 min live coding session focusing on core DSA, database queries, or object-oriented design.",
+    "tip": "Be prepared to explain your design choices and discuss project architecture."
+  },
+  {
+    "title": "Stage 3: Onsite Interview Loop",
+    "desc": "4 rounds of interviews including 3 coding rounds (LLD/DSA) and 1 system design / architectural round.",
+    "tip": "Master object-oriented design patterns and low-level design diagrams."
+  }
+]

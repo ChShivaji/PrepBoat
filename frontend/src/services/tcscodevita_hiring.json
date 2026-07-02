@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Stage 1: Pre-Qualifier Round",
+    "desc": "A 6-hour competitive coding challenge with 6 programming problems of varying difficulty levels.",
+    "tip": "You need to solve at least 1-2 questions with all test cases passing to get shortlisted for interview calls."
+  },
+  {
+    "title": "Stage 2: Round 2 (Qualifier)",
+    "desc": "A proctored 6-hour coding round for top performers of Stage 1 to filter candidate ranks.",
+    "tip": "Practice competitive programming. Questions require highly optimized time complexity."
+  },
+  {
+    "title": "Stage 3: Grand Finale & Interviews",
+    "desc": "Top rankers are called for the Grand Finale and face interview panels for TCS Digital or Innovator roles.",
+    "tip": "Be prepared to perform code walk-throughs of the solutions you submitted in the contest."
+  }
+]

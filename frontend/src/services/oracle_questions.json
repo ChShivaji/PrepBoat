@@ -1,0 +1,1602 @@
+[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find two numbers in array that add up to target sum",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Two Sum.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 2,
+    "title": "Maximum Subarray (Kadane's)",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find contiguous subarray with maximum sum",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Maximum Subarray (Kadane's).",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 3,
+    "title": "Stock Buy Sell",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Calculate maximum profit from buying and selling stocks",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Stock Buy Sell.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 4,
+    "title": "Rotate Array",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Rotate array to right by k steps",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Rotate Array.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 5,
+    "title": "Remove Duplicates",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Remove duplicates from sorted array in-place",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Remove Duplicates.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 6,
+    "title": "Merge Sorted Arrays",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Merge two sorted arrays into one",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Merge Sorted Arrays.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 7,
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if two strings are anagrams",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Valid Anagram.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 8,
+    "title": "Longest Substring Without Repeating",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find longest substring with unique characters",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Longest Substring Without Repeating.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 9,
+    "title": "String Palindrome",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if string reads same forwards and backwards",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for String Palindrome.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 10,
+    "title": "First Missing Positive",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Array & String"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find smallest missing positive integer",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for First Missing Positive.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 11,
+    "title": "Fibonacci Series",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Generate nth Fibonacci number",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Fibonacci Series.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 12,
+    "title": "Prime Number Check",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Determine if given number is prime",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Prime Number Check.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 13,
+    "title": "Factorial Calculation",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Calculate factorial of a number",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Factorial Calculation.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 14,
+    "title": "Power of Two",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if number is power of 2",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Power of Two.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 15,
+    "title": "Reverse Integer",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Reverse digits of an integer",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Reverse Integer.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 16,
+    "title": "Count Digits",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Count number of digits in integer",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Count Digits.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 17,
+    "title": "GCD/LCM",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find greatest common divisor or least common multiple",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for GCD/LCM.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 18,
+    "title": "Perfect Square",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if number is perfect square",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Perfect Square.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 19,
+    "title": "Happy Number",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Determine if number leads to 1 through digit square sum",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Happy Number.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 20,
+    "title": "Armstrong Number",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Mathematical & Logic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if number equals sum of cubes of digits",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Armstrong Number.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 21,
+    "title": "Binary Tree Traversal",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement inorder, preorder, postorder traversal",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Binary Tree Traversal.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 22,
+    "title": "Tree Height",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find maximum depth of binary tree",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Tree Height.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 23,
+    "title": "Symmetric Tree",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if binary tree is mirror of itself",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Symmetric Tree.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 24,
+    "title": "Path Sum",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if tree has root-to-leaf path with given sum",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Path Sum.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 25,
+    "title": "Level Order Traversal",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Print tree level by level (BFS)",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Level Order Traversal.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 26,
+    "title": "Lowest Common Ancestor",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find LCA of two nodes in tree",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Lowest Common Ancestor.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 27,
+    "title": "Binary Search Tree Validation",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if tree is valid BST",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Binary Search Tree Validation.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 28,
+    "title": "Graph BFS/DFS",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement breadth-first and depth-first search",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Graph BFS/DFS.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 29,
+    "title": "Connected Components",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Count number of connected components in graph",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Connected Components.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 30,
+    "title": "Shortest Path",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Tree & Graph"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find shortest path between two nodes",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Shortest Path.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 31,
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Search element in sorted array",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Binary Search.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 32,
+    "title": "Merge Sort",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Sort array using divide and conquer",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Merge Sort.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 33,
+    "title": "Quick Sort",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Sort array using pivot partitioning",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Quick Sort.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 34,
+    "title": "Bubble Sort",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Sort using adjacent element swapping",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Bubble Sort.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 35,
+    "title": "Selection Sort",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Sort by repeatedly finding minimum element",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Selection Sort.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 36,
+    "title": "Search in Rotated Array",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find element in rotated sorted array",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Search in Rotated Array.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 37,
+    "title": "Find Peak Element",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Locate peak in array where element is greater than neighbors",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Find Peak Element.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 38,
+    "title": "Search 2D Matrix",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Search element in row and column sorted matrix",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Search 2D Matrix.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 39,
+    "title": "Kth Largest Element",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find kth largest element in array",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Kth Largest Element.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 40,
+    "title": "Median of Arrays",
+    "difficulty": "Hard",
+    "round": "Interview",
+    "topics": [
+      "Sorting & Searching"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find median of two sorted arrays",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Median of Arrays.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 41,
+    "title": "Climbing Stairs",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Count ways to reach top taking 1 or 2 steps",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Climbing Stairs.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 42,
+    "title": "House Robber",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Maximum money robber can steal without robbing adjacent houses",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for House Robber.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 43,
+    "title": "Coin Change",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Minimum coins needed to make target amount",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Coin Change.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 44,
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find length of longest increasing subsequence",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Longest Increasing Subsequence.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 45,
+    "title": "Edit Distance",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Minimum operations to convert one string to another",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Edit Distance.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 46,
+    "title": "Maximum Product Subarray",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find subarray with maximum product",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Maximum Product Subarray.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 47,
+    "title": "Unique Paths",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Count unique paths in grid from top-left to bottom-right",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Unique Paths.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 48,
+    "title": "Knapsack Problem",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Maximum value items that fit in knapsack capacity",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Knapsack Problem.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 49,
+    "title": "Palindrome Partitioning",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Minimum cuts needed to partition string into palindromes",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Palindrome Partitioning.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 50,
+    "title": "Word Break",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if string can be segmented into dictionary words",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Word Break.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 51,
+    "title": "Valid Parentheses",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if parentheses are balanced",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Valid Parentheses.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 52,
+    "title": "Next Greater Element",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find next greater element for each array element",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Next Greater Element.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 53,
+    "title": "Min Stack",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design stack with getMin() operation in O(1)",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Min Stack.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 54,
+    "title": "Queue using Stacks",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement queue using two stacks",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Queue using Stacks.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 55,
+    "title": "Stack using Queues",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement stack using two queues",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Stack using Queues.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 56,
+    "title": "Largest Rectangle Histogram",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find largest rectangle area in histogram",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Largest Rectangle Histogram.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 57,
+    "title": "Sliding Window Maximum",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find maximum in each sliding window of size k",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Sliding Window Maximum.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 58,
+    "title": "Evaluate Expression",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Evaluate mathematical expression with operators",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Evaluate Expression.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 59,
+    "title": "Simplify Path",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Simplify Unix-style file path",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Simplify Path.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 60,
+    "title": "Daily Temperatures",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Stack & Queue"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find how many days until warmer temperature",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Daily Temperatures.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 61,
+    "title": "Reverse Linked List",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Reverse singly linked list iteratively/recursively",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Reverse Linked List.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 62,
+    "title": "Merge Two Lists",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Merge two sorted linked lists",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Merge Two Lists.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 63,
+    "title": "Cycle Detection",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Detect if linked list has cycle using Floyd's algorithm",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Cycle Detection.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 64,
+    "title": "Remove Nth Node",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Remove nth node from end of linked list",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Remove Nth Node.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 65,
+    "title": "Intersection Point",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find where two linked lists intersect",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Intersection Point.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 66,
+    "title": "Palindrome List",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if linked list forms palindrome",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Palindrome List.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 67,
+    "title": "Add Two Numbers",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Add numbers represented as linked lists",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Add Two Numbers.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 68,
+    "title": "Copy Random Pointer",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Deep copy linked list with random pointers",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Copy Random Pointer.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 69,
+    "title": "Sort List",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Sort linked list in O(n log n) time",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Sort List.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 70,
+    "title": "Flatten List",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Linked List"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Flatten multilevel doubly linked list",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Flatten List.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 71,
+    "title": "Group Anagrams",
+    "difficulty": "Easy",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Group strings that are anagrams together",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Group Anagrams.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 72,
+    "title": "Top K Frequent",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find k most frequent elements in array",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Top K Frequent.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 73,
+    "title": "Subarray Sum K",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Count subarrays with sum equal to k",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Subarray Sum K.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 74,
+    "title": "Longest Consecutive",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find longest consecutive sequence length",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Longest Consecutive.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 75,
+    "title": "Word Pattern",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if string follows given pattern",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Word Pattern.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 76,
+    "title": "Contains Duplicate",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if array contains duplicates",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Contains Duplicate.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 77,
+    "title": "Intersection of Arrays",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find intersection of two arrays",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Intersection of Arrays.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 78,
+    "title": "Valid Sudoku",
+    "difficulty": "Hard",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if Sudoku board is valid",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Valid Sudoku.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 79,
+    "title": "Find Difference",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find character added in second string",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Find Difference.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 80,
+    "title": "Ransom Note",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Hash Table & Set"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Check if ransom note can be constructed from magazine",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Ransom Note.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 81,
+    "title": "Employee Salary Queries",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "SQL queries on employee database",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Employee Salary Queries.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 82,
+    "title": "Nth Highest Salary",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Find nth highest salary using SQL",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Nth Highest Salary.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 83,
+    "title": "Department Rankings",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Rank employees within departments",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Department Rankings.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 84,
+    "title": "Date Manipulations",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Handle date calculations and formatting",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Date Manipulations.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 85,
+    "title": "Hierarchical Queries",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Query parent-child relationships using CONNECT BY",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Hierarchical Queries.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 86,
+    "title": "Window Functions",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Use ROW_NUMBER, RANK, DENSE_RANK functions",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Window Functions.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 87,
+    "title": "Pivot Operations",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Transform rows to columns and vice versa",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Pivot Operations.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 88,
+    "title": "Regular Expressions",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Pattern matching using REGEXP functions",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Regular Expressions.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 89,
+    "title": "PL/SQL Procedures",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Write stored procedures and functions",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for PL/SQL Procedures.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 90,
+    "title": "Exception Handling",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Oracle-Specific Database"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Handle exceptions in PL/SQL code",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Exception Handling.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 91,
+    "title": "LRU Cache",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design Least Recently Used cache",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for LRU Cache.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 92,
+    "title": "Trie Implementation",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Implement prefix tree data structure",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Trie Implementation.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 93,
+    "title": "Serialize/Deserialize",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Convert tree to string and back",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Serialize/Deserialize.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 94,
+    "title": "Design Twitter",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design social media feed system",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Design Twitter.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 95,
+    "title": "Rate Limiter",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design API rate limiting system",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Rate Limiter.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 96,
+    "title": "Consistent Hashing",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Distribute keys across servers",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Consistent Hashing.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 97,
+    "title": "Map Reduce",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Process large datasets using map-reduce pattern",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Map Reduce.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 98,
+    "title": "Load Balancer",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Distribute requests across multiple servers",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Load Balancer.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 99,
+    "title": "Cache System",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design distributed caching system",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for Cache System.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  },
+  {
+    "id": 100,
+    "title": "URL Shortener",
+    "difficulty": "Medium",
+    "round": "Interview",
+    "topics": [
+      "Advanced"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design system like bit.ly or tinyurl",
+    "examples": "",
+    "approach": "Solve using the standard optimal approach for URL Shortener.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": "Can you optimize the space complexity further?"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Stage 1: Cognitive & Technical Assessment",
+    "desc": "Multiple choice questions assessing English ability, critical thinking, abstract reasoning, and pseudocode logic.",
+    "tip": "Practice solving MCQs quickly. Technical sections often test loops, logical operators, and dry runs."
+  },
+  {
+    "title": "Stage 2: Coding Assessment",
+    "desc": "2 coding problems to be solved in 45 minutes. Expect array manipulations, strings, or math problems.",
+    "tip": "Code compile correctness is critical. Make sure all sample test cases pass."
+  },
+  {
+    "title": "Stage 3: Communication Assessment",
+    "desc": "Automated oral test checking pronunciation, reading fluency, listening, and speaking skills.",
+    "tip": "Speak clearly, maintain a steady pace, and use a good headset in a quiet room."
+  },
+  {
+    "title": "Stage 4: Interview (Technical & HR)",
+    "desc": "Interactive loop focusing on final-year projects, tech stack choices, team dynamics, and conflict resolutions.",
+    "tip": "Prepare using the STAR method for behavioral and situational questions."
+  }
+]

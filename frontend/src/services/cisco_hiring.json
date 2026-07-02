@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Stage 1: Online Assessment (HackerRank)",
+    "desc": "Technical MCQs + 2 coding questions on basic data structures, arrays, strings, or graph traversal.",
+    "tip": "Practice time management. Coding questions are typically of LeetCode Easy-to-Medium difficulty."
+  },
+  {
+    "title": "Stage 2: Technical Interview Round 1",
+    "desc": "Covers computer networking (OSI model, TCP/IP, routing protocols), operating systems, and coding.",
+    "tip": "Master networking concepts: IP addressing, subnetting, TCP handshake, and DNS resolution."
+  },
+  {
+    "title": "Stage 3: Technical Interview Round 2",
+    "desc": "Focuses on Low-Level Design (LLD), system architecture, live code refactoring, and database queries.",
+    "tip": "Practice designing modular code structures and discuss concurrency/multithreading."
+  },
+  {
+    "title": "Stage 4: Managerial & HR Interview",
+    "desc": "Assesses leadership traits, team collaboration scenarios, value alignment, and cultural fit.",
+    "tip": "Be authentic and show strong interest in Cisco's hardware/software ecosystem."
+  }
+]

@@ -1,0 +1,626 @@
+[
+  {
+    "id": 1,
+    "title": "Sum of Second Smallest Element at Odd Positions and Largest at Even Positions",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given an array, calculate the sum of the second-smallest element from odd positions and the largest element from even positions.Example: Input [3, 2, 1, 7, 5, 4], Output: 7",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 2,
+    "title": "Find Product of Two Smallest Numbers in Array Whose Sum is Less Than Given Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given a sum and an array, find the product of the two smallest numbers whose sum is less than the given sum.Example: Input sum=9, arr=[5,4,2,3,9,1,7], Output: 2",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 3,
+    "title": "Find Second Largest Number in Array of 1000 Integers",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given an array of 1000 integers, find the second-largest number (return -1 if none exists).Example: Input num1=3, num2=[2,1,2], Output: 1",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 4,
+    "title": "Find All Unique Pairs of Animal IDs",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given a list of integers representing animal IDs, find all unique pairs.Example: Input [1, 2, 3], Output: [(1, 2), (1, 3), (2, 3)]",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 5,
+    "title": "Find Maximum Sum of Coins from Consecutive Treasure Chests",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given a list of integers representing coins in treasure chests (some negative), find the maximum sum from consecutive chests.Example: Input [2, -3, 4, -1, 2, 1, -5, 4], Output: 6",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 6,
+    "title": "Calculate Total Weight and Heaviest Ingredient for a Cake",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given a list of floating-point numbers representing ingredient weights, calculate the total weight and the heaviest ingredient.Example: Input [1.2, 0.5, 2.3, 1.8], Output: (5.8, 2.3)",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 7,
+    "title": "Calculate Total Value and Highest Value of Dragon's Treasures",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given a list of integers representing treasure values, calculate the total value and the highest value.Example: Input [200, 500, 1000, 300], Output: (2000, 1000)",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 8,
+    "title": "Check if a Specific Ingredient ID is Used in a Potion",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given a list of integers representing ingredient IDs and a target ID, check if the target ID is used in the potion.Example: Input [101, 102, 103, 104], 102, Output: \"Yes\"",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 9,
+    "title": "Calculate Total Hours and Highest Hour from Clocks",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given a list of integers representing hours on clocks, calculate the total hours and the highest hour.Example: Input [3, 7, 5, 9], Output: (24, 9)",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 10,
+    "title": "Find the Second Smallest Element in an Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Find the second smallest element in the given array",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 11,
+    "title": "Sum of Even and Odd Elements in an Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Calculate sum of even and odd elements separately",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 12,
+    "title": "Reverse the Array and Print Odd and Even Positions",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Reverse array and print elements at even and odd positions",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 13,
+    "title": "Sum of Second Largest from Even Positions and Second Smallest from Odd Positions",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given an array, calculate the sum of the second-largest element from even positions and the second-smallest from odd positions",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 14,
+    "title": "Find Maximum Value and Index in Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given an array, find the maximum value and its index.Example: Input [23, 45, 82, 27, 66, 12, 78, 13, 71, 86], Output: (86, 9)",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 15,
+    "title": "Matrix Division and Sum of Second Largest",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Perform matrix division and find the sum of the second-largest elements in each row",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 16,
+    "title": "Password Checker",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Check if a string is a valid password based on criteria (e.g., length, numbers, capitals, no spaces/slashes).Example: Input \"aA1_67\", Output: 1; \"a987 abC012\", Output: 0",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 17,
+    "title": "Move Hyphen",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Move hyphens in a string to specific positions based on rules",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 18,
+    "title": "Replace Character",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Replace specific characters in a string with another character",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 19,
+    "title": "Operation Choices",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Perform operations on a string based on user-defined choices",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 20,
+    "title": "Shorten Word with Middle Character Count",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given a word, return the first letter, the count of middle characters, and the last letter",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 21,
+    "title": "Vowel Permutation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given a string, print all possible permutations of vowels present in the string",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 22,
+    "title": "Calculate Difference of Sum of Numbers",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given integers m and n, calculate the difference between the sum of numbers from 1 to n not divisible by m and the sum of numbers divisible by m.Example: Input m=6, n=30, Output: 285",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 23,
+    "title": "Count Number of Carry Operations When Adding Two Numbers",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given two numbers, count the number of carry operations when adding them digit by digit.Example: Input num1=451, num2=349, Output: 2",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 24,
+    "title": "Calculate Total Coins Adam Gives to Charity",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given x, calculate the total coins Adam gives as i^2 from day 1 to x.Example: Input: 2, Output: 5",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 25,
+    "title": "Find Sum of Divisors for Given Integer N",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Given an integer N, find the sum of all its divisors.Example: Input: 6, Output: 12",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 26,
+    "title": "Sum of Binary Digits",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Convert a number N to binary and return the sum of its binary digits (number of 1's)",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 27,
+    "title": "Prime Numbers Between 1 and N",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Print all prime numbers between 1 and N",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 28,
+    "title": "Check Leap Year",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Check if a given year is a leap year",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 29,
+    "title": "Rat Count House",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Involves calculating food consumption for rats across houses",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 30,
+    "title": "Difference of Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Involves calculating differences between sums based on divisibility",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 31,
+    "title": "Product Smallest Pair",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Likely involves finding the product of the smallest pair in an array",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 32,
+    "title": "Decimal to N-Base Notation",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Convert a decimal number to a given base (N)",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 33,
+    "title": "Number of Carries",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Count the number of carry operations when adding two numbers",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 34,
+    "title": "Max Exponents",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Likely involves finding maximum exponents in a number or expression",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 35,
+    "title": "Calculate Sum of Numbers Divisible by 3 and 5",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Calculate the sum of numbers divisible by 3 and 5 within a range",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 36,
+    "title": "Display Table and Sum of Multiples",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Involves displaying a table and summing multiples",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 37,
+    "title": "Print Palindrome Numbers",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Print all palindrome numbers within a given range",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 38,
+    "title": "Sum of Distance Between Three Points",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Likely involves calculating distances between points",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 39,
+    "title": "Autobiographical Number",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Problem: Check if a number is autobiographical (each digit indicates its count in the number)\n\nGet the doc file with most Asked coding questions & actual questions from here - Accenture",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time \u00b7 O(1) space",
+    "follow_up": ""
+  }
+]

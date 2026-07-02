@@ -1,0 +1,830 @@
+[
+  {
+    "id": 1,
+    "title": "Maximum Product Excluding One Element",
+    "difficulty": "Medium",
+    "round": "OA",
+    "topics": [
+      "Arrays"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/maximum-product-of-the-array-except-itself/",
+    "leetcode_num": "",
+    "description": "Given an integer array nums, find the maximum product you can obtain by removing exactly one element from the array and multiplying the rest together.",
+    "examples": "Input: nums = [1, 2, 3, 4]\nOutput: 24\nExplanation: Remove 1, product of [2,3,4] = 24.\n\nInput: nums = [-1, -2, -3, 4]\nOutput: -6\nExplanation: Remove 4, product of [-1,-2,-3] = -6.",
+    "approach": "Compute prefix and suffix product arrays. For each index i, the product excluding index i is prefix[i-1]  suffix[i+1]. Track the maximum across all indices. Handle the edge case where the array contains zeros carefully.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "Can you solve it in O(1) extra space?"
+  },
+  {
+    "id": 2,
+    "title": "Longest Subarray with Sum Zero",
+    "difficulty": "Medium",
+    "round": "OA",
+    "topics": [
+      "Hashing",
+      "GFG Classic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of integers (possibly negative), find the length of the longest subarray whose elements sum to zero.",
+    "examples": "Input: arr = [15, -2, 2, -8, 1, 7, 10, 23]\nOutput: 5\nExplanation: Subarray [-2, 2, -8, 1, 7] has sum 0.\n\nInput: arr = [1, 2, 3]\nOutput: 0",
+    "approach": "Use a prefix sum with a hash map storing the first index where each prefix sum value appears. If the current prefix sum has been seen before at index j, then subarray from j+1 to current index has sum zero. Track the maximum such length.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "What if you need to print the actual subarray?"
+  },
+  {
+    "id": 3,
+    "title": "Subarray Sum Equals K",
+    "difficulty": "Medium",
+    "round": "OA",
+    "topics": [
+      "Prefix Sum",
+      "Hashing"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/subarray-sum-equals-k/",
+    "leetcode_num": "35",
+    "description": "Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals k. The array may contain negative integers.",
+    "examples": "Input: nums = [1,1,1], k = 2\nOutput: 2\n\nInput: nums = [1,2,3], k = 3\nOutput: 2",
+    "approach": "Maintain a running prefix sum and a frequency map. At each position, check how many times (currentSum - k) has appeared before in the prefix sums. Add that count to the answer and update the frequency map with the current prefix sum.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "Why does a sliding window not work here when the array has negative numbers?"
+  },
+  {
+    "id": 4,
+    "title": "Trapping Rain Water",
+    "difficulty": "Hard",
+    "round": "OA",
+    "topics": [
+      "Two Pointers"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/trapping-rain-water/",
+    "leetcode_num": "35",
+    "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+    "examples": "Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]\nOutput: 6\n\nInput: height = [4,2,0,3,2,5]\nOutput: 9",
+    "approach": "Use two pointers left and right starting at the ends. Maintain leftMax and rightMax. At each step, process the side with the smaller max boundary. The water trapped at that position is the difference between the boundary max and the bar height. Advance the pointer inward.",
+    "complexity": "Time O(n) \u00b7 Space O(1)",
+    "follow_up": "Extend this to a 2D grid (Trapping Rain Water II, LeetCode &amp;#35;407)."
+  },
+  {
+    "id": 5,
+    "title": "Gas Station",
+    "difficulty": "Medium",
+    "round": "OA",
+    "topics": [
+      "Greedy"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/gas-station/",
+    "leetcode_num": "35",
+    "description": "There are n gas stations arranged in a circle. The gas array gives the fuel available at each station and the cost array gives the fuel needed to travel to the next station. Find the unique starting station index from which you can complete the circuit, or return -1 if impossible.",
+    "examples": "Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2]\nOutput: 3\n\nInput: gas = [2,3,4], cost = [3,4,3]\nOutput: -1",
+    "approach": "If total gas is less than total cost, no solution exists. Otherwise a solution always exists. Iterate through stations tracking the running tank. Whenever the tank goes negative, reset it to zero and mark the next station as the new candidate start. The candidate at the end is the answer.",
+    "complexity": "Time O(n) \u00b7 Space O(1)",
+    "follow_up": "Prove why a solution is always unique when the total gas is at least total cost."
+  },
+  {
+    "id": 6,
+    "title": "Degree of an Array",
+    "difficulty": "Easy",
+    "round": "OA",
+    "topics": [
+      "Hashing"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/degree-of-an-array/",
+    "leetcode_num": "35",
+    "description": "The degree of an array is the maximum frequency of any element. Find the length of the shortest contiguous subarray that has the same degree as the whole array.",
+    "examples": "Input: nums = [1,2,2,3,1]\nOutput: 2\nExplanation: degree is 2 (both 1 and 2 appear twice). Shortest subarray with degree 2 is [2,2], length 2.\n\nInput: nums = [1,2,2,3,1,4,2]\nOutput: 6",
+    "approach": "Build three maps tracking the frequency, first occurrence index, and last occurrence index for every element. The degree is the maximum frequency. For every element matching the degree, the subarray length is lastIndex - firstIndex + 1. Return the minimum among all such lengths.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "What if you need the shortest subarray with degree at least k?"
+  },
+  {
+    "id": 7,
+    "title": "First Missing Positive",
+    "difficulty": "Hard",
+    "round": "Phone Screen",
+    "topics": [
+      "Arrays"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/first-missing-positive/",
+    "leetcode_num": "35",
+    "description": "Given an unsorted integer array nums, return the smallest missing positive integer. Your algorithm must run in O(n) time and use O(1) extra space.",
+    "examples": "Input: nums = [1,2,0]\nOutput: 3\n\nInput: nums = [3,4,-1,1]\nOutput: 2\n\nInput: nums = [7,8,9,11,12]\nOutput: 1",
+    "approach": "Use the array itself as a hash table. Place each number x in position x-1 if x is in range [1, n]. After rearranging, scan for the first index where nums[i] != i+1. That index+1 is the answer. If all positions are correct, the answer is n+1.",
+    "complexity": "Time O(n) \u00b7 Space O(1)",
+    "follow_up": "Why does swapping guarantee termination and not infinite loops?"
+  },
+  {
+    "id": 8,
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "round": "Phone Screen",
+    "topics": [
+      "Stack"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/valid-parentheses/",
+    "leetcode_num": "35",
+    "description": "Given a string s containing just the characters &#x27;(&#x27;, &#x27;)&#x27;, &#x27;{&#x27;, &#x27;}&#x27;, &#x27;[&#x27;, and &#x27;]&#x27;, determine if the input string is valid. A string is valid if every open bracket is closed by the correct type in the correct order.",
+    "examples": "Input: s = &quot;()&quot;\nOutput: true\n\nInput: s = &quot;()[]{}&quot;\nOutput: true\n\nInput: s = &quot;(]&quot;\nOutput: false",
+    "approach": "Use a stack. Push every opening bracket. When you encounter a closing bracket, check if the top of the stack is its matching opener. If not, or if the stack is empty, return false. At the end, the stack must be empty.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "Extend to handle a string with wildcards &#x27;*&#x27; that can represent any bracket or empty string (LeetCode &amp;#35;678)."
+  },
+  {
+    "id": 9,
+    "title": "House Robber II",
+    "difficulty": "Medium",
+    "round": "Phone Screen",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/house-robber-ii/",
+    "leetcode_num": "35",
+    "description": "All houses are arranged in a circle. You cannot rob two adjacent houses. Given the amount of money in each house, return the maximum amount you can rob without alerting the police.",
+    "examples": "Input: nums = [2,3,2]\nOutput: 3\n\nInput: nums = [1,2,3,1]\nOutput: 4\nExplanation: Rob house 1 (money = 1) and then rob house 3 (money = 3). Total = 4.",
+    "approach": "The circular constraint means you cannot rob both first and last house. Break into two subproblems: rob houses 0 to n-2, and rob houses 1 to n-1. Apply the standard House Robber DP on each range and return the maximum of both results.",
+    "complexity": "Time O(n) \u00b7 Space O(1)",
+    "follow_up": "What if houses are arranged on a tree (LeetCode &amp;#35;337)?"
+  },
+  {
+    "id": 10,
+    "title": "Jump Game",
+    "difficulty": "Medium",
+    "round": "Phone Screen",
+    "topics": [
+      "Greedy"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/jump-game/",
+    "leetcode_num": "35",
+    "description": "Given an integer array nums where each element represents your maximum jump length at that position, return true if you can reach the last index starting from index 0.",
+    "examples": "Input: nums = [2,3,1,1,4]\nOutput: true\n\nInput: nums = [3,2,1,0,4]\nOutput: false",
+    "approach": "Track the maximum index reachable so far. At each position i, if i exceeds the maximum reachable index, return false. Otherwise update maxReach to max(maxReach, i + nums[i]). If maxReach reaches or passes the last index, return true.",
+    "complexity": "Time O(n) \u00b7 Space O(1)",
+    "follow_up": "What is the minimum number of jumps to reach the last index (LeetCode &amp;#35;45)?"
+  },
+  {
+    "id": 11,
+    "title": "LRU Cache",
+    "difficulty": "Medium",
+    "round": "Phone Screen",
+    "topics": [
+      "Design",
+      "Linked List"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/lru-cache/",
+    "leetcode_num": "35",
+    "description": "Design a data structure that follows the Least Recently Used (LRU) cache eviction policy. Implement get(key) and put(key, value) each in O(1) average time.",
+    "examples": "Input:\nLRUCache(2)\nput(1, 1)\nput(2, 2)\nget(1)       \u2192 1\nput(3, 3)    \u2192 evicts key 2\nget(2)       \u2192 -1\nget(3)       \u2192 3",
+    "approach": "Combine a doubly linked list (for O(1) move-to-front and evict-from-tail) with a hash map keyed by cache key pointing to list nodes. On get, move the node to the head. On put, add/update at head; if capacity exceeded, remove tail node and delete its hash map entry.",
+    "complexity": "Time O(1) per operation \u00b7 Space O(capacity)",
+    "follow_up": "Implement LFU Cache where the least frequently used item is evicted (LeetCode &amp;#35;460)."
+  },
+  {
+    "id": 12,
+    "title": "Subsets II",
+    "difficulty": "Medium",
+    "round": "Phone Screen",
+    "topics": [
+      "Backtracking"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/subsets-ii/",
+    "leetcode_num": "35",
+    "description": "Given an integer array nums that may contain duplicates, return all possible subsets (the power set) without duplicate subsets.",
+    "examples": "Input: nums = [1,2,2]\nOutput: [[],[1],[1,2],[1,2,2],[2],[2,2]]\n\nInput: nums = [0]\nOutput: [[],[0]]",
+    "approach": "Sort the array first. In the backtracking recursion, skip an element at the current recursion level if it equals the previous element (to avoid duplicate subsets). Otherwise include or exclude it normally.",
+    "complexity": "Time O(n * 2^n) \u00b7 Space O(n)",
+    "follow_up": "How would you generate all unique permutations of the same array?"
+  },
+  {
+    "id": 13,
+    "title": "Top K Frequent Elements",
+    "difficulty": "Medium",
+    "round": "Phone Screen",
+    "topics": [
+      "Heap",
+      "Bucket Sort"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/top-k-frequent-elements/",
+    "leetcode_num": "35",
+    "description": "Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.",
+    "examples": "Input: nums = [1,1,1,2,2,3], k = 2\nOutput: [1,2]\n\nInput: nums = [1], k = 1\nOutput: [1]",
+    "approach": "Count frequencies with a hash map. Use bucket sort where the bucket index equals the frequency. Iterate buckets from highest to lowest, collecting elements until k are gathered. This avoids an O(n log n) sort.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "Solve it with a min-heap of size k for an O(n log k) solution \u2014 when would you prefer that?"
+  },
+  {
+    "id": 14,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Hashing"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/two-sum/",
+    "leetcode_num": "35",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers that add up to target. Each input has exactly one solution.",
+    "examples": "Input: nums = [2,7,11,15], target = 9\nOutput: [0,1]\n\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]",
+    "approach": "Use a hash map storing value-to-index. For each element, check if (target - current) exists in the map. If yes, return both indices. If no, insert the current element.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "Extend to Three Sum (LeetCode &amp;#35;15) \u2014 what is the time complexity?"
+  },
+  {
+    "id": 15,
+    "title": "3Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Two Pointers"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/3sum/",
+    "leetcode_num": "35",
+    "description": "Given an integer array nums, return all unique triplets [nums[i], nums[j], nums[k]] such that i, j, k are distinct indices and the three values sum to zero.",
+    "examples": "Input: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]",
+    "approach": "Sort the array. Fix each element as the first element of a triplet using a loop. Use two pointers on the remaining subarray to find pairs summing to the negation of the fixed element. Skip duplicates by advancing pointers past equal values.",
+    "complexity": "Time O(n\u00b2) \u00b7 Space O(1)",
+    "follow_up": "Closest Three Sum (LeetCode &amp;#35;16)."
+  },
+  {
+    "id": 16,
+    "title": "Merge Intervals",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Sorting",
+      "Intervals"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/merge-intervals/",
+    "leetcode_num": "35",
+    "description": "Given an array of intervals where intervals[i] = [start_i, end_i], merge all overlapping intervals and return an array of non-overlapping intervals.",
+    "examples": "Input: intervals = [[1,3],[2,6],[8,10],[15,18]]\nOutput: [[1,6],[8,10],[15,18]]\n\nInput: intervals = [[1,4],[4,5]]\nOutput: [[1,5]]",
+    "approach": "Sort intervals by start time. Iterate through sorted intervals. If the current interval&#x27;s start is greater than the last merged interval&#x27;s end, add it as a new interval. Otherwise extend the last merged interval&#x27;s end to the maximum of both ends.",
+    "complexity": "Time O(n log n) \u00b7 Space O(n)",
+    "follow_up": "Insert Interval into an already sorted non-overlapping list (LeetCode &amp;#35;57)."
+  },
+  {
+    "id": 17,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Graph",
+      "BFS/DFS"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/number-of-islands/",
+    "leetcode_num": "35",
+    "description": "Given an m x n 2D binary grid where &#x27;1&#x27; is land and &#x27;0&#x27; is water, return the number of islands. An island is surrounded by water and formed by connecting adjacent land cells horizontally or vertically.",
+    "examples": "Input:\ngrid = [[&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],\n        [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],\n        [&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],\n        [&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;]]\nOutput: 3",
+    "approach": "Iterate every cell. When a &#x27;1&#x27; is found, increment the island count and run BFS or DFS from that cell, marking all reachable connected &#x27;1&#x27; cells as visited (mark as &#x27;0&#x27; or use a visited array). Continue scanning the grid.",
+    "complexity": "Time O(m*n) \u00b7 Space O(m*n)",
+    "follow_up": "Max Area of Island (LeetCode &amp;#35;695)."
+  },
+  {
+    "id": 18,
+    "title": "Course Schedule",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Graph",
+      "Topological Sort"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/course-schedule/",
+    "leetcode_num": "35",
+    "description": "There are numCourses courses labeled 0 to numCourses-1. Given prerequisites pairs, determine if it is possible to finish all courses (i.e., there is no cycle in the prerequisite graph).",
+    "examples": "Input: numCourses = 2, prerequisites = [[1,0]]\nOutput: true\n\nInput: numCourses = 2, prerequisites = [[1,0],[0,1]]\nOutput: false",
+    "approach": "Build a directed graph from prerequisites. Use Kahn&#x27;s algorithm (BFS with in-degree tracking) or DFS cycle detection. In Kahn&#x27;s, start all nodes with in-degree 0, process them, reduce neighbours&#x27; in-degrees, enqueue any that hit 0. If processed count equals numCourses, no cycle exists.",
+    "complexity": "Time O(V+E) \u00b7 Space O(V+E)",
+    "follow_up": "Return a valid course order (LeetCode &amp;#35;210)."
+  },
+  {
+    "id": 19,
+    "title": "Binary Tree Level Order Traversal",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Trees",
+      "BFS"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "leetcode_num": "35",
+    "description": "Given the root of a binary tree, return the level-order traversal of its node values (i.e., from left to right, level by level).",
+    "examples": "Input: root = [3,9,20,null,null,15,7]\nOutput: [[3],[9,20],[15,7]]\n\nInput: root = [1]\nOutput: [[1]]",
+    "approach": "Use a queue initialised with the root. For each iteration, record the current queue size (level size). Process exactly that many nodes, adding their children to the queue, and collect values into a level list. Append each level list to the result.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "Zigzag Level Order Traversal (LeetCode &amp;#35;103)."
+  },
+  {
+    "id": 20,
+    "title": "Validate Binary Search Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Trees"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "leetcode_num": "35",
+    "description": "Given the root of a binary tree, determine if it is a valid binary search tree where each node&#x27;s value is strictly greater than all values in its left subtree and strictly less than all values in its right subtree.",
+    "examples": "Input: root = [2,1,3]\nOutput: true\n\nInput: root = [5,1,4,null,null,3,6]\nOutput: false\nExplanation: Root is 5, right child is 4 which is less than 5.",
+    "approach": "Recursively validate each node with an allowed range (min, max). The root has range (-\u221e, +\u221e). Going left passes (min, node.val) as the new range; going right passes (node.val, max). If a node&#x27;s value falls outside its range, the BST is invalid.",
+    "complexity": "Time O(n) \u00b7 Space O(h)",
+    "follow_up": "Recover BST with exactly two nodes swapped (LeetCode &amp;#35;99)."
+  },
+  {
+    "id": 21,
+    "title": "Lowest Common Ancestor of a BST",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Trees"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+    "leetcode_num": "35",
+    "description": "Given a BST and two nodes p and q, find their Lowest Common Ancestor (the deepest node that is an ancestor of both p and q).",
+    "examples": "Input: root = [6,2,8,0,4,7,9], p = 2, q = 8\nOutput: 6\n\nInput: root = [6,2,8,0,4,7,9], p = 2, q = 4\nOutput: 2",
+    "approach": "Leverage BST ordering. If both p and q are less than the current node, recurse left. If both are greater, recurse right. Otherwise the current node is the split point and is the LCA.",
+    "complexity": "Time O(h) \u00b7 Space O(h)",
+    "follow_up": "LCA of a general binary tree without BST property (LeetCode &amp;#35;236)."
+  },
+  {
+    "id": 22,
+    "title": "Word Break",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/word-break/",
+    "leetcode_num": "35",
+    "description": "Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.",
+    "examples": "Input: s = &quot;leetcode&quot;, wordDict = [&quot;leet&quot;,&quot;code&quot;]\nOutput: true\n\nInput: s = &quot;applepenapple&quot;, wordDict = [&quot;apple&quot;,&quot;pen&quot;]\nOutput: true\n\nInput: s = &quot;catsandog&quot;, wordDict = [&quot;cats&quot;,&quot;dog&quot;,&quot;sand&quot;,&quot;and&quot;,&quot;cat&quot;]\nOutput: false",
+    "approach": "Create a boolean DP array of size n+1 where dp[i] is true if s[0..i-1] can be segmented. dp[0] is true (empty string). For each position i, check all positions j &lt; i where dp[j] is true and s[j..i-1] is in the dictionary. Use a hash set for O(1) word lookup.",
+    "complexity": "Time O(n\u00b2) \u00b7 Space O(n)",
+    "follow_up": "Return all possible segmentations (Word Break II, LeetCode &amp;#35;140)."
+  },
+  {
+    "id": 23,
+    "title": "Coin Change",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/coin-change/",
+    "leetcode_num": "35",
+    "description": "Given an array of coin denominations and an integer amount, return the minimum number of coins needed to make up that amount. Return -1 if it is not possible.",
+    "examples": "Input: coins = [1,5,6,9], amount = 11\nOutput: 2\nExplanation: 5 + 6 = 11.\n\nInput: coins = [2], amount = 3\nOutput: -1",
+    "approach": "Build a bottom-up DP array where dp[i] stores the minimum coins to make amount i. Initialise dp[0] = 0, rest to infinity. For each amount from 1 to target, try every coin denomination c. If c &lt;= i, dp[i] = min(dp[i], dp[i-c] + 1).",
+    "complexity": "Time O(amount * n) \u00b7 Space O(amount)",
+    "follow_up": "Count total number of combinations to make the amount (Coin Change 2, LeetCode &amp;#35;518)."
+  },
+  {
+    "id": 24,
+    "title": "Unique Paths",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/unique-paths/",
+    "leetcode_num": "35",
+    "description": "A robot starts at the top-left corner of an m x n grid and wants to reach the bottom-right corner. The robot can only move right or down. How many unique paths exist?",
+    "examples": "Input: m = 3, n = 7\nOutput: 28\n\nInput: m = 3, n = 2\nOutput: 3",
+    "approach": "dp[i][j] = number of ways to reach cell (i,j). First row and column are all 1 (only one way to reach them). Every other cell dp[i][j] = dp[i-1][j] + dp[i][j-1]. Optimise to a 1D array by updating in place left to right.",
+    "complexity": "Time O(m*n) \u00b7 Space O(n)",
+    "follow_up": "Unique Paths II with obstacles (LeetCode &amp;#35;63)."
+  },
+  {
+    "id": 25,
+    "title": "Decode Ways",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/decode-ways/",
+    "leetcode_num": "35",
+    "description": "A message encoded with &#x27;A&#x27;\u2192&#x27;1&#x27;, &#x27;B&#x27;\u2192&#x27;2&#x27;, \u2026, &#x27;Z&#x27;\u2192&#x27;26&#x27;. Given a string of digits, return the number of ways to decode it.",
+    "examples": "Input: s = &quot;12&quot;\nOutput: 2\nExplanation: &quot;AB&quot; (1 2) or &quot;L&quot; (12).\n\nInput: s = &quot;226&quot;\nOutput: 3\n\nInput: s = &quot;06&quot;\nOutput: 0",
+    "approach": "dp[i] = number of ways to decode s[0..i-1]. dp[0]=1 and dp[1]= (s[0]!=&#x27;0&#x27;) ? 1 : 0. For each position i&gt;=2, add dp[i-1] if s[i-1]!=&#x27;0&#x27;, and add dp[i-2] if the two-digit number s[i-2..i-1] is between 10 and 26.",
+    "complexity": "Time O(n) \u00b7 Space O(1)",
+    "follow_up": "What if &#x27;*&#x27; can represent any digit 1-9 (LeetCode &amp;#35;639)?"
+  },
+  {
+    "id": 26,
+    "title": "Spiral Matrix",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Matrix"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/spiral-matrix/",
+    "leetcode_num": "35",
+    "description": "Given an m x n matrix, return all elements in spiral order (clockwise from top-left).",
+    "examples": "Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [1,2,3,6,9,8,7,4,5]\n\nInput: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput: [1,2,3,4,8,12,11,10,9,5,6,7]",
+    "approach": "Maintain four boundaries: top, bottom, left, right. Traverse right along top, down along right, left along bottom, up along left. After each direction, shrink the corresponding boundary. Stop when top &gt; bottom or left &gt; right.",
+    "complexity": "Time O(m*n) \u00b7 Space O(1)",
+    "follow_up": "Generate a spiral matrix filled with numbers 1 to n\u00b2 (LeetCode &amp;#35;59)."
+  },
+  {
+    "id": 27,
+    "title": "Meeting Rooms II",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Intervals",
+      "Heap"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/meeting-rooms-ii/",
+    "leetcode_num": "35",
+    "description": "Given a list of meeting time intervals, find the minimum number of conference rooms required.",
+    "examples": "Input: intervals = [[0,30],[5,10],[15,20]]\nOutput: 2\n\nInput: intervals = [[7,10],[2,4]]\nOutput: 1",
+    "approach": "Sort meetings by start time. Use a min-heap of end times. For each meeting, if its start is &gt;= the earliest ending meeting (heap top), reuse that room (pop from heap). Otherwise allocate a new room. Push the current meeting&#x27;s end time to the heap. Heap size at end is the answer.",
+    "complexity": "Time O(n log n) \u00b7 Space O(n)",
+    "follow_up": "Two pointer approach using sorted start and end arrays achieves the same complexity with cleaner code \u2014 implement both."
+  },
+  {
+    "id": 28,
+    "title": "Clone Graph",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Graph",
+      "BFS"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/clone-graph/",
+    "leetcode_num": "35",
+    "description": "Given a reference to a node in an undirected connected graph, return a deep copy (clone) of the graph.",
+    "examples": "Input: adjList = [[2,4],[1,3],[2,4],[1,3]]\nOutput: [[2,4],[1,3],[2,4],[1,3]]\n(A new deep-copied graph with the same structure)",
+    "approach": "Use a hash map from original node to its clone. BFS from the start node. For each node popped from the queue, iterate its neighbours. If a neighbour has not been cloned yet, clone it, add to map, and enqueue. Add each cloned neighbour to the current clone&#x27;s neighbour list.",
+    "complexity": "Time O(V+E) \u00b7 Space O(V)",
+    "follow_up": "What changes if the graph can contain cycles versus a DAG?"
+  },
+  {
+    "id": 29,
+    "title": "Minimum Path Sum",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/minimum-path-sum/",
+    "leetcode_num": "35",
+    "description": "Given an m x n grid filled with non-negative numbers, find the path from top-left to bottom-right (only right or down moves) that minimises the sum of numbers along the path.",
+    "examples": "Input: grid = [[1,3,1],[1,5,1],[4,2,1]]\nOutput: 7\nExplanation: Path 1\u21923\u21921\u21921\u21921 = 7.",
+    "approach": "Update the grid in-place (or use a 1D DP array). For the first row, accumulate left to right. For the first column, accumulate top to bottom. Each remaining cell becomes min(cell above, cell to the left) + current cell value.",
+    "complexity": "Time O(m*n) \u00b7 Space O(1) (in-place)",
+    "follow_up": "What if you could also move diagonally?"
+  },
+  {
+    "id": 30,
+    "title": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Trees",
+      "Design"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+    "leetcode_num": "35",
+    "description": "Design an algorithm to serialize a binary tree to a string and deserialize that string back to the original tree structure.",
+    "examples": "Input: root = [1,2,3,null,null,4,5]\nSerialized: &quot;1,2,null,null,3,4,null,null,5,null,null&quot;\nOutput after deserialization: same tree structure",
+    "approach": "For serialization, use preorder DFS. Output each node&#x27;s value followed by its left and right subtrees. Use a sentinel (e.g., &quot;null&quot;) for null nodes. For deserialization, split the string into tokens and use a recursive preorder reconstruction consuming tokens from a queue.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "Serialize and Deserialize BST (LeetCode &amp;#35;449) \u2014 how does the BST property allow a more compact format?"
+  },
+  {
+    "id": 31,
+    "title": "Find the Duplicate Number",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [],
+    "leetcode_link": "https://leetcode.com/problems/find-the-duplicate-number/",
+    "leetcode_num": "35",
+    "description": "Given an array nums of n+1 integers where each integer is in [1, n], there is exactly one repeated number. Find it without modifying the array and using only constant extra space.",
+    "examples": "Input: nums = [1,3,4,2,2]\nOutput: 2\n\nInput: nums = [3,1,3,4,2]\nOutput: 3",
+    "approach": "Treat the array as a linked list where nums[i] is the next pointer from index i. The duplicate creates a cycle. Use Floyd&#x27;s cycle detection: a slow pointer advances one step and a fast pointer two steps until they meet. Then reset slow to index 0, advance both one step at a time \u2014 their meeting point is the duplicate.",
+    "complexity": "Time O(n) \u00b7 Space O(1)",
+    "follow_up": "What if there could be multiple duplicates?"
+  },
+  {
+    "id": 32,
+    "title": "Group Anagrams",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Hashing",
+      "Strings"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/group-anagrams/",
+    "leetcode_num": "35",
+    "description": "Given an array of strings strs, group the anagrams together. Return them in any order.",
+    "examples": "Input: strs = [&quot;eat&quot;,&quot;tea&quot;,&quot;tan&quot;,&quot;ate&quot;,&quot;nat&quot;,&quot;bat&quot;]\nOutput: [[&quot;bat&quot;],[&quot;nat&quot;,&quot;tan&quot;],[&quot;ate&quot;,&quot;eat&quot;,&quot;tea&quot;]]",
+    "approach": "Use a hash map keyed by the sorted version of each string (or a character count tuple). All anagrams share the same key. Append each string to its group&#x27;s list. Return all values.",
+    "complexity": "Time O(n * k log k) where k is max string length \u00b7 Space O(n*k)",
+    "follow_up": "Use a character frequency tuple as key to achieve O(n*k) time."
+  },
+  {
+    "id": 33,
+    "title": "Container With Most Water",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Two Pointers"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/container-with-most-water/",
+    "leetcode_num": "35",
+    "description": "Given n vertical lines of heights stored in height[], find two lines that together with the x-axis form a container holding the most water.",
+    "examples": "Input: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\n\nInput: height = [1,1]\nOutput: 1",
+    "approach": "Two pointers at both ends. Compute area as min(height[left], height[right])  (right - left). Move the pointer pointing to the shorter line inward (moving the taller line cannot increase area). Track the maximum area.",
+    "complexity": "Time O(n) \u00b7 Space O(1)",
+    "follow_up": "Why is it safe to discard the shorter line and not explore all its pairings?"
+  },
+  {
+    "id": 34,
+    "title": "Edit Distance",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/edit-distance/",
+    "leetcode_num": "35",
+    "description": "Given two strings word1 and word2, return the minimum number of operations (insert, delete, or replace) to convert word1 to word2.",
+    "examples": "Input: word1 = &quot;horse&quot;, word2 = &quot;ros&quot;\nOutput: 3\nExplanation: horse\u2192rorse (replace h\u2192r), rorse\u2192rose (delete r), rose\u2192ros (delete e).\n\nInput: word1 = &quot;intention&quot;, word2 = &quot;execution&quot;\nOutput: 5",
+    "approach": "dp[i][j] = min operations to convert word1[0..i-1] to word2[0..j-1]. If the characters match, dp[i][j] = dp[i-1][j-1]. Otherwise dp[i][j] = 1 + min(dp[i-1][j] (delete), dp[i][j-1] (insert), dp[i-1][j-1] (replace)).",
+    "complexity": "Time O(m*n) \u00b7 Space O(m*n) reducible to O(min(m,n))",
+    "follow_up": "Recover the actual sequence of operations (alignment problem)."
+  },
+  {
+    "id": 35,
+    "title": "Pacific Atlantic Water Flow",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Graph",
+      "BFS"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+    "leetcode_num": "35",
+    "description": "Given an m x n island height matrix, water flows from a cell to adjacent cells with equal or lower height. Return all cells from which water can reach both the Pacific (top/left border) and the Atlantic (bottom/right border).",
+    "examples": "Input: heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]\nOutput: [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]",
+    "approach": "Run reverse BFS (water flows uphill from ocean borders). Pacific BFS starts from the top row and left column; Atlantic from the bottom row and right column. A cell is reachable from an ocean if its height is &gt;= the calling cell&#x27;s height. Cells in both reachable sets are the answer.",
+    "complexity": "Time O(m*n) \u00b7 Space O(m*n)",
+    "follow_up": "What if there are multiple land masses separated by water?"
+  },
+  {
+    "id": 36,
+    "title": "Jump Game II",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Greedy"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/jump-game-ii/",
+    "leetcode_num": "35",
+    "description": "Given a 0-indexed array of non-negative integers nums where each element is the maximum jump from that position, return the minimum number of jumps to reach the last index.",
+    "examples": "Input: nums = [2,3,1,1,4]\nOutput: 2\nExplanation: Jump from index 0 to 1 (value 3), then to the last index.\n\nInput: nums = [2,3,0,1,4]\nOutput: 2",
+    "approach": "Greedy BFS-style. Maintain currentEnd (furthest reachable in the current jump) and farthest (furthest reachable with one more jump). At each position up to currentEnd, update farthest. When currentEnd is reached, increment jumps and set currentEnd to farthest.",
+    "complexity": "Time O(n) \u00b7 Space O(1)",
+    "follow_up": "What if some positions are blocked (value 0) \u2014 how do you detect whether the end is reachable?"
+  },
+  {
+    "id": 37,
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Trees",
+      "DFS"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "leetcode_num": "35",
+    "description": "Given the root of a binary tree, return its maximum depth (the number of nodes along the longest path from the root to a farthest leaf node).",
+    "examples": "Input: root = [3,9,20,null,null,15,7]\nOutput: 3\n\nInput: root = [1,null,2]\nOutput: 2",
+    "approach": "Recursive DFS: return 0 for null, otherwise return 1 + max(depth(left), depth(right)). Iterative BFS also works using a level-order traversal and counting levels.",
+    "complexity": "Time O(n) \u00b7 Space O(h)",
+    "follow_up": "Minimum depth of a binary tree (LeetCode &amp;#35;111) \u2014 why is minimum depth trickier than maximum depth?"
+  },
+  {
+    "id": 38,
+    "title": "Path Sum II",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Trees",
+      "Backtracking"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/path-sum-ii/",
+    "leetcode_num": "35",
+    "description": "Given the root of a binary tree and a target sum, return all root-to-leaf paths where the sum of the nodes equals targetSum.",
+    "examples": "Input: root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22\nOutput: [[5,4,11,2],[5,8,4,5]]",
+    "approach": "DFS with a running path list and remaining sum. At each node, add it to the path and subtract from remaining. At a leaf node with remaining = 0, add a copy of the path to results. Backtrack by removing the node from the path when returning.",
+    "complexity": "Time O(n\u00b2) \u00b7 Space O(n)",
+    "follow_up": "Path Sum III where the path does not need to start from root or end at a leaf (LeetCode &amp;#35;437)."
+  },
+  {
+    "id": 39,
+    "title": "Word Ladder",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Graph",
+      "BFS"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/word-ladder/",
+    "leetcode_num": "35",
+    "description": "Given a beginWord, endWord, and a wordList, find the length of the shortest transformation sequence from beginWord to endWord, changing one letter at a time, where each intermediate word must be in the wordList.",
+    "examples": "Input: beginWord = &quot;hit&quot;, endWord = &quot;cog&quot;, wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;,&quot;cog&quot;]\nOutput: 5\nExplanation: hit\u2192hot\u2192dot\u2192dog\u2192cog (5 words).",
+    "approach": "BFS from beginWord. For each word in the queue, generate all possible one-letter mutations. If a mutation is in the word set and not yet visited, add it to the queue and mark visited. Return the level count when endWord is found.",
+    "complexity": "Time O(n * m\u00b2) where n = word count, m = word length \u00b7 Space O(n*m)",
+    "follow_up": "Find all shortest transformation sequences (Word Ladder II, LeetCode &amp;#35;126)."
+  },
+  {
+    "id": 40,
+    "title": "LFU Cache",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Design",
+      "Linked List"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/lfu-cache/",
+    "leetcode_num": "35",
+    "description": "Design a data structure for a Least Frequently Used (LFU) cache. get and put must each run in O(1). When capacity is reached, evict the least frequently used item, breaking ties by evicting the least recently used.",
+    "examples": "Input:\nLFUCache(2)\nput(1, 1)\nput(2, 2)\nget(1)       \u2192 1 (freq[1]=2, freq[2]=1)\nput(3, 3)    \u2192 evicts key 2\nget(2)       \u2192 -1\nget(3)       \u2192 3\nput(4, 4)    \u2192 evicts key 1 (freq[1]=2, freq[3]=2, but key 1 was least recently used)",
+    "approach": "Maintain a key\u2192(value, frequency) map, a frequency\u2192doubly-linked-list-of-keys map (LRU order within a frequency bucket), and a minFreq counter. On get, increment the key&#x27;s frequency and move it to the higher frequency bucket. On put, if full, evict the tail of the minFreq bucket.",
+    "complexity": "Time O(1) per operation \u00b7 Space O(capacity)",
+    "follow_up": "Why does the LFU eviction strategy not always outperform LRU in practice?"
+  },
+  {
+    "id": 41,
+    "title": "Rotate Image",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Matrix"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/rotate-image/",
+    "leetcode_num": "35",
+    "description": "Given an n x n 2D matrix representing an image, rotate it 90 degrees clockwise in-place.",
+    "examples": "Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput: [[7,4,1],[8,5,2],[9,6,3]]",
+    "approach": "First transpose the matrix (swap matrix[i][j] with matrix[j][i]). Then reverse each row. Together these two operations produce a clockwise 90-degree rotation.",
+    "complexity": "Time O(n\u00b2) \u00b7 Space O(1)",
+    "follow_up": "How do you rotate 90 degrees counter-clockwise?"
+  },
+  {
+    "id": 42,
+    "title": "Two Sum IV \u2014 Input is a BST",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Trees",
+      "Hashing"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/",
+    "leetcode_num": "35",
+    "description": "Given the root of a BST and an integer k, return true if there exist two elements in the BST such that their sum equals k.",
+    "examples": "Input: root = [5,3,6,2,4,null,7], k = 9\nOutput: true\n\nInput: root = [5,3,6,2,4,null,7], k = 28\nOutput: false",
+    "approach": "DFS traversal with a hash set. For each node, check if (k - node.val) is already in the set. If yes, return true. Otherwise insert node.val into the set and continue.",
+    "complexity": "Time O(n) \u00b7 Space O(n)",
+    "follow_up": "How can you leverage the BST structure to avoid the hash set (use iterators for an O(n) time, O(h) space solution)?"
+  },
+  {
+    "id": 43,
+    "title": "Find Median from Data Stream",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Heap",
+      "Design"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/find-median-from-data-stream/",
+    "leetcode_num": "35",
+    "description": "Design a data structure that supports adding integers from a stream and retrieving the median of all elements seen so far in O(log n) add and O(1) find.",
+    "examples": "MedianFinder()\naddNum(1)\naddNum(2)\nfindMedian() \u2192 1.5\naddNum(3)\nfindMedian() \u2192 2.0",
+    "approach": "Use two heaps \u2014 a max-heap (lower half) and a min-heap (upper half). Always keep their sizes balanced (differ by at most 1). On each insert, add to the max-heap first, then move its max to the min-heap, then rebalance if sizes differ. Median is either the max-heap top (odd count) or the average of both tops (even count).",
+    "complexity": "Time O(log n) add \u00b7 O(1) findMedian \u00b7 Space O(n)",
+    "follow_up": "Sliding Window Median for a window of size k (LeetCode &amp;#35;480)."
+  },
+  {
+    "id": 44,
+    "title": "Design Parking Lot",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Onsite",
+      "LLD",
+      "OOP",
+      "Design"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design a multi-floor parking lot with two types of spaces: type-2 for two-wheelers and type-4 for four-wheelers. Support parking a vehicle, freeing a space, and querying available spots. Vehicles must be assigned the closest available slot.",
+    "examples": "ParkingLot(floors=3, rows=5, cols=10)\npark(vehicleType=2, vehicleId=&quot;MH12AB1234&quot;) \u2192 Slot(floor=0, row=0, col=0)\npark(vehicleType=4, vehicleId=&quot;MH12AB5678&quot;) \u2192 Slot(floor=0, row=0, col=5)\nfree(vehicleId=&quot;MH12AB1234&quot;)\npark(vehicleType=2, vehicleId=&quot;NEW123&quot;) \u2192 Slot(floor=0, row=0, col=0)",
+    "approach": "Model Slot, Floor, ParkingLot as classes. Each floor maintains a sorted set (min-heap or TreeSet) of available slots per type. On park, pop the smallest available slot; on free, re-insert the slot back. Use a map from vehicleId to Slot for efficient freeing.",
+    "complexity": "Time O(log n) per park/free operation",
+    "follow_up": "Add support for reserved slots and monthly pass vehicles."
+  },
+  {
+    "id": 45,
+    "title": "Reformat Date",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Strings"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/reformat-date/",
+    "leetcode_num": "35",
+    "description": "Given a date string in the format &quot;Day Month Year&quot; (e.g., &quot;20th Oct 2052&quot;), reformat it to &quot;YYYY-MM-DD&quot; format.",
+    "examples": "Input: date = &quot;20th Oct 2052&quot;\nOutput: &quot;2052-10-20&quot;\n\nInput: date = &quot;6th Jun 1933&quot;\nOutput: &quot;1933-06-06&quot;",
+    "approach": "Split the string into parts. Extract the numeric day by stripping the ordinal suffix (st, nd, rd, th). Map the month abbreviation to its two-digit number using a lookup table. Format as YYYY-MM-DD with zero-padding.",
+    "complexity": "Time O(1) \u00b7 Space O(1)",
+    "follow_up": "Reformat between multiple date string formats dynamically."
+  },
+  {
+    "id": 46,
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming",
+      "Binary Search"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "leetcode_num": "35",
+    "description": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "examples": "Input: nums = [10,9,2,5,3,7,101,18]\nOutput: 4\nExplanation: [2,3,7,101] has length 4.\n\nInput: nums = [0,1,0,3,2,3]\nOutput: 4",
+    "approach": "Maintain a tails array where tails[i] is the smallest tail element of all increasing subsequences of length i+1. For each number, binary search in tails for the leftmost value &gt;= current. Replace it, or append if current is larger than all. The length of tails is the LIS length.",
+    "complexity": "Time O(n log n) \u00b7 Space O(n)",
+    "follow_up": "Print the actual subsequence, not just its length."
+  },
+  {
+    "id": 47,
+    "title": "Number of Ways to Reach a Position After Exactly k Steps",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming",
+      "Memoization"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/",
+    "leetcode_num": "35",
+    "description": "Given integers startPos, endPos, and k, return the number of different ways to reach endPos from startPos in exactly k steps on an infinite number line, where each step moves left or right by 1. Return the answer modulo 10^9 + 7.",
+    "examples": "Input: startPos = 1, endPos = 2, k = 3\nOutput: 3\nExplanation: Three paths of 3 steps each reach position 2 from position 1.\n\nInput: startPos = 2, endPos = 5, k = 10\nOutput: 0",
+    "approach": "Let diff = |endPos - startPos|. We need (k - diff) to be non-negative and even (so remaining steps cancel out). If not, return 0. Otherwise the answer is C(k, (k+diff)/2) mod 10^9+7 \u2014 the number of ways to choose right-steps from k total steps. Alternatively, memoised recursion: ways(pos, stepsLeft) = ways(pos-1, stepsLeft-1) + ways(pos+1, stepsLeft-1).",
+    "complexity": "Time O(k\u00b2) with memoization \u00b7 Space O(k\u00b2)",
+    "follow_up": "How does the combinatorics approach achieve O(k) time?"
+  },
+  {
+    "id": 48,
+    "title": "Inventory Management \u2014 Maximum Units on a Truck",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Greedy",
+      "Sorting"
+    ],
+    "leetcode_link": "https://leetcode.com/problems/maximum-units-on-a-truck/",
+    "leetcode_num": "35",
+    "description": "Given a list of box types where boxTypes[i] = [numberOfBoxes, numberOfUnitsPerBox] and a truck size, return the maximum total number of units you can put on the truck.",
+    "examples": "Input: boxTypes = [[1,3],[2,2],[3,1]], truckSize = 4\nOutput: 8\nExplanation: Load 1 box of 3 units, 2 boxes of 2 units = 1+2 = 3 boxes, 4-3=1 more box of 1 unit = 3+2+2+1 = 8.\n\nInput: boxTypes = [[5,10],[2,5],[4,7],[3,9]], truckSize = 10\nOutput: 91",
+    "approach": "Greedy \u2014 sort box types by units per box in descending order. Load as many boxes of the highest unit type as possible before moving to the next type. Stop when the truck is full.",
+    "complexity": "Time O(n log n) \u00b7 Space O(1)",
+    "follow_up": "What if each box type has a weight constraint and the truck has a weight limit?"
+  },
+  {
+    "id": 49,
+    "title": "Minimum Number of Platforms Required",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Greedy",
+      "Sorting",
+      "GFG Classic"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given arrays of arrival and departure times of all trains at a station, find the minimum number of platforms required so no train waits.",
+    "examples": "Input: arr = [900,940,950,1100,1500,1800], dep = [910,1200,1120,1130,1900,2000]\nOutput: 3\n\nInput: arr = [900,1100,1235], dep = [1000,1200,1240]\nOutput: 1",
+    "approach": "Sort both arrays. Use two pointers. Increment platform count when a train arrives before another departs (arr[i] &lt;= dep[j]); otherwise decrement and advance j. Track the maximum platform count reached.",
+    "complexity": "Time O(n log n) \u00b7 Space O(1)",
+    "follow_up": "Equivalent to Meeting Rooms II \u2014 identify the structural similarity."
+  },
+  {
+    "id": 50,
+    "title": "Design an Inventory Management System",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Onsite",
+      "LLD",
+      "OOP",
+      "Observer Pattern"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design a low-level inventory management system for a retail store. Products have stock levels. Support operations: addStock, removeStock, getStock. Notify registered observers (like a reorder service or UI dashboard) whenever stock falls below a threshold.",
+    "examples": "InventorySystem system = new InventorySystem();\nsystem.addObserver(new ReorderObserver(threshold=10));\nsystem.addProduct(&quot;apple&quot;, stock=50);\nsystem.removeStock(&quot;apple&quot;, 45);\n// Observer fires: &quot;apple stock is 5, below threshold&quot;",
+    "approach": "Product class holds id, name, and quantity. InventorySystem maintains a map of productId\u2192Product and a list of StockObserver. On every stock mutation, check if stock &lt; threshold and notify all observers. This is a direct application of the Observer design pattern. The ReorderObserver can trigger a restocking API or send an alert.",
+    "complexity": "Time O(k) per mutation where k = number of observers \u00b7 Space O(n)",
+    "follow_up": "How would you make the system distributed \u2014 multiple warehouse nodes each holding partial inventory?"
+  }
+]

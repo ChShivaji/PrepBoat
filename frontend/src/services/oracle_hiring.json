@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Stage 1: Online Assessment",
+    "desc": "Aptitude and computer science MCQs + 2 coding questions on databases or algorithms.",
+    "tip": "Oracle assessments heavily test database concepts, SQL logic, and basic data structures."
+  },
+  {
+    "title": "Stage 2: Technical Interview 1",
+    "desc": "Deep dive into data structures, SQL queries (joins, indexing), and object-oriented programming.",
+    "tip": "Brush up on complex SQL queries, database transaction properties (ACID), and normal forms."
+  },
+  {
+    "title": "Stage 3: Technical Interview 2",
+    "desc": "Focuses on system design, multi-threading, concurrency control, and advanced algorithms.",
+    "tip": "Understand how memory management works and talk about resource locking mechanisms."
+  },
+  {
+    "title": "Stage 4: HR & Hiring Manager Interview",
+    "desc": "Discussion on career alignment, past projects, oracle cloud systems, and values fit.",
+    "tip": "Show awareness of Oracle's cloud offerings (OCI) and express enthusiasm for client-facing work."
+  }
+]

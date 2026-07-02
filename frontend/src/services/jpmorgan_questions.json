@@ -1,0 +1,832 @@
+[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "Hash MapConstraints: 2 ≤ nums.length ≤ 10⁴",
+      "-10⁹ ≤ nums[i] ≤ 10⁹",
+      "exactly one valid answer exists."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of integers nums and an integer target, return the indices of the two numbers that add up to target. You may not use the same element twice.",
+    "examples": "Input: nums = [2, 7, 11, 15], target = 9Output: [0, 1]",
+    "approach": "nums[0] + nums[1] = 2 + 7 = 9. Use a hash map to achieve O(n) time.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 2,
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Sliding Window",
+      "Hash MapConstraints: 0 ≤ s.length ≤ 5×10⁴",
+      "characters are English letters",
+      "digits",
+      "or symbols."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a string s, find the length of the longest substring that contains no repeating characters.",
+    "examples": "Input: s = \"abcabcbb\"Output: 3",
+    "approach": "The longest substring without repeats is \"abc\". Use a sliding window with a character index map to keep the window valid in O(n).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 3,
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Stack",
+      "StringsConstraints: 1 ≤ s.length ≤ 10⁴",
+      "s contains only (",
+      ")",
+      "{",
+      "}",
+      "[",
+      "]."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a string s, determine if it is valid. A string is valid if every open bracket is closed by the same type of bracket in the correct order, and no open bracket is left unclosed.",
+    "examples": "Input: s = \"{[()]}\"Output: trueInput: s = \"(]\"Output: false",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 4,
+    "title": "Product of Array Except Self",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "Prefix/Suffix ProductsConstraints: 2 ≤ nums.length ≤ 10⁵",
+      "-30 ≤ nums[i] ≤ 30. Must run in O(n)",
+      "without using division."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums, return an array answer where answer[i] equals the product of all elements of nums except nums[i].",
+    "examples": "Input: nums = [1, 2, 3, 4]Output: [24, 12, 8, 6]",
+    "approach": "Build a left-product array and a right-product array, then multiply them together.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 5,
+    "title": "Trapping Rain Water",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "Two PointersConstraints: 0 ≤ height.length ≤ 3×10⁴",
+      "0 ≤ height[i] ≤ 10⁵."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array height representing an elevation map where each bar has width 1, compute how much water can be trapped between the bars after rain.",
+    "examples": "Input: height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]Output: 6",
+    "approach": "Use the two-pointer approach: maintain left_max and right_max. At each step, water at position i = min(left_max, right_max) - height[i].",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 6,
+    "title": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Sliding Window",
+      "Hash MapConstraints: 1 ≤ s.length ≤ 10⁵",
+      "1 ≤ t.length ≤ 10⁴."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given strings s and t, return the minimum window substring of s that contains every character of t (including duplicates). If no such window exists, return an empty string.",
+    "examples": "Input: s = \"ADOBECODEBANC\", t = \"ABC\"Output: \"BANC\"",
+    "approach": "Expand the right pointer until the window is valid, then shrink from the left to find the minimum valid window.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 7,
+    "title": "Merge Intervals",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "SortingConstraints: 1 ≤ intervals.length ≤ 10⁴",
+      "0 ≤ start_i ≤ end_i ≤ 10⁴."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of intervals, merge all overlapping intervals and return an array of non-overlapping intervals covering the entire range.",
+    "examples": "Input: intervals = [[1,3],[2,6],[8,10],[15,18]]Output: [[1,6],[8,10],[15,18]]",
+    "approach": "Sort by start time. Iterate and merge when the current interval's start is ≤ previous end.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 8,
+    "title": "Rotate Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "In-place ManipulationConstraints: 1 ≤ nums.length ≤ 10⁵",
+      "0 ≤ k ≤ 10⁵."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums, rotate the array to the right by k steps. Try to solve it in O(1) extra space.",
+    "examples": "Input: nums = [1, 2, 3, 4, 5, 6, 7], k = 3Output: [5, 6, 7, 1, 2, 3, 4]Hint: Reverse the full array, then reverse the first k elements, then reverse the remaining n-k elements.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 9,
+    "title": "Longest Palindromic Substring",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Strings",
+      "Expand Around CenterConstraints: 1 ≤ s.length ≤ 1000",
+      "s contains only lowercase English letters."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a string s, return the longest palindromic substring in s.",
+    "examples": "Input: s = \"babad\"Output: \"bab\" (or \"aba\")Input: s = \"racecar\"Output: \"racecar\"",
+    "approach": "For each character (and each pair), expand outward while characters match. O(n²) time, O(1) space.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 10,
+    "title": "Linked Lists",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Prepare and solve the coding question: Linked Lists asked in JPMORGAN recruitment.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 11,
+    "title": "Reverse Linked List",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Linked List",
+      "Iteration/RecursionConstraints: 0 ≤ number of nodes ≤ 5000",
+      "-5000 ≤ Node.val ≤ 5000."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the head of a singly linked list, reverse the list and return the new head.",
+    "examples": "Input: [1 → 2 → 3 → 4 → 5]Output: [5 → 4 → 3 → 2 → 1]Hint: Use three pointers: prev, curr, next. Iterative solution runs in O(n) time and O(1) space.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 12,
+    "title": "Detect Cycle in Linked List",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Linked List",
+      "Floyd's Cycle DetectionConstraints: 0 ≤ number of nodes ≤ 10⁴."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the head of a linked list, return true if there is a cycle, otherwise false. Solve in O(1) extra space.",
+    "examples": "Input: [3 → 2 → 0 → -4], pos = 1 (tail connects to index 1)Output: true",
+    "approach": "Use slow and fast pointers. If they meet, a cycle exists.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 13,
+    "title": "Merge Two Sorted Linked Lists",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Linked List",
+      "Two PointersConstraints: 0 ≤ number of nodes in each list ≤ 50",
+      "-100 ≤ Node.val ≤ 100."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the heads of two sorted linked lists, merge them into one sorted linked list by splicing their nodes together. Return the head of the merged list.",
+    "examples": "Input: l1 = [1 → 2 → 4], l2 = [1 → 3 → 4]Output: [1 → 1 → 2 → 3 → 4 → 4]",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 14,
+    "title": "Find the Middle of a Linked List",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Linked List",
+      "Two PointersConstraints: 1 ≤ number of nodes ≤ 100."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the head of a singly linked list, return the middle node. If there are two middle nodes, return the second one.",
+    "examples": "Input: [1 → 2 → 3 → 4 → 5]Output: Node 3Input: [1 → 2 → 3 → 4 → 5 → 6]Output: Node 4Hint: Use the slow/fast pointer technique. When fast reaches the end, slow is at the middle.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 15,
+    "title": "Trees & Binary Search",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Prepare and solve the coding question: Trees & Binary Search asked in JPMORGAN recruitment.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 16,
+    "title": "Validate Binary Search Tree",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Binary Tree",
+      "DFS",
+      "RecursionConstraints: 1 ≤ number of nodes ≤ 10⁴",
+      "-2³¹ ≤ Node.val ≤ 2³¹ - 1."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the root of a binary tree, determine if it is a valid BST. For every node, all values in its left subtree must be strictly less than its value, and all values in its right subtree must be strictly greater.",
+    "examples": "Input: [5, 1, 7] → false (right child 7 is correct, but example with [5, 1, 4, null, null, 3, 6] → false because 4 < 5 violates the BST property at root)Hint: Pass min and max bounds through recursion. Avoid the common mistake of only comparing parent-child pairs.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 17,
+    "title": "Level Order Traversal of Binary Tree",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Binary Tree",
+      "BFSConstraints: 0 ≤ number of nodes ≤ 2000",
+      "-1000 ≤ Node.val ≤ 1000."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given the root of a binary tree, return its level-order traversal as a list of lists, where each inner list contains values at that level from left to right.",
+    "examples": "Input: root = [3, 9, 20, null, null, 15, 7]Output: [[3], [9, 20], [15, 7]]Hint: Use a queue (BFS). At the start of each level, record the current queue size to know how many nodes to process for that level.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 18,
+    "title": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Binary Tree",
+      "BFS/DFS",
+      "String EncodingConstraints: 0 ≤ number of nodes ≤ 10⁴",
+      "-1000 ≤ Node.val ≤ 1000."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design an algorithm to serialize a binary tree into a string and deserialize the string back into the original tree structure.",
+    "examples": "Input: root = [1, 2, 3, null, null, 4, 5]Serialized: \"1,2,3,#,#,4,5\"Deserialized: Original tree reconstructed exactly.Note: Your encoding scheme is your choice — level-order with null markers is the most common approach.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 19,
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Binary SearchConstraints: 1 ≤ nums.length ≤ 5000",
+      "-10⁴ ≤ nums[i] ≤ 10⁴",
+      "all values are unique."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a sorted array rotated at an unknown pivot index, and a target integer, return the index of target if it exists, otherwise -1. Your solution must run in O(log n) time.",
+    "examples": "Input: nums = [4, 5, 6, 7, 0, 1, 2], target = 0Output: 4Hint: At each step of binary search, determine which half is sorted. The target must be in the sorted half if it falls within that range.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 20,
+    "title": "Find First and Last Position of Element in Sorted Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Binary SearchConstraints: 0 ≤ nums.length ≤ 10⁵",
+      "-10⁹ ≤ nums[i] ≤ 10⁹",
+      "must run in O(log n)."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a sorted array and a target, return [first_index, last_index] of the target. Return [-1, -1] if not found.",
+    "examples": "Input: nums = [5, 7, 7, 8, 8, 10], target = 8Output: [3, 4]Hint: Run binary search twice — once biased toward the left boundary, once toward the right.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 21,
+    "title": "Graphs",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Prepare and solve the coding question: Graphs asked in JPMORGAN recruitment.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 22,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Graphs",
+      "BFS/DFS",
+      "MatrixConstraints: 1 ≤ rows",
+      "cols ≤ 300",
+      "grid[i][j] is '0' or '1'."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a 2D grid of '1' (land) and '0' (water), count the number of islands. An island is a group of adjacent land cells (horizontally or vertically connected) surrounded by water.",
+    "examples": "Input:11110110101100000000Output: 1Hint: For each unvisited '1', launch a DFS/BFS to mark all connected land as visited. Each launch = one island.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 23,
+    "title": "Course Schedule (Cycle Detection)",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Graphs",
+      "Topological Sort",
+      "DFSConstraints: 1 ≤ numCourses ≤ 2000",
+      "0 ≤ prerequisites.length ≤ 5000."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given numCourses courses and a list of prerequisite pairs [a, b] (take b before a), determine if it is possible to complete all courses. Return true if possible, false if a cycle exists.",
+    "examples": "Input: numCourses = 2, prerequisites = [[1, 0]]Output: trueInput: numCourses = 2, prerequisites = [[1, 0], [0, 1]]Output: false (circular dependency)",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 24,
+    "title": "Word Search in Grid",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Backtracking",
+      "DFS",
+      "MatrixConstraints: 1 ≤ rows",
+      "cols ≤ 6",
+      "1 ≤ word.length ≤ 15."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a 2D board of characters and a string word, return true if word exists in the grid formed by sequentially adjacent cells (up/down/left/right). The same cell may not be used more than once per path.",
+    "examples": "Input: board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCCED\"Output: trueHint: Use DFS with backtracking. Mark cells as visited in-place and restore them after recursion.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 25,
+    "title": "Coin Change",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming (Unbounded Knapsack)Constraints: 1 ≤ coins.length ≤ 12",
+      "1 ≤ coins[i] ≤ 2³¹ - 1",
+      "0 ≤ amount ≤ 10⁴."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of coin denominations and an amount, return the minimum number of coins needed to make the amount. Return -1 if it is impossible.",
+    "examples": "Input: coins = [1, 5, 6, 9], amount = 11Output: 2 (5 + 6 = 11)Input: coins = [2], amount = 3Output: -1",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 26,
+    "title": "Longest Common Subsequence",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming (2D DP)Constraints: 1 ≤ text1.length",
+      "text2.length ≤ 1000",
+      "strings contain only lowercase English letters."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given two strings text1 and text2, return the length of their longest common subsequence. A subsequence does not need to be contiguous.",
+    "examples": "Input: text1 = \"abcde\", text2 = \"ace\"Output: 3 (the LCS is \"ace\")Hint: Define dp[i][j] = LCS length of text1[0..i-1] and text2[0..j-1]. Recurrence: if chars match, dp[i][j] = dp[i-1][j-1] + 1; else max(dp[i-1][j], dp[i][j-1]).",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 27,
+    "title": "Maximum Subarray (Kadane's Algorithm)",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming",
+      "ArraysConstraints: 1 ≤ nums.length ≤ 10⁵",
+      "-10⁴ ≤ nums[i] ≤ 10⁴."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums, find the contiguous subarray with the largest sum and return that sum.",
+    "examples": "Input: nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]Output: 6 (subarray [4, -1, 2, 1])Hint: Track current_sum and max_sum. If current_sum < 0, reset to 0.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 28,
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming",
+      "FibonacciConstraints: 1 ≤ n ≤ 45."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are climbing n stairs. Each time you can climb 1 or 2 steps. Return the number of distinct ways to reach the top.",
+    "examples": "Input: n = 5Output: 8 (the pattern follows Fibonacci: dp[n] = dp[n-1] + dp[n-2])",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 29,
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming",
+      "Binary SearchConstraints: 1 ≤ nums.length ≤ 2500",
+      "-10⁴ ≤ nums[i] ≤ 10⁴."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "examples": "Input: nums = [10, 9, 2, 5, 3, 7, 101, 18]Output: 4 (the LIS is [2, 3, 7, 101])Hint: The O(n log n) solution uses patience sorting with a tails array and binary search.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 30,
+    "title": "Maximum Product Subarray",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming",
+      "ArraysConstraints: 1 ≤ nums.length ≤ 2×10⁴",
+      "-10 ≤ nums[i] ≤ 10."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums, find the contiguous subarray with the largest product and return the product.",
+    "examples": "Input: nums = [2, 3, -2, 4]Output: 6 (subarray [2, 3])Hint: Track both max_product and min_product (because multiplying two negatives yields a positive).",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 31,
+    "title": "Heap & Priority Queue",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Prepare and solve the coding question: Heap & Priority Queue asked in JPMORGAN recruitment.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 32,
+    "title": "Top K Frequent Elements",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Hash Map",
+      "Heap (Min-Heap)Constraints: 1 ≤ nums.length ≤ 10⁵",
+      "k is in range [1",
+      "number of unique elements]."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums and an integer k, return the k most frequently occurring elements in any order.",
+    "examples": "Input: nums = [1, 1, 1, 2, 2, 3], k = 2Output: [1, 2]Hint: Count frequencies with a hash map, then use a min-heap of size k to maintain the top-k elements.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 33,
+    "title": "K-th Largest Element in an Array",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Heap",
+      "QuickselectConstraints: 1 ≤ k ≤ nums.length ≤ 10⁵",
+      "-10⁴ ≤ nums[i] ≤ 10⁴."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums and integer k, return the k-th largest element (not the k-th distinct).",
+    "examples": "Input: nums = [3, 2, 1, 5, 6, 4], k = 2Output: 5Hint: A min-heap of size k gives O(n log k). Quickselect gives O(n) average.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 34,
+    "title": "Design & Data Structures",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Prepare and solve the coding question: Design & Data Structures asked in JPMORGAN recruitment.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 35,
+    "title": "Implement LRU Cache",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Design",
+      "Hash Map + Doubly Linked ListConstraints: 1 ≤ capacity ≤ 3000",
+      "both get and put must run in O(1) average."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design a data structure implementing a Least Recently Used (LRU) cache. Implement get(key) (return value or -1 if not found) and put(key, value) (insert/update, evicting LRU entry when at capacity).",
+    "examples": "LRUCache cache = new LRUCache(2);cache.put(1, 1); cache.put(2, 2);cache.get(1); → 1cache.put(3, 3); (evicts key 2)cache.get(2); → -1Hint: Combine a hash map (for O(1) access) with a doubly linked list (for O(1) insertion/deletion at both ends).",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 36,
+    "title": "Find Duplicate Number",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "Floyd's Cycle DetectionConstraints: nums.length = n+1",
+      "each integer in [1",
+      "n]",
+      "exactly one duplicate — do not modify array",
+      "O(1) space."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array of n+1 integers where each value is in [1, n], find the one duplicate number without modifying the array.",
+    "examples": "Input: nums = [1, 3, 4, 2, 2]Output: 2Hint: Treat array indices as a linked list (index → nums[index]). A cycle exists at the duplicate. Apply Floyd's tortoise and hare algorithm.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 37,
+    "title": "Subsets (Power Set)",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Backtracking",
+      "Bit ManipulationConstraints: 1 ≤ nums.length ≤ 10",
+      "all elements are unique."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an integer array nums of unique elements, return all possible subsets (the power set). The solution must not contain duplicate subsets.",
+    "examples": "Input: nums = [1, 2, 3]Output: [[], [1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]]Hint: Use iterative approach — for each new element, add it to every existing subset.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 38,
+    "title": "Finance-Flavored Coding Problems",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "General DSA"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "JP Morgan uniquely includes problems inspired by financial systems. These are commonly reported in OA rounds and domain interviews.",
+    "examples": "",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 39,
+    "title": "Best Time to Buy and Sell Stock — Multiple Transactions",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Arrays",
+      "GreedyConstraints: 1 ≤ prices.length ≤ 3×10⁴",
+      "0 ≤ prices[i] ≤ 10⁴."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a stock price array prices where prices[i] is the price on day i, find the maximum profit you can achieve by completing as many transactions as you like (you must sell before buying again).",
+    "examples": "Input: prices = [7, 1, 5, 3, 6, 4]Output: 7",
+    "approach": "Buy at 1, sell at 5 (profit 4). Buy at 3, sell at 6 (profit 3). Total = 7.Insight: Any upward slope contributes to profit — sum all positive day-to-day differences.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 40,
+    "title": "Maximum Profit with at Most K Transactions",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming (Finance)Constraints: 0 ≤ k ≤ 100",
+      "0 ≤ prices.length ≤ 1000."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given a stock price array and an integer k representing the maximum number of transactions allowed (buy + sell = 1 transaction), find the maximum profit. You must sell before buying again.",
+    "examples": "Input: k = 2, prices = [3, 2, 6, 5, 0, 3]Output: 7",
+    "approach": "Buy at 2, sell at 6 (profit 4). Buy at 0, sell at 3 (profit 3). Total = 7.Hint: Define dp[i][j] = max profit using at most i transactions through day j. Handle the edge case where k ≥ n/2 separately (unlimited transactions).",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 41,
+    "title": "Transaction Fee — Maximize Stock Profit",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Dynamic Programming",
+      "Greedy (Finance)Constraints: 1 ≤ prices.length ≤ 5×10⁴",
+      "1 ≤ prices[i] ≤ 5×10⁴",
+      "0 ≤ fee ≤ 5×10⁴."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an array prices and a transaction fee, find the maximum profit by completing as many transactions as desired (each transaction incurs a fee applied once per buy-sell cycle). You cannot hold more than one share at a time.",
+    "examples": "Input: prices = [1, 3, 2, 8, 4, 9], fee = 2Output: 8",
+    "approach": "Transactions: buy at 1 sell at 8 (profit 5), buy at 4 sell at 9 (profit 3). Total = 8.Hint: Maintain two states — cash (max profit holding no stock) and hold (max profit holding one stock). Transition at each price.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 42,
+    "title": "Running Median of a Data Stream",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Heap",
+      "Design (Finance)Constraints: 0 ≤ num ≤ 10⁵",
+      "at most 5×10⁴ calls to addNum and findMedian."
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design a data structure that supports adding integers from a data stream and finding the median of all elements added so far, in O(log n) per add and O(1) per query.",
+    "examples": "addNum(1) → median = 1.0addNum(2) → median = 1.5addNum(3) → median = 2.0",
+    "approach": "Maintain two heaps — a max-heap for the lower half and a min-heap for the upper half — keeping them balanced in size at all times.Real-world relevance: This pattern appears in real-time financial analytics where running statistics on a price stream are required.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 43,
+    "title": "Rate Limiter — Sliding Window Counter",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Design",
+      "Sliding Window (Finance/Systems)"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Design a rate limiter that allows at most N requests per T seconds for a given user. Implement two methods: isAllowed(userId, timestamp) — returns true if the request at the given timestamp should be allowed, false otherwise.",
+    "examples": "Rate limit: 3 requests per 10 seconds.isAllowed(\"user1\", 1) → true (1 request)isAllowed(\"user1\", 5) → true (2 requests)isAllowed(\"user1\", 9) → true (3 requests)isAllowed(\"user1\", 10) → false (still 3 within window [1, 10])isAllowed(\"user1\", 12) → true (window shifts, request at 1 falls out)Real-world relevance: JP Morgan's trading APIs enforce per-client rate limits to prevent market manipulation and ensure fair access.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 44,
+    "title": "Order Book Matching Engine (Simulation)",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Design",
+      "Priority Queue",
+      "Sorting (Finance)"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Simulate a simple stock order book. You receive a stream of buy orders (with price and quantity) and sell orders (with price and quantity). Match orders using the rule: a buy order matches a sell order when the buy price ≥ sell price. Process orders in FIFO order for equal prices. For each matched trade, output the trade price and quantity. Return all remaining unmatched orders at the end.",
+    "examples": "Orders: BUY 100 shares at $50, SELL 100 shares at $48, BUY 50 shares at $45, SELL 50 shares at $52Matched: 100 shares at $48 (buy $50 ≥ sell $48)Remaining: BUY 50 @ $45, SELL 50 @ $52 (no match since $45 < $52)Hint: Use a max-heap for buy orders (highest price has priority) and a min-heap for sell orders (lowest price has priority).Real-world relevance: This is the core of a stock exchange matching engine — a fundamental system at any investment bank's trading technology division.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 45,
+    "title": "Detect Arbitrage Opportunity (Currency Exchange)",
+    "difficulty": "Hard",
+    "round": "Onsite",
+    "topics": [
+      "Graphs",
+      "Bellman-Ford (Finance)"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "Given an n×n matrix rates where rates[i][j] is the exchange rate from currency i to currency j, determine if an arbitrage opportunity exists (a cycle where you can start with 1 unit of currency X, convert through a sequence of currencies, and end up with more than 1 unit of currency X).",
+    "examples": "rates =USD → EUR: 0.9, EUR → GBP: 0.8, GBP → USD: 1.5Product: 0.9 × 0.8 × 1.5 = 1.08 > 1 → Arbitrage exists!Hint: Take the negative log of each rate. An arbitrage cycle becomes a negative-weight cycle. Apply Bellman-Ford to detect it.Real-world relevance: Quantitative developers and algo trading teams at JP Morgan regularly build systems to identify and act on arbitrage opportunities across markets.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  },
+  {
+    "id": 46,
+    "title": "Portfolio Rebalancing",
+    "difficulty": "Medium",
+    "round": "Onsite",
+    "topics": [
+      "Greedy",
+      "Sorting (Finance)"
+    ],
+    "leetcode_link": "",
+    "leetcode_num": "",
+    "description": "You are given a portfolio of n assets, each with a current allocation percentage and a target allocation percentage. To rebalance, you can transfer value between assets. Each transfer has a cost equal to 0.1% of the amount transferred. Find the minimum total cost to rebalance the portfolio to the target allocation, given a total portfolio value of V.",
+    "examples": "V = 100,000Assets: [A: current 40%, target 30%], [B: current 20%, target 35%], [C: current 40%, target 35%]Excess: A = 10,000, C = 5,000. Deficit: B = 15,000.Transfers: A→B 10,000 (cost 10), C→B 5,000 (cost 5). Total cost = $15.Hint: Compute excess and deficit for each asset. Greedily match surpluses to deficits. The minimum total transferred amount (= total surplus = total deficit) determines cost.",
+    "approach": "Understand the problem statement, identify optimal data structures, and implement with clean code.",
+    "complexity": "O(N) time · O(1) space",
+    "follow_up": ""
+  }
+]
