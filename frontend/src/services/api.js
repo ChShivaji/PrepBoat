@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Get backend URL from env or fallback to local port
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://prepboat-backend.onrender.com';
 
 const api = axios.create({
   baseURL: API_URL,
