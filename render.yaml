@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: prepboat-backend
+    env: docker
+    plan: free
+    rootDir: backend
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://postgres:Shivaji%402006%23@db.hpdixybgdurhrxgusjls.supabase.co:5432/postgres
+      - key: GEMINI_API_KEY
+        sync: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "1440"
