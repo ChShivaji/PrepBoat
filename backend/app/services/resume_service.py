@@ -1051,6 +1051,11 @@ Key Features: {proj.get('key_features', '')}
             profiles_parts.append(f"[GeeksforGeeks](https://auth.geeksforgeeks.org/user/{profiles.get('geeksforgeeks')})")
             
         profiles_str = " | ".join(profiles_parts)
+        skills_str = "\n".join(skills_lines)
+        education_str = "\n".join(education_blocks)
+        cert_str = "\n".join(cert_blocks)
+        experience_str = "".join(experience_blocks)
+        project_str = "".join(project_blocks)
         
         user_data_prompt = f"""
 Candidate Name: {data.get('name')}
@@ -1063,19 +1068,19 @@ Coding Profiles & Links: {profiles_str}
 Professional Summary: {data.get('summary')}
 
 Technical Skills:
-{"\n".join(skills_lines)}
+{skills_str}
 
 Work Experience / Internships:
-{"".join(experience_blocks)}
+{experience_str}
 
 Projects:
-{"".join(project_blocks)}
+{project_str}
 
 Education:
-{"\n".join(education_blocks)}
+{education_str}
 
 Certifications:
-{"\n".join(cert_blocks)}
+{cert_str}
 
 Achievements:
 {achievements_str}
