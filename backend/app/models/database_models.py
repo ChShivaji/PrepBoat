@@ -35,14 +35,14 @@ class Question(Base):
     title = Column(String(200), nullable=False)
     description = Column(Text, nullable=False)
     difficulty = Column(String(20), nullable=False)  # 'Easy', 'Medium', 'Hard'
-    topic = Column(String(50), nullable=False)       # e.g., 'Arrays', 'Percentages', 'Joins'
+    topic = Column(String(100), nullable=False)       # e.g., 'Arrays', 'Percentages', 'Joins'
     category = Column(String(50), nullable=False)    # 'DSA', 'Aptitude', 'SQL', 'Core Subjects'
     tags = Column(String(255), nullable=True)         # Comma separated
     company_tags = Column(String(255), nullable=True) # Comma separated
     solution = Column(Text, nullable=True)
     explanation = Column(Text, nullable=True)
-    time_complexity = Column(String(50), nullable=True)
-    space_complexity = Column(String(50), nullable=True)
+    time_complexity = Column(String(150), nullable=True)
+    space_complexity = Column(String(150), nullable=True)
     entrypoint = Column(String(100), nullable=True)
     test_cases = Column(Text, nullable=True)  # JSON-encoded array of test cases
     solutions_json = Column(Text, nullable=True)  # JSON-encoded dictionary of solutions by language

@@ -8,6 +8,8 @@ import sys
 def seed_db():
     db = SessionLocal()
     try:
+        # Drop all tables first to apply schema migrations for Postgres columns
+        Base.metadata.drop_all(bind=engine)
         # Create tables if they don't exist
         Base.metadata.create_all(bind=engine)
         
