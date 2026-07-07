@@ -20,6 +20,8 @@ import AIInterviewGen from './pages/AIInterviewGen';
 import AIMentor from './pages/AIMentor';
 import Admin from './pages/Admin';
 import AptitudePrep from './pages/AptitudePrep';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 // Route guards
 const ProtectedRoute = ({ children }) => {
@@ -49,6 +51,8 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/terms" element={<TermsOfService />} />
 
       {/* Protected Routes (Student & general workspace) */}
       <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />

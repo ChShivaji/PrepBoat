@@ -292,6 +292,13 @@ const Register = () => {
           </div>
 
         </div>
+        
+        {/* Public Legal Footer */}
+        <div className="absolute bottom-4 text-center text-xs text-slate-600 w-full flex justify-center gap-4 left-0">
+          <Link to="/privacy" className="hover:text-slate-400 transition-colors">Privacy Policy</Link>
+          <span>•</span>
+          <Link to="/terms" className="hover:text-slate-400 transition-colors">Terms of Service</Link>
+        </div>
       </div>
 
     </div>
