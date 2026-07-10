@@ -372,132 +372,18 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Row 4: Monthly Time Spent Tracker (Replaces Difficulty Breakdown, takes 2 cols) + Subject Progress (takes 1 col) */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-        
-        {/* Monthly Time Spent Analytics Graph */}
-        <div className="glass-panel p-4 rounded-lg flex flex-col justify-between border border-slate-200 lg:col-span-2 min-w-0 relative">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 pb-4 mb-4">
-            <div className="space-y-1">
-              <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest">Study Time Tracker</h3>
-              <p className="text-[10px] text-slate-600">Tracking daily study time logged in practice modules</p>
-            </div>
-            
-            {/* Month Navigator controls */}
-            <div className="flex items-center gap-4 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-lg text-xs select-none">
-              <button 
-                onClick={handlePrevMonth}
-                disabled={isAtStart}
-                className="p-1 rounded-lg hover:bg-slate-200 text-slate-500 disabled:opacity-30 disabled:hover:bg-transparent transition-all"
-                title="Previous Month"
-              >
-                <ChevronLeft size={16} />
-              </button>
-              <span className="font-bold text-slate-800 min-w-[100px] text-center">
-                {displayedMonthName} {displayedYear}
-              </span>
-              <button 
-                onClick={handleNextMonth}
-                disabled={isAtEnd}
-                className="p-1 rounded-lg hover:bg-slate-200 text-slate-500 disabled:opacity-30 disabled:hover:bg-transparent transition-all"
-                title="Next Month"
-              >
-                <ChevronRight size={16} />
-              </button>
-            </div>
-          </div>
-
-          {/* Month Summary Stats banner */}
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex items-center gap-2 bg-indigo-50 border border-indigo-100 px-4 py-2.5 rounded-lg text-indigo-700">
-              <Clock size={20} />
-              <div>
-                <span className="text-[10px] uppercase font-bold text-indigo-500 block">Total Spent</span>
-                <span className="text-sm font-extrabold font-mono">{monthlyHours?.total_hours || 0} Hours</span>
-              </div>
-            </div>
-            <div className="text-left">
-              <span className="text-[10px] uppercase font-bold text-slate-600 block">Daily Average</span>
-              <span className="text-sm font-bold text-slate-800">
-                {monthlyHours ? (monthlyHours.total_hours / (monthlyHours.total_days || 30)).toFixed(2) : 0} hrs/day
-              </span>
-            </div>
-          </div>
-
-          {/* Time spent Area Chart */}
-          <div className="h-64 w-full min-w-0">
-            {loadingHours ? (
-              <div className="h-full flex items-center justify-center text-slate-500 text-xs gap-2">
-                <div className="w-4 h-4 rounded-full border-2 border-indigo-600 border-t-transparent animate-spin" />
-                <span>Loading calendar analytics...</span>
-              </div>
-            ) : monthlyHours?.daily_hours && monthlyHours.daily_hours.length > 0 ? (
-              <ResponsiveContainer width="100%" height="100%">
-                <AreaChart 
-                  data={monthlyHours.daily_hours} 
-                  margin={{ top: 10, right: 10, left: -20, bottom: 0 }}
-                >
-                  <defs>
-                    <linearGradient id="timeColor" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#6366F1" stopOpacity={0.35}/>
-                      <stop offset="95%" stopColor="#6366F1" stopOpacity={0.01}/>
-                    </linearGradient>
-                  </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
-                  <XAxis 
-                    dataKey="day" 
-                    stroke="#94A3B8" 
-                    fontSize={9} 
-                    tickLine={false} 
-                    axisLine={false} 
-                    dy={8}
-                    tickFormatter={(val) => `Day ${val}`}
-                  />
-                  <YAxis 
-                    stroke="#94A3B8" 
-                    fontSize={9} 
-                    tickLine={false} 
-                    axisLine={false} 
-                    dx={-8}
-                    tickFormatter={(val) => `${val}h`}
-                  />
-                  <Tooltip 
-                    contentStyle={{ backgroundColor: '#ffffff', borderColor: '#e2e8f0', color: '#1e293b', borderRadius: '12px', fontSize: '11px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}
-                    itemStyle={{ color: '#4F46E5', fontWeight: 'bold' }}
-                    labelFormatter={(label) => `Day ${label} of ${displayedMonthName}`}
-                    formatter={(value) => [`${value} Hours`, 'Time Logged']}
-                  />
-                  <Area 
-                    type="monotone" 
-                    dataKey="hours" 
-                    stroke="#6366F1" 
-                    strokeWidth={2.5} 
-                    fillOpacity={1} 
-                    fill="url(#timeColor)" 
-                  />
-                </AreaChart>
-              </ResponsiveContainer>
-            ) : (
-              <div className="h-full flex items-center justify-center text-slate-600 text-xs">
-                No study logs found for this period.
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Detailed Subject Progress bars */}
-        <div className="glass-panel p-4 rounded-lg space-y-4 border border-slate-200 lg:col-span-1 flex flex-col justify-between">
+      </div>      {/* Row 4: Detailed Subject Progress bars */}
+      <div className="w-full">
+        <div className="glass-panel p-6 rounded-lg space-y-4 border border-slate-200">
           <div className="space-y-1">
             <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest">Detailed Subject Progress</h3>
             <p className="text-[10px] text-slate-600">Real-time status tracking completed questions compared to totals</p>
           </div>
           
-          <div className="flex-1 flex flex-col justify-center space-y-4 py-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
             {stats?.category_progress && stats.category_progress.length > 0 ? (
               stats.category_progress.map((c) => (
-                <div key={c.subject} className="space-y-2 bg-slate-50 p-4 rounded-lg border border-slate-200">
+                <div key={c.subject} className="space-y-2 bg-slate-55 p-4 rounded-lg border border-slate-200">
                   <div className="flex items-center justify-between text-[11px]">
                     <span className="font-bold text-slate-700">{c.subject}</span>
                     <span className="font-mono text-slate-600">{c.solved} / {c.total} Solved ({c.percentage}%)</span>
@@ -512,11 +398,10 @@ const Dashboard = () => {
                 </div>
               ))
             ) : (
-              <div className="text-slate-600 text-xs text-center py-6">No subject progress logged.</div>
+              <div className="text-slate-600 text-xs text-center py-6 col-span-3">No subject progress logged.</div>
             )}
           </div>
         </div>
-
       </div>
     </div>
   );
