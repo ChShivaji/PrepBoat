@@ -6,7 +6,7 @@ import { Ship, AlertCircle, User as UserIcon, Lock, Mail, ChevronRight, Monitor,
 import techLoginArt from '../assets/tech_login_art.png';
 
 const Register = () => {
-  const { login } = useAuth();
+  const { register } = useAuth();
   const navigate = useNavigate();
 
   const [name, setName] = useState('');
@@ -15,11 +15,6 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  
-  // OTP Verification States
-  const [showOtpInput, setShowOtpInput] = useState(false);
-  const [otpCode, setOtpCode] = useState('');
-  const [verifying, setVerifying] = useState(false);
 
   const validateGoogleMailFormat = (emailStr) => {
     const clean = emailStr.trim().toLowerCase();
@@ -82,62 +77,40 @@ const Register = () => {
     setLoading(true);
 
     try {
-      // 1. Send OTP verification code to the Gmail account
-      await api.post('/api/auth/register-send-otp', {
-        name: trimmedName,
-        email: trimmedEmail,
-        password: trimmedPassword,
-        college: '',
-        branch: '',
-        cgpa: null,
-        target_role: 'Software Engineer',
-        role: 'student'
-      });
-      setShowOtpInput(true);
+      const checkRes = await api.get(`/api/auth/check-email?email=${encodeURIComponent(trimmedEmail)}`);
+      if (checkRes.data.exists) {
+        setError('already registered');
+        setLoading(false);
+        return;
+      }
     } catch (err) {
       console.error(err);
-      const errMsg = err.response?.data?.detail || "Failed to send verification code. Please check your network.";
-      if (errMsg.toLowerCase().includes('already registered')) {
+      if (err.response?.data?.detail === 'invalid mail') {
+        setError('Please use a valid @gmail.com address');
+        setLoading(false);
+        return;
+      }
+    }
+
+    const res = await register(
+      trimmedName,
+      trimmedEmail,
+      trimmedPassword,
+      '', // empty college
+      '', // empty branch
+      '', // empty cgpa
+      'Software Engineer' // default fallback target role
+    );
+    if (res.success) {
+      navigate('/');
+    } else {
+      if (res.error && (res.error.toLowerCase().includes('exist') || res.error.toLowerCase().includes('register'))) {
         setError('already registered');
       } else {
-        setError(errMsg);
+        setError(res.error);
       }
-    } finally {
-      setLoading(false);
     }
-  };
-
-  const handleVerifyOtp = async (e) => {
-    e.preventDefault();
-    setError('');
-
-    if (!otpCode || otpCode.trim().length !== 6) {
-      setError('Please enter a valid 6-digit verification code.');
-      return;
-    }
-
-    setVerifying(true);
-    try {
-      // Verify OTP and auto-create the account
-      await api.post('/api/auth/register-verify-otp', {
-        email: email.trim(),
-        otp_code: otpCode.trim()
-      });
-
-      // Successfully verified! Log in the user
-      const loginRes = await login(email.trim(), password);
-      if (loginRes.success) {
-        navigate('/');
-      } else {
-        setError(loginRes.error || "Verification succeeded, but login failed. Please log in manually.");
-      }
-    } catch (err) {
-      console.error(err);
-      const errMsg = err.response?.data?.detail || "Invalid or expired verification code. Please try again.";
-      setError(errMsg);
-    } finally {
-      setVerifying(false);
-    }
+    setLoading(false);
   };
 
   return (
@@ -226,150 +199,94 @@ const Register = () => {
               PrepBoat<span className="text-indigo-500">AI</span>
             </h1>
           </div>
+          {/* Heading */}
+          <div className="text-center md:text-left space-y-2">
+            <h2 className="text-lg font-bold text-white tracking-tight">Create Account</h2>
+            <p className="text-xs text-slate-400">Fill in the fields below to start your placement preparation.</p>
+          </div>
 
-          {/* Heading & Form Switcher */}
-          {showOtpInput ? (
-            <form onSubmit={handleVerifyOtp} noValidate className="space-y-4">
-              <div className="text-center md:text-left space-y-2">
-                <h2 className="text-lg font-bold text-white tracking-tight">Verify Your Email</h2>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  We've sent a 6-digit verification code to <strong className="text-indigo-400">{email}</strong>. 
-                  Please check your inbox and enter the code below to complete your registration.
-                </p>
-              </div>
-
-              {error && (
-                <div className="p-3.5 bg-rose-950/40 border border-rose-800/50 rounded-lg text-rose-300 text-xs flex items-start gap-2.5 animate-fadeIn">
-                  <AlertCircle size={15} className="shrink-0 mt-0.5" />
-                  <span className="font-semibold leading-relaxed">{error}</span>
-                </div>
-              )}
-
-              <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-400">6-Digit Verification Code</label>
-                <div className="relative">
-                  <input
-                    type="text"
-                    value={otpCode}
-                    onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
-                    placeholder="Enter code (e.g. 123456)"
-                    className="w-full pl-10 pr-4 py-2.5 bg-[#0f0f0f] border border-[#333] text-sm text-gray-200 rounded-lg placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200 font-mono tracking-widest text-center text-lg text-slate-100"
-                  />
-                  <Lock size={16} className="absolute left-3.5 top-3.5 text-slate-500" />
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                disabled={verifying}
-                className="w-full py-3 mt-4 bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] text-white font-semibold rounded-lg text-sm transition-all duration-150 disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20"
-              >
-                <span>{verifying ? 'Verifying Code...' : 'Verify & Create Account'}</span>
-                <ChevronRight size={16} />
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setShowOtpInput(false);
-                  setOtpCode('');
-                  setError('');
-                }}
-                className="w-full py-2.5 bg-transparent border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-slate-300 font-semibold rounded-lg text-xs transition-colors"
-              >
-                Go Back / Change Email
-              </button>
-            </form>
-          ) : (
-            <>
-              <div className="text-center md:text-left space-y-2">
-                <h2 className="text-lg font-bold text-white tracking-tight">Create Account</h2>
-                <p className="text-xs text-slate-400">Fill in the fields below to start your placement preparation.</p>
-              </div>
-
-              {error && (
-                <div className="p-3.5 bg-rose-950/40 border border-rose-800/50 rounded-lg text-rose-300 text-xs flex items-start gap-2.5 animate-fadeIn">
-                  <AlertCircle size={15} className="shrink-0 mt-0.5" />
-                  <span className="font-semibold leading-relaxed">{error}</span>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} noValidate className="space-y-4">
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400">Full Name</label>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Enter your name"
-                      className="w-full pl-10 pr-4 py-2.5 bg-[#0f0f0f] border border-[#333] text-gray-200 rounded-lg text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200"
-                    />
-                    <UserIcon size={16} className="absolute left-3.5 top-3 text-slate-500" />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400">Google Mail (Gmail)</label>
-                  <div className="relative">
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="e.g. candidate@gmail.com"
-                      className="w-full pl-10 pr-4 py-2.5 bg-[#0f0f0f] border border-[#333] text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200 text-sm"
-                    />
-                    <Mail size={16} className="absolute left-3.5 top-3 text-slate-500" />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400">Password (Min 6 characters)</label>
-                  <div className="relative">
-                    <input
-                      type="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="••••••••"
-                      className="w-full pl-10 pr-4 py-2.5 bg-[#0f0f0f] border border-[#333] text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200 text-sm"
-                    />
-                    <Lock size={16} className="absolute left-3.5 top-3 text-slate-500" />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-slate-400">Confirm Password</label>
-                  <div className="relative">
-                    <input
-                      type="password"
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                      placeholder="••••••••"
-                      className="w-full pl-10 pr-4 py-2.5 bg-[#0f0f0f] border border-[#333] text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200 text-sm"
-                    />
-                    <Lock size={16} className="absolute left-3.5 top-3 text-slate-500" />
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full py-3 mt-4 bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] text-white font-semibold rounded-lg text-sm transition-all duration-150 disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20"
-                >
-                  <span>{loading ? 'Sending Code...' : 'Sign Up'}</span>
-                  <ChevronRight size={16} />
-                </button>
-              </form>
-
-              <div className="text-center pt-2 text-sm text-slate-400 font-medium">
-                Already have an account?{' '}
-                <Link to="/login" className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors font-sans">
-                  Sign In
-                </Link>
-              </div>
-            </>
+          {error && (
+            <div className="p-3.5 bg-rose-950/40 border border-rose-800/50 rounded-lg text-rose-300 text-xs flex items-start gap-2.5 animate-fadeIn">
+              <AlertCircle size={15} className="shrink-0 mt-0.5" />
+              <span className="font-semibold leading-relaxed">{error}</span>
+            </div>
           )}
 
+          {/* Form */}
+          <form onSubmit={handleSubmit} noValidate className="space-y-4">
+            <div className="space-y-1">
+              <label className="text-xs font-semibold text-slate-400">Full Name</label>
+              <div className="relative">
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your name"
+                  className="w-full pl-10 pr-4 py-2.5 bg-[#0f0f0f] border border-[#333] text-gray-200 rounded-lg text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200"
+                />
+                <UserIcon size={16} className="absolute left-3.5 top-3 text-slate-500" />
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <label className="text-xs font-semibold text-slate-400">Google Mail (Gmail)</label>
+              <div className="relative">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="e.g. candidate@gmail.com"
+                  className="w-full pl-10 pr-4 py-2.5 bg-[#0f0f0f] border border-[#333] text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200 text-sm"
+                />
+                <Mail size={16} className="absolute left-3.5 top-3 text-slate-500" />
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <label className="text-xs font-semibold text-slate-400">Password (Min 6 characters)</label>
+              <div className="relative">
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="w-full pl-10 pr-4 py-2.5 bg-[#0f0f0f] border border-[#333] text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200 text-sm"
+                />
+                <Lock size={16} className="absolute left-3.5 top-3 text-slate-500" />
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <label className="text-xs font-semibold text-slate-400">Confirm Password</label>
+              <div className="relative">
+                <input
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="w-full pl-10 pr-4 py-2.5 bg-[#0f0f0f] border border-[#333] text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all duration-200 text-sm"
+                />
+                <Lock size={16} className="absolute left-3.5 top-3 text-slate-500" />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-3 mt-4 bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] text-white font-semibold rounded-lg text-sm transition-all duration-150 disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/20"
+            >
+              <span>{loading ? 'Creating Workspace...' : 'Sign Up'}</span>
+              <ChevronRight size={16} />
+            </button>
+          </form>
+
+          {/* Login Redirect */}
+          <div className="text-center pt-2 text-sm text-slate-400 font-medium">
+            Already have an account?{' '}
+            <Link to="/login" className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors font-sans">
+              Sign In
+            </Link>
+          </div>
         </div>
         
         {/* Public Legal Footer */}
