@@ -20,7 +20,7 @@ const Practice = () => {
   const [topics, setTopics] = useState([]);
   const [selectedTopic, setSelectedTopic] = useState('');
 
-  const categories = ['DSA', 'Aptitude', 'SQL', 'Core Subjects'];
+  const categories = ['DSA'];
 
   const fetchQuestions = async () => {
     setLoading(true);
