@@ -6,7 +6,7 @@ services:
     rootDir: backend
     envVars:
       - key: DATABASE_URL
-        value: postgresql://postgres.hpdixybgdurhrxgusjls:Shivaji%402006%23@aws-1-ap-south-1.pooler.supabase.com:6543/postgres
+        sync: false
       - key: GEMINI_API_KEY
         sync: false
       - key: JWT_SECRET
