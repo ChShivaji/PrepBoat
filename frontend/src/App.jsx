@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Pages import
+import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
@@ -47,6 +48,7 @@ function App() {
   return (
     <Routes>
       {/* Public Routes */}
+      <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -55,7 +57,7 @@ function App() {
       <Route path="/terms" element={<TermsOfService />} />
 
       {/* Protected Routes (Student & general workspace) */}
-      <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+      <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/practice" element={<ProtectedRoute><Practice /></ProtectedRoute>} />
       <Route path="/practice/:id" element={<ProtectedRoute><QuestionDetail /></ProtectedRoute>} />
       <Route path="/references" element={<ProtectedRoute><ReferenceHub /></ProtectedRoute>} />

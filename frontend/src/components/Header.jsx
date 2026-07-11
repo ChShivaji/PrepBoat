@@ -26,7 +26,7 @@ const Header = () => {
 
   const getPageTitle = () => {
     const path = location.pathname;
-    if (path === '/') return 'Overview Dashboard';
+    if (path === '/dashboard' || path === '/') return 'Overview Dashboard';
     if (path === '/practice') return 'Practice Challenges';
     if (path.startsWith('/practice/')) return 'Coding Workspace';
     if (path === '/tests') return 'Mock Test Engine';

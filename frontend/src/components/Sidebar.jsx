@@ -30,7 +30,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const menuItems = [
-    { name: 'Dashboard', path: '/', icon: LayoutDashboard },
+    { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
     { name: 'Practice Bank', path: '/practice', icon: BookOpen },
     { name: 'Reference Hub', path: '/references', icon: Youtube },
     { name: 'Company Prep', path: '/company-prep', icon: Building2 },
