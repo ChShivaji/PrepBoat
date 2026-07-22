@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import AdSenseScript from '../components/AdSenseScript';
 import { 
   Ship, BookOpen, FileText, Bot, Sparkles, Code, 
   ChevronDown, ArrowRight, CheckCircle2, ShieldCheck 
@@ -44,6 +45,8 @@ const Landing = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-indigo-600 selection:text-white">
+      <AdSenseScript />
+      
       {/* Navbar */}
       <nav className="border-b border-slate-900 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +59,10 @@ const Landing = () => {
                 PrepBoat <span className="text-xs bg-indigo-500/20 text-indigo-400 px-1.5 py-0.5 rounded border border-indigo-500/30">AI</span>
               </span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-6">
+              <Link to="/guides" className="text-sm font-semibold text-slate-400 hover:text-indigo-400 transition-colors">
+                Prep Guides
+              </Link>
               <Link 
                 to="/login" 
                 className="text-sm font-semibold text-slate-300 hover:text-white transition-colors"
@@ -257,6 +263,8 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>PrepBoat AI © {new Date().getFullYear()}. All rights reserved.</p>
           <div className="flex gap-4">
+            <Link to="/guides" className="hover:text-slate-400 transition-colors">Prep Guides</Link>
+            <span>•</span>
             <Link to="/privacy" className="hover:text-slate-400 transition-colors">Privacy Policy</Link>
             <span>•</span>
             <Link to="/terms" className="hover:text-slate-400 transition-colors">Terms of Service</Link>

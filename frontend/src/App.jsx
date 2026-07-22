@@ -23,6 +23,8 @@ import Admin from './pages/Admin';
 import AptitudePrep from './pages/AptitudePrep';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import Guides from './pages/Guides';
+import GuideDetail from './pages/GuideDetail';
 
 // Route guards
 const ProtectedRoute = ({ children }) => {
@@ -49,6 +51,8 @@ function App() {
     <Routes>
       {/* Public Routes */}
       <Route path="/" element={<Landing />} />
+      <Route path="/guides" element={<Guides />} />
+      <Route path="/guides/:slug" element={<GuideDetail />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
